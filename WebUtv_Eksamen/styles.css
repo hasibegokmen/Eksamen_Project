@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "header"
+        "content";
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+    padding: 0.60rem;
+    background-color: lightseagreen;
+    color: white;
+}
+
+.header-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 1.2rem;
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+}
+
+/* Menü */
+.menu {
+    text-align: right;
+    background-color: lightseagreen;
+    padding: 0;
+}
+
+/* Yatay Menü Stilleri (Büyük Ekranlar) */
+.menu ul {
+    display: flex;
+    gap: 0.6rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0.20rem;
+    margin: 0;
+    line-height: 1.80rem;
+    text-align: center;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.6rem 0.9rem;
+    background-color: turquoise;
+    border-radius: 0.3rem;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #e9e3e4;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.6);
+}
+
+/* Hamburger Menü ve Yan Menü (Mobil Ekranlar) */
+.kontrol {
+    display: none; /* Büyük ekranlarda gizli */
+}
+
+#kontrol {
+    display: none; /* Checkbox gizli */
+}
+
+/* Mobilde Sağdan Açılan Yan Menü */
+@media (max-width: 800px) {
+    /* Hamburger menü simgesi */
+    .kontrol {
+        display: block;
+        font-size: 2rem;
+        color: white;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        cursor: pointer;
+        z-index: 20;
+        transition: transform 0.3s ease;
+    }
+
+    /* Yan menü gizli başlar */
+    .menu {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        height: 50%;
+        width: 150px;
+        background-color: lightseagreen;
+        transition: right 0.5s ease;
+        z-index: 15;
+        padding-top: 60px;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu ul li {
+        text-align: left;
+        padding: 1rem;
+    }
+
+    /* Menü açılınca sağdan göster */
+    #kontrol:checked ~ .menu {
+        right: 0;
+    }
+
+    /* Başlangıçta sadece üç çizgi (fa-bars) görünür */
+    .kontrol .fa-bars {
+        display: inline-block;  
+    }
+
+    .kontrol .fa-times {
+        display: none; /* X başlangıçta gizli */
+    }
+
+    /* Hamburger menü açıldığında ikon değişir */
+    #kontrol:checked + .kontrol .fa-bars {
+        display: none; /* Üç çizgi gizlenir */
+    }
+
+    #kontrol:checked + .kontrol .fa-times {
+        display: inline-block; /* X görünür hale gelir */
+    }
+
+    /* Grid düzenlemesi mobilde */
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    .side-menu,
+    .extra-info {
+        display: none; /* Mobilde yan paneller gizlenir */
+    }
+
+    header h1 {
+        display: none; /* Mobilde yan paneller gizlenir */
+    }
+
+    .main-content {
+        grid-column: span 1;
+    }
+}
+
+/* Ana İçerik Yapısı */
+.grid-container {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    gap: o.6rem;
+    padding: 1.2rem;
+    height: calc(100vh - 70px);
+}
+
+/* Sol Menü */
+.side-menu {
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+.side-link {
+    width: 100%;
+    padding: 0.6rem;
+    margin-bottom: 0.3rem;
+    background-color: lightseagreen;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.side-link:hover {
+    background-color: #1e867f;
+}
+
+/* Ana İçerik */
+.main-content {
+    background-color: #e9e9e9;
+    padding: 1.2rem;
+    font-size: 1.1rem;
+}
+
+/* Sağ Menü */
+.extra-info {
+    background-color: #f4f4f4;
+    padding: 0.6rem;
+    font-size: 1rem;
+}
+
+
