@@ -1,3 +1,4 @@
+/* Genel Stil Ayarları */
 * {
     box-sizing: border-box;
 }
@@ -21,7 +22,6 @@ header {
     grid-template-columns: 1fr 3fr 1fr;
     align-items: center;
     padding: 1rem;
-    /*background-color: linear-gradient(to right, #00093c, #2d0b00);*/
     background-color: #00093c;
     color: rgb(250, 250, 250);
 }
@@ -103,7 +103,7 @@ https://www.youtube.com/watch?v=uSHc2YLGBSM&t=1257s videolarindan yararlanildi.*
     height: calc(100vh - 70px);
 }
 
-/* Sol Menü */
+/* Home page Sol Menü */
 .side-menu {
     background-color: #f4f4f4;
     display: flex;
@@ -112,6 +112,7 @@ https://www.youtube.com/watch?v=uSHc2YLGBSM&t=1257s videolarindan yararlanildi.*
     padding: 10px;
 }
 
+/* Acilan bilgi paneli icin bu siteden yararlandim https://www.quora.com/How-do-I-make-a-div-visible-on-clicking-a-link-using-only-HTML-and-CSS*/
 /*Sol menu linkler at Home page*/
 .side-link {
     width: 100%;
@@ -126,6 +127,58 @@ https://www.youtube.com/watch?v=uSHc2YLGBSM&t=1257s videolarindan yararlanildi.*
 }
 
 .side-link:hover {
+    background-color: #1e867f;
+}
+
+/* Paneli Gizle Göster */
+.panel-toggle {
+    display: none;
+}
+
+/* Panel içeriği */
+.info-panel {
+    display: none;
+    background-color: #f8f8f8;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    margin-top: 1rem;
+    border-radius: 0.3rem;
+    position: relative;
+}
+
+/* Panel açılınca gösterilecek. Panelin acilip acilmadigini kontrol icin*/
+.panel-toggle:checked + .info-panel {
+    display: block;
+}
+
+/* Kapatma Butonu info panel yan linkler icin anasayfa*/
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+/* Hide panels by default */
+.info-panel {
+    display: none;
+    background-color: #f8f8f8;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    margin-top: 1rem;
+    border-radius: 0.3rem;
+}
+
+/* Style for the side menu */
+.side-link[aria-expanded="true"] {
     background-color: #1e867f;
 }
 
