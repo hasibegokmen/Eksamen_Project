@@ -143,12 +143,22 @@ https://www.youtube.com/watch?v=uSHc2YLGBSM&t=1257s videolarindan yararlanildi.*
     border: 1px solid #ddd;
     margin-top: 1rem;
     border-radius: 0.3rem;
-    position: relative;
+    /*position: relative;*/
+    position: absolute;
+    top: 0; /* Üstten başlayacak */
+    left: 0;
+    width: 100%; /* Ana içerik kadar genişlik */
+    background-color: rgba(255, 255, 255, 0.9); /* Hafif şeffaf bir arka plan */
+    visibility: hidden; /* Başlangıçta gizli */
+    height: 0; /* Başlangıç yüksekliği 0 */
+    overflow: hidden;
 }
 
 /* Panel açılınca gösterilecek. Panelin acilip acilmadigini kontrol icin*/
 .panel-toggle:checked + .info-panel {
     display: block;
+    visibility: visible; /* Görünür yap */
+    height: 200px; /* Açıldığında yüksekliği ayarla */
 }
 
 /* Kapatma Butonu info panel yan linkler icin anasayfa*/
@@ -187,6 +197,8 @@ https://www.youtube.com/watch?v=uSHc2YLGBSM&t=1257s videolarindan yararlanildi.*
     background-color: #e9e9e9;
     padding: 1.2rem;
     font-size: 1.1rem;
+    position: relative;
+
 }
 
 /* Sağ Menü */
@@ -194,6 +206,15 @@ https://www.youtube.com/watch?v=uSHc2YLGBSM&t=1257s videolarindan yararlanildi.*
     background-color: #f4f4f4;
     padding: 0.6rem;
     font-size: 1rem;
+}
+
+.video-preview {
+    margin-bottom: 1rem; /* Space below the image */
+    text-align: center; /* Center the image if needed */
+}
+.video-preview img {
+    border-radius: 8px; /* Rounds the corners of the image */
+    /* Additional styling specific to this image */
 }
 
 /*Telefon boyutuna gelince olacak degisiklikler*/
