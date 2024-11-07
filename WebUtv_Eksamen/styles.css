@@ -220,13 +220,27 @@ input[type="radio"]:checked + label + .info-panel {
     color: #333;
 }
 
+.acit-btn {
+    background-color: #2e3b86;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    text-decoration: none;
+    border-radius: 5%;
+    display: inline-block;
+}
+
+.acit-btn:hover {
+    color: #e9e3e4;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.6);
+}
+
 
 /* Style for the side menu */
 .side-link[aria-expanded="true"] {
     background-color: #1e867f;
 }
 
-  
+/*Style for Table of studie program*/ 
   table {
     width: 100%;
     border-collapse: collapse;
@@ -241,13 +255,64 @@ input[type="radio"]:checked + label + .info-panel {
   th {
     background-color: rgb(4, 37, 88);
     color: white;
+    text-align: center;
     font-weight: bold;
   }
   
   tr:second-child(even) {
     background-color: #f2f2f2;
   }
-  
+
+  .table {
+    display: none;
+  }
+
+/*Radio button for to show right studie prog*/
+#matematik-fysikk:checked ~ .studie-table-container #matematik-fysikk-prog,
+#statistik-data:checked ~ .studie-table-container #statistik-data-prog,
+#vitenskapelige-beregninger:checked ~ .studie-table-container #vitenskapelige-beregninger-prog {
+    display: block;
+}
+
+/*
+.table-toggle{
+    display: none;
+}*/
+
+/*studie program name are formated*/
+label {
+    padding: 8px 15px;
+    background-color: #01336a;
+    color: white;
+    margin-right: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+label:hover {
+    background-color: #0056b3;
+}
+
+/* Ders programindaki Linklerin altındaki çizgiyi mavi yap */
+.studie-table-container .table a {
+    color:darkblue;
+    text-decoration: underline; /* Alt çizgi eklemek */
+    text-decoration-color: darkblue; /* Alt çizgi rengini mavi yapmak */
+    /*color: inherit; /* Bağlantı metninin rengini mevcut metin renginde tutmak */
+}
+
+/* Link tıklandığında mor renkte kalması için tiklandiginda*/
+.studie-table-container .table a:visited {
+    color: purple; /* Tıklanmış link rengini mor yap */
+    text-decoration-color: rgb(78, 13, 110); /* Alt çizgi rengini de mor yap */
+}
+
+/* Linkin üzerine gelindiğinde alt çizgi rengini daha belirgin yapabilirsiniz */
+.studie-table-container .table a:hover {
+    color: blue; /* Üzerine gelindiğinde mavi renk */
+    text-decoration-color: darkblue; /* Alt çizgi rengini koyu mavi yap */
+}
 
 
 /* Ana İçerik */
