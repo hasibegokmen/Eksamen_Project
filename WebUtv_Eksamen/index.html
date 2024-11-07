@@ -27,7 +27,7 @@
     <nav class="navbar"> <!--Navbar-->
         <!-- Checkbox for toggling the menu -->
         <input type="checkbox" id="kontrol">
-        <!-- Label for hamburger icon -->
+        <!-- Label for hamburger icon and closs-button on Navbar -->
         <label for="kontrol" class="kontrol">
             <i class="fa fa-bars"></i>
             <i class="fa fa-times"></i>
@@ -44,14 +44,17 @@
     </nav>
 </header>
 
+
+<!--Home page content-->
 <main class="grid-container">
     <aside class="side-menu">
 
+    <!--Side link at the home page on the left. I use for to open info-panel and close with click another link-->   
     <input type="radio" id="panel-reset" name="info-panel" class="panel-toggle" checked>
         <label for="panel1" class="side-link">Opptakskrav og poeng</label>
         <label for="panel2" class="side-link">Slik søker du</label>
         <label for="panel3" class="side-link">Hva lærer du?</label>
-        <label for="panel4" class="side-link">Studiets oppbygging</label>
+        <label for="panel4" class="side-link"><a href="studiepro.html">Studiets oppbygging</a></label>
         <label for="panel5" class="side-link">Hvordan foregår undervisningen?</label>
         <label for="panel6" class="side-link">Hva koster det?</label>
         <label for="panel7" class="side-link">Hva kan du jobbe som?</label>
@@ -59,26 +62,23 @@
         <label for="panel9" class="side-link">Videre studiemuligheter ved OsloMet</label>
     </aside>
 
-    
+    <!--Middle section on the home page-->
     <section class="main-content" id="main-content">
         <h2>Matematisk modellering og datavitenskap – ingeniør</h2>
             <h3>Bachelorprogram</h3>
+            <!--to add video and we use to video tag for accesibility and right koding-->
             <video class="video" controls>
                 <source src="mathematical.mp4" type="video/mp4">
             </video>
-            <p>Det skal komme hit video</p>
-        
-            <!--Buraya video gelecek, tasarimin nasil olacagini denemek icin gecici olarak eklenmistir-->
-        <picture class="video-preview">
-            <img src="./images/videobilde.png" alt="Video" width="800px" height="600px">
-        </picture>
-        
+            
 
-        <!--Toggleable Panels with radiobutton -->
+        <!--Toggleable Panels with radiobutton. When user click side-link, info-panel will open middle of the home page. Therefore user don't need scrool down 
+        to read information. Important informations are easy to see for user.
+        -->
         <input type="radio" id="panel1" name="info-panel" class="panel-toggle">
         <div class="info-panel" aria-labelledby="panel1">
             <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
-            <p><h3>Opptakskrav og poeng</h3></p>
+            <p><h3>Opptakskrav og poeng</h3></p><!--We also put the titles in the info panel so that the user can easily see which section he/she is reading.-->
             <p>For å søke på dette programmet må du ha:</p>
             <ul>
                 <li><a href="https://www.samordnaopptak.no/">Generell studiekompetanse</a> 
@@ -92,6 +92,7 @@
                 kan du søke på dette studiet om du har bestått ettårig forkurs for ingeniørutdanning.</p>
         </div>
 
+        <!--Info-panel for "Slik søker du"-->
         <input type="radio" id="panel2" name="info-panel" class="panel-toggle">
         <div class="info-panel" aria-labelledby="panel2">
             <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
@@ -105,6 +106,7 @@
             <p><a href="https://www.oslomet.no/studier/soknad-og-opptak/opptak-til-bachelor-aarsstudier" target="_blank" rel="noopener">Mer om å søke på bachelor.</a></p>
         </div>
 
+        <!--Info-panel for "Hva lærer du"-->
         <input type="radio" id="panel3" name="info-panel" class="panel-toggle">
         <div class="info-panel" aria-labelledby="panel3">
             <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
@@ -118,19 +120,22 @@
             </article>
         </div>
 
+        <!--Every student wants to get information about which courses they will take when choosing a department. 
+        That's why we made the complicated course table on the website more readable and understandable and added it to the new page.-->
         <input type="radio" id="panel4" name="info-panel" class="panel-toggle">
         <div class="info-panel" aria-labelledby="panel4">
             <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
-            <p><h3>Studiets oppbygging</h3></p>
+            <p><h3><a href="studiepro.html">Studiets oppbygging</a></h3></p>
              <!--Buraya ders tablosu gelecek ya da ders tablosu ayri sayfa olacak-->
         </div>
 
+        <!--Info-panel for "Hvordan foregår undervisning"-->
         <input type="radio" id="panel5" name="info-panel" class="panel-toggle">
         <div class="info-panel" aria-labelledby="panel5">
             <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
             <p><h3>Hvordan foregår undervisning</h3></p>
             <p>Undervisningen er en kombinasjon av</p>
-            <ul>
+            <ul><!--Madde imi kullanmak icin-->
                 <li>Prosjektarbeid</li>
                 <li>Workshop</li>
                 <li>Presentasjoner</li>
@@ -141,10 +146,10 @@
                 <li>Gruppearbeid</li>
                 <li>Arbeidslivsrelevant bacheloroppgave</li>
             </ul>
-            <!-- Diğer açıklama paragrafı -->
             <p>For å gjennomføre studiet på normert tid, må du regne med å bruke om lag 40 timer per uke på studierelatert arbeid gjennom hele semesteret.</p>
         </div>
 
+        <!--info panel for "Hva koster det?"-->
         <input type="radio" id="panel6" name="info-panel" class="panel-toggle">
         <div class="info-panel" aria-labelledby="panel6">
             <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
@@ -153,6 +158,7 @@
             <p><a href="https://student.oslomet.no/studieavgift-for-internasjonale-studenter-utenfor-eu-eos" target="_blank" rel="noopener">Er du internasjonal student fra utenfor EU og EØS, må du betale studieavgift (student.oslomet.no).</a> Det er mulig å søke om unntak for betaling av denne studieavgiften.</p>
         </div>
 
+        <!--info panel for "Hva kan du jobbe som?"-->
         <input type="radio" id="panel7" name="info-panel" class="panel-toggle">
         <div class="info-panel" aria-labelledby="panel7">
             <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
@@ -168,6 +174,7 @@
             </article>
         </div>
 
+        <!--info panel for "Utveksling"-->
         <input type="radio" id="panel8" name="info-panel" class="panel-toggle">
         <div class="info-panel" aria-labelledby="panel8">
             <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
@@ -175,6 +182,7 @@
             <p>Du kan dra på utveksling i femte semester.</p>
         </div>
 
+        <!--Videre studiemuligheter ved OsloMet-->
         <input type="radio" id="panel9" name="info-panel" class="panel-toggle">
         <div class="info-panel" aria-labelledby="panel9">
             <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
@@ -185,8 +193,38 @@
         </div>
     </section>
     
+    <!--information section on the right Short information about program-->
     <aside class="extra-info">
         <p>Additional information here.</p>
+        <div class="shortinfo">
+            <p><h3>Studiested</h3></p>
+            <p>Pilestredet i Oslo</p>
+        </div>
+        <div class="shortinfo">
+            <p><h3>Varighet</h3></p>
+            <p>3 år</p>
+        </div>
+        <div class="shortinfo">
+            <p><h3>Omfang</h3></p>
+            <p>Heltid</p>
+        </div>
+        <div class="shortinfo">
+            <p><h3>Studiepoeng</h3></p>
+            <p>180</p>
+        </div>
+        <div class="shortinfo">
+            <p><h3>Studiestart</h3></p>
+            <p>August</p>
+        </div>
+        <div class="shortinfo">
+            <p><h3>Undervisningsspråk</h3></p>
+            <p>Norsk</p>
+            <p>Engelsk</p>
+        </div>
+        <div class="shortinfo">
+            <p><h3>Studieplasser</h3></p>
+            <p>40</p>
+        </div>
     </aside>
 </main>
 
