@@ -240,7 +240,7 @@ input[type="radio"]:checked + label + .info-panel {
     background-color: #1e867f;
 }
 
-  
+/*Style for Table of studie program*/ 
   table {
     width: 100%;
     border-collapse: collapse;
@@ -262,7 +262,56 @@ input[type="radio"]:checked + label + .info-panel {
   tr:second-child(even) {
     background-color: #f2f2f2;
   }
-  
+
+  .table {
+    display: none;
+  }
+
+/*Radio button for to show right studie prog*/
+#matematik-fysikk:checked ~ .studie-table-container #matematik-fysikk-prog,
+#statistik-data:checked ~ .studie-table-container #statistik-data-prog,
+#vitenskapelige-beregninger:checked ~ .studie-table-container #vitenskapelige-beregninger-prog {
+    display: block;
+}
+
+/*
+.table-toggle{
+    display: none;
+}*/
+
+/*studie program name are formated*/
+label {
+    padding: 8px 15px;
+    background-color: #01336a;
+    color: white;
+    margin-right: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+label:hover {
+    background-color: #0056b3;
+}
+
+/* Ders programindaki Linklerin altındaki çizgiyi mavi yap */
+.studie-table-container .table a {
+    text-decoration: underline; /* Alt çizgi eklemek */
+    text-decoration-color: blue; /* Alt çizgi rengini mavi yapmak */
+    color: inherit; /* Bağlantı metninin rengini mevcut metin renginde tutmak */
+}
+
+/* Link tıklandığında mor renkte kalması için tiklandiginda*/
+.studie-table-container .table a:visited {
+    color: rgb(76, 27, 110); /* Tıklanmış link rengini mavi yap */
+    text-decoration-color: rgb(76, 27, 110); /* Alt çizgi rengini de mavi yap */
+}
+
+/* Linkin üzerine gelindiğinde alt çizgi rengini daha belirgin yapabilirsiniz (isteğe bağlı) */
+.studie-table-container .table a:hover {
+    color: blue; /* Üzerine gelindiğinde mavi renk */
+    text-decoration-color: darkblue; /* Alt çizgi rengini koyu mavi yap */
+}
 
 
 /* Ana İçerik */
