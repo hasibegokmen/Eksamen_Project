@@ -220,6 +220,20 @@ input[type="radio"]:checked + label + .info-panel {
     color: #333;
 }
 
+.acit-btn {
+    background-color: #2e3b86;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    text-decoration: none;
+    border-radius: 5%;
+    display: inline-block;
+}
+
+.acit-btn:hover {
+    color: #e9e3e4;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.6);
+}
+
 
 /* Style for the side menu */
 .side-link[aria-expanded="true"] {
