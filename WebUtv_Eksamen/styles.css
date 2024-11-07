@@ -255,6 +255,7 @@ input[type="radio"]:checked + label + .info-panel {
   th {
     background-color: rgb(4, 37, 88);
     color: white;
+    text-align: center;
     font-weight: bold;
   }
   
