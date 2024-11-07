@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="styles.css"><!--for contact til Styles-->
 </head>
 <body>
+
 <!--When we choise HTML Element, we took advantage of link= https://developer.mozilla.org/en-US/docs/Web/HTML/Element-->
 <header> 
     <div class="header-logo">
         <a href="index.html">OsloMet</a>
     </div>
+
     <h1>Mathematical Modelling</h1>
     <nav class="navbar"> <!--Navbar-->
         <!-- Checkbox for toggling the menu -->
@@ -36,17 +38,7 @@
 
 <main class="grid-container">
     <aside class="side-menu">
-        <!--
-        <label for="panel1-toggle" class="side-link" aria-expanded="false">Opptakskrav og poeng</label>
-        <label for="panel2-toggle" class="side-link" aria-expanded="false">Slik søker du</label>
-        <label for="panel3-toggle" class="side-link" aria-expanded="false">Hva lærer du?</label>
-        <label for="panel4-toggle" class="side-link" aria-expanded="false">Studiets oppbygging</label>
-        <label for="panel5-toggle" class="side-link" aria-expanded="false">Hvordan foregår undervisningen?</label>
-        <label for="panel6-toggle" class="side-link" aria-expanded="false">Hva koster det?</label>
-        <label for="panel7-toggle" class="side-link" aria-expanded="false">Hva kan du jobbe som?</label>
-        <label for="panel8-toggle" class="side-link" aria-expanded="false">Utveksling</label>
-        <label for="panel9-toggle" class="side-link" aria-expanded="false">Videre studiemuligheter ved OsloMet</label>
-    </aside>-->
+
     <input type="radio" id="panel-reset" name="info-panel" class="panel-toggle" checked>
         <label for="panel1" class="side-link">Opptakskrav og poeng</label>
         <label for="panel2" class="side-link">Slik søker du</label>
@@ -58,33 +50,6 @@
         <label for="panel8" class="side-link">Utveksling</label>
         <label for="panel9" class="side-link">Videre studiemuligheter ved OsloMet</label>
     </aside>
-<!--
-    <section class="main-content">
-        <input type="radio" id="panel1" name="info-panel" class="panel-toggle">
-        <div class="info-panel">
-            <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
-            <h3>Opptakskrav og poeng</h3>
-            <p>For å søke på dette programmet må du ha:</p>
-            <ul>
-                <li><a href="https://www.samordnaopptak.no/">Generell studiekompetanse</a> eller oppfylle kravene til realkompetanse</li>
-                <li>Matematikk R1 og R2</li>
-                <li>Fysikk 1</li>
-            </ul>
-            <p>Det kan være konkurranse om plassene. Ved forrige opptak kom alle kvalifiserte søkere inn.</p>
-        </div>
-
-        <input type="radio" id="panel2" name="info-panel" class="panel-toggle">
-        <div class="info-panel">
-            <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
-            <h3>Slik søker du</h3>
-            <p>Du søker på Samordna opptak med studiekode 215 503.</p>
-            <ul>
-                <li>15. april: ordinær søknadsfrist</li>
-                <li>1. mars: frist for enkelte søkere</li>
-            </ul>
-            <p><a href="https://www.oslomet.no/studier/soknad-og-opptak/opptak-til-bachelor-aarsstudier">Mer om å søke på bachelor.</a></p>
-        </div>
-    </section>-->
 
     
     <section class="main-content" id="main-content">
@@ -145,14 +110,27 @@
         <div class="info-panel" aria-labelledby="panel4">
             <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
             <p><h3>Studiets oppbygging</h3></p>
-            
+             <!--Buraya ders tablosu gelecek ya da ders tablosu ayri sayfa olacak-->
         </div>
 
         <input type="radio" id="panel5" name="info-panel" class="panel-toggle">
         <div class="info-panel" aria-labelledby="panel5">
             <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
             <p><h3>Hvordan foregår undervisning</h3></p>
-            
+            <p>Undervisningen er en kombinasjon av</p>
+            <ul>
+                <li>Prosjektarbeid</li>
+                <li>Workshop</li>
+                <li>Presentasjoner</li>
+                <li>Veiledninger</li>
+                <li>Diskusjoner og refleksjoner</li>
+                <li>Forelesninger</li>
+                <li>Selvstudier</li>
+                <li>Gruppearbeid</li>
+                <li>Arbeidslivsrelevant bacheloroppgave</li>
+            </ul>
+            <!-- Diğer açıklama paragrafı -->
+            <p>For å gjennomføre studiet på normert tid, må du regne med å bruke om lag 40 timer per uke på studierelatert arbeid gjennom hele semesteret.</p>
         </div>
 
         <input type="radio" id="panel6" name="info-panel" class="panel-toggle">
