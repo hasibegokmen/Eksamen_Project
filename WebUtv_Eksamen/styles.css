@@ -296,18 +296,19 @@ label:hover {
 
 /* Ders programindaki Linklerin altındaki çizgiyi mavi yap */
 .studie-table-container .table a {
+    color:darkblue;
     text-decoration: underline; /* Alt çizgi eklemek */
-    text-decoration-color: blue; /* Alt çizgi rengini mavi yapmak */
-    color: inherit; /* Bağlantı metninin rengini mevcut metin renginde tutmak */
+    text-decoration-color: darkblue; /* Alt çizgi rengini mavi yapmak */
+    /*color: inherit; /* Bağlantı metninin rengini mevcut metin renginde tutmak */
 }
 
 /* Link tıklandığında mor renkte kalması için tiklandiginda*/
 .studie-table-container .table a:visited {
-    color: rgb(76, 27, 110); /* Tıklanmış link rengini mavi yap */
-    text-decoration-color: rgb(76, 27, 110); /* Alt çizgi rengini de mavi yap */
+    color: purple; /* Tıklanmış link rengini mor yap */
+    text-decoration-color: rgb(78, 13, 110); /* Alt çizgi rengini de mor yap */
 }
 
-/* Linkin üzerine gelindiğinde alt çizgi rengini daha belirgin yapabilirsiniz (isteğe bağlı) */
+/* Linkin üzerine gelindiğinde alt çizgi rengini daha belirgin yapabilirsiniz */
 .studie-table-container .table a:hover {
     color: blue; /* Üzerine gelindiğinde mavi renk */
     text-decoration-color: darkblue; /* Alt çizgi rengini koyu mavi yap */
