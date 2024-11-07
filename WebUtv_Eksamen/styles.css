@@ -156,13 +156,17 @@ https://www.youtube.com/watch?v=uSHc2YLGBSM&t=1257s videolarindan yararlanildi.*
     transition: max-height 0.5s ease-out;
 }
 
-/* Panel açılınca gösterilecek. Panelin acilip acilmadigini kontrol icin*/
+
+/*Panel açılınca gösterilecek. Panelin acilip acilmadigini kontrol icin*/
 .panel-toggle:checked + .info-panel {
     display: block;
     visibility: visible; /* Görünür yap */
     max-height: none; /* Açıldığında yüksekliği ayarla */
 }
 
+input[type="radio"]:checked + label + .info-panel {
+    display: block;
+}
 /* Kapatma Butonu info panel yan linkler icin anasayfa*/
 .close-btn {
     position: absolute;
@@ -179,20 +183,35 @@ https://www.youtube.com/watch?v=uSHc2YLGBSM&t=1257s videolarindan yararlanildi.*
     color: #333;
 }
 
-/* Hide panels by default */
-.info-panel {
-    display: none;
-    background-color: #f8f8f8;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    margin-top: 1rem;
-    border-radius: 0.3rem;
-}
 
 /* Style for the side menu */
 .side-link[aria-expanded="true"] {
     background-color: #1e867f;
 }
+
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #2d3223;
+  }
+  
+  th {
+    background-color: rgb(4, 37, 88);
+    color: white;
+    font-weight: bold;
+  }
+  
+  tr:second-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+
 
 /* Ana İçerik */
 .main-content {

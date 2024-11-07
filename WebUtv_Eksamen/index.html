@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css"><!--for contact til Styles-->
 </head>
 <body>
-
+<!--When we choise HTML Element, we took advantage of link= https://developer.mozilla.org/en-US/docs/Web/HTML/Element-->
 <header> 
     <div class="header-logo">
         <a href="index.html">OsloMet</a>
@@ -36,6 +36,7 @@
 
 <main class="grid-container">
     <aside class="side-menu">
+        <!--
         <label for="panel1-toggle" class="side-link" aria-expanded="false">Opptakskrav og poeng</label>
         <label for="panel2-toggle" class="side-link" aria-expanded="false">Slik søker du</label>
         <label for="panel3-toggle" class="side-link" aria-expanded="false">Hva lærer du?</label>
@@ -45,24 +46,63 @@
         <label for="panel7-toggle" class="side-link" aria-expanded="false">Hva kan du jobbe som?</label>
         <label for="panel8-toggle" class="side-link" aria-expanded="false">Utveksling</label>
         <label for="panel9-toggle" class="side-link" aria-expanded="false">Videre studiemuligheter ved OsloMet</label>
-        
+    </aside>-->
+    <input type="radio" id="panel-reset" name="info-panel" class="panel-toggle" checked>
+        <label for="panel1" class="side-link">Opptakskrav og poeng</label>
+        <label for="panel2" class="side-link">Slik søker du</label>
+        <label for="panel3" class="side-link">Hva lærer du?</label>
+        <label for="panel4" class="side-link">Studiets oppbygging</label>
+        <label for="panel5" class="side-link">Hvordan foregår undervisningen?</label>
+        <label for="panel6" class="side-link">Hva koster det?</label>
+        <label for="panel7" class="side-link">Hva kan du jobbe som?</label>
+        <label for="panel8" class="side-link">Utveksling</label>
+        <label for="panel9" class="side-link">Videre studiemuligheter ved OsloMet</label>
     </aside>
+<!--
+    <section class="main-content">
+        <input type="radio" id="panel1" name="info-panel" class="panel-toggle">
+        <div class="info-panel">
+            <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
+            <h3>Opptakskrav og poeng</h3>
+            <p>For å søke på dette programmet må du ha:</p>
+            <ul>
+                <li><a href="https://www.samordnaopptak.no/">Generell studiekompetanse</a> eller oppfylle kravene til realkompetanse</li>
+                <li>Matematikk R1 og R2</li>
+                <li>Fysikk 1</li>
+            </ul>
+            <p>Det kan være konkurranse om plassene. Ved forrige opptak kom alle kvalifiserte søkere inn.</p>
+        </div>
 
+        <input type="radio" id="panel2" name="info-panel" class="panel-toggle">
+        <div class="info-panel">
+            <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
+            <h3>Slik søker du</h3>
+            <p>Du søker på Samordna opptak med studiekode 215 503.</p>
+            <ul>
+                <li>15. april: ordinær søknadsfrist</li>
+                <li>1. mars: frist for enkelte søkere</li>
+            </ul>
+            <p><a href="https://www.oslomet.no/studier/soknad-og-opptak/opptak-til-bachelor-aarsstudier">Mer om å søke på bachelor.</a></p>
+        </div>
+    </section>-->
+
+    
     <section class="main-content" id="main-content">
         <h2>Matematisk modellering og datavitenskap – ingeniør</h2>
             <h3>Bachelorprogram</h3>
             <p>Det skal komme hit video</p>
         
             <!--Buraya video gelecek, tasarimin nasil olacagini denemek icin gecici olarak eklenmistir-->
-        <div class="video-preview">
+        <picture class="video-preview">
             <img src="./images/videobilde.png" alt="Video" width="800px" height="600px">
-        <div class="video-preview">
+        </picture>
         
 
-        <!-- Toggleable Panels with Checkboxes -->
-        <input type="checkbox" id="panel1-toggle" class="panel-toggle">
+        <!--Toggleable Panels with radiobutton -->
+        <input type="radio" id="panel1" name="info-panel" class="panel-toggle">
         <div class="info-panel" aria-labelledby="panel1">
-            <label for="panel1-toggle" class="close-btn"><i class="fa fa-times"></i></label>
+            <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
+            <p><h3>Opptakskrav og poeng</h3></p>
             <p>For å søke på dette programmet må du ha:</p>
             <ul>
                 <li><a href="https://www.samordnaopptak.no/">Generell studiekompetanse</a> 
@@ -76,16 +116,67 @@
                 kan du søke på dette studiet om du har bestått ettårig forkurs for ingeniørutdanning.</p>
         </div>
 
-        <input type="checkbox" id="panel2-toggle" class="panel-toggle">
+        <input type="radio" id="panel2" name="info-panel" class="panel-toggle">
         <div class="info-panel" aria-labelledby="panel2">
-            <label for="panel2-toggle" class="close-btn"><i class="fa fa-times"></i></label>
-            <p>This is the information for Link 2.</p>
+            <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
+            <p><h3>Slik søker du</h3></p>
+            <p>Du søker på Samordna opptak med studiekode 215 503.</p>
+            <ul>
+                <li>15. april: ordinær søknadsfrist</li>
+                <li>1. mars: frist for enkelte søkere</li>
+            </ul>
+            <p><a href="https://www.oslomet.no/studier/soknad-og-opptak/opptak-til-bachelor-aarsstudier">Mer om å søke på bachelor.</a></p>
         </div>
 
-        <input type="checkbox" id="panel3-toggle" class="panel-toggle">
+        <input type="radio" id="panel3" name="info-panel" class="panel-toggle">
         <div class="info-panel" aria-labelledby="panel3">
-            <label for="panel3-toggle" class="close-btn"><i class="fa fa-times"></i></label>
-            <p>This is the information for Link 3.</p>
+            <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
+            <p><h3>Hva lærer du</h3></p>
+            <article>
+                <p>Bachelor i matematisk modellering og datavitenskap kobler sammen matematikk, informatikk, fysikk og statistikk. </p>
+                <p>Du får innsikt i matematiske modeller som brukes i praktisk problemløsning blant annet i medisinsk kjemi, biologiske prosesser og ulike samfunnssystemer. </p>
+                <p>Det første studieåret har du emner i blant annet matematikk, programmering, fysikk og kjemi for å få en felles forståelse av tematikken.</p>
+                <p>Det siste semesteret skriver du en bacheloroppgave tett knyttet til problemstillinger i arbeidslivet.</p>
+                <p>Første året velger du hvilken av disse spesialiseringene du vil ta.</p>
+            </article>
+        </div>
+
+        <input type="radio" id="panel4" name="info-panel" class="panel-toggle">
+        <div class="info-panel" aria-labelledby="panel4">
+            <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
+            <p><h3>Studiets oppbygging</h3></p>
+            
+        </div>
+
+        <input type="radio" id="panel5" name="info-panel" class="panel-toggle">
+        <div class="info-panel" aria-labelledby="panel5">
+            <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
+            <p><h3>Hvordan foregår undervisning</h3></p>
+            
+        </div>
+
+        <input type="radio" id="panel6" name="info-panel" class="panel-toggle">
+        <div class="info-panel" aria-labelledby="panel6">
+            <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
+            <p><h3>Hva koster det?</h3></p>
+        </div>
+
+        <input type="radio" id="panel7" name="info-panel" class="panel-toggle">
+        <div class="info-panel" aria-labelledby="panel7">
+            <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
+            <p><h3>Hva kan du jobbe som?</h3></p>
+        </div>
+
+        <input type="radio" id="panel8" name="info-panel" class="panel-toggle">
+        <div class="info-panel" aria-labelledby="panel8">
+            <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
+            <p><h3>Utveksling</h3></p>
+        </div>
+
+        <input type="radio" id="panel9" name="info-panel" class="panel-toggle">
+        <div class="info-panel" aria-labelledby="panel9">
+            <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
+            <p><h3>Videre studiemuligheter ved OsloMet</h3></p>
         </div>
     </section>
     
