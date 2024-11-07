@@ -324,13 +324,6 @@ label:hover {
 
 }
 
-/* Sağ Menü */
-.extra-info {
-    background-color: #f4f4f4;
-    padding: 0.6rem;
-    font-size: 1rem;
-}
-
 .video-preview {
     width: 100%;
     display: block;
@@ -343,6 +336,52 @@ label:hover {
     border-radius: 8px; /* Rounds the corners of the image */
     /* Additional styling specific to this image */
 }
+
+/* Sağ side
+
+/* Ana konteyner stilleri */
+.extra-info {
+    background-color: #f9f9f9; /* Hafif bir arka plan rengi */
+    padding: 20px;
+    border-radius: 8px; /* Köşeleri yuvarla */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    max-width: 400px; /* Genişliği sınırlandır */
+    margin: 20px auto; /* Ortala */
+}
+
+/* Her bir bilgi bloğu için stil */
+.shortinfo {
+    padding: 15px 0; /* Yukarıdan ve aşağıdan boşluk bırak */
+    border-bottom: 1px solid #00093c; /* Alt çizgi ekle */
+}
+
+/* Son öğedeki alt çizgiyi kaldır */
+.shortinfo:last-child {
+    border-bottom: none;
+}
+
+/* Başlık stilini daha belirgin yap */
+.shortinfo h3 {
+    font-size: 1.1em;
+    color: #333;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Bilgi metni için stil */
+.shortinfo p {
+    margin: 5px 0 0; /* Başlığın altında küçük bir boşluk */
+    color: #555;
+}
+
+/*Buton olmadigi icin bundan emin degilim*/
+/* Hover efekti */
+.shortinfo:hover {
+    background-color: #f0f0f0; /* Üzerine gelindiğinde arka plan rengini değiştir */
+    transition: background-color 0.3s ease;
+}
+
+
 
 /*Telefon boyutuna gelince olacak degisiklikler*/
 /* Mobilde Sağdan Açılan Yan Menü */
