@@ -39,6 +39,36 @@ header h1 {
     margin: 0;
 }
 
+/* Search */
+
+.search-box {
+    height: px;
+    display: flex;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-style: outset;
+    border-color: #ddd;
+    border-radius: 30px;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+    .search-box:hover input {
+        width: 100%;
+    }
+    .search-box input {
+        width: 0;
+        outline: none;
+        border: none;
+        font-weight: 500;
+        transition: 0.8s;
+        background: transparent;
+        color: #ddd;
+    }
+    .search-box a .fas{
+        color:#ddd;
+        font-size:18px;
+    }
+
 /* Menü at Navbar*/
 .menu {
     text-align: right;
