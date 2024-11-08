@@ -383,6 +383,87 @@ label:hover {
 
 
 
+/*Footer*/
+footer{
+    width: 100%;
+    position: relative;
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    color: white;
+    padding: 20px 0;
+    font-size: 13px;
+    line-height: 20px;
+}
+   
+.row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:flex-start ;
+    justify-content: space-between;
+    
+}
+.column{
+    
+    padding: 10px;
+    flex: 1;
+    max-width: 300px;
+}
+
+
+
+.column h3{
+    color: white;
+   font-size: medium;
+   margin-top:10px ;
+}
+.contact-link {
+    display: block; /* Linki yeni satıra taşır */
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    margin-top: 40px; /* Üstten biraz boşluk ekler */
+}
+    .contact-link:hover{
+        text-decoration: underline;
+    }
+ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+ul li a{
+    text-decoration:none ;
+    color: white;
+}
+ul li a:hover{
+    text-decoration: underline;
+}
+.column i{
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 2rem; /*to make the social media icons bigger*/
+}
+.column a{
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    display: block;
+    transition: transform 0.3s ease;
+    padding: 5px 10px;
+}
+.column a:hover,
+.column a:focus{
+    transform: scale(1.1);
+    /*kutucuk seklinde gozuksun istenirse outline: 2px solid white; bu eklenebilir*/
+    outline-offset: 4px;
+}
+
+/* Footer kodlari burada bitiyor Duzenlenecek*/
+
+
+
 /*Telefon boyutuna gelince olacak degisiklikler*/
 /* Mobilde Sağdan Açılan Yan Menü */
 @media (max-width: 600px) {
