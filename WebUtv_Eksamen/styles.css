@@ -26,12 +26,12 @@ header {
     color: rgb(250, 250, 250);
 }
 
-/*Logo OsloMet*/
+/*Logo OsloMet*//*logo degisince bu kalkabilir*/
 .header-logo {
     font-size: 2rem;
     font-weight: bold;
     text-align: left;
-    padding-left: 1.2rem;
+    padding-left: 1.2rem;/*bosluk*/
 }
 
 header h1 {
@@ -113,6 +113,7 @@ header h1 {
     font-weight: bold;
 }
 
+/
 .menu a:hover {
     color: #e9e3e4;
     box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.6);
@@ -381,6 +382,7 @@ label:hover {
     transition: background-color 0.3s ease;
 }
 
+/* Video alti kisim*/
 
 
 /*Footer*/
@@ -465,9 +467,8 @@ ul li a:hover{
 
 
 /*Telefon boyutuna gelince olacak degisiklikler*/
-/* Mobilde Sağdan Açılan Yan Menü */
 @media (max-width: 600px) {
-    /* Hamburger menü simgesi */
+    /* Hamburger menü simgesi Mobilde Sağdan Açılan Yan Menü */
     .kontrol {
         display: block;
         font-size: 2rem;
@@ -483,7 +484,7 @@ ul li a:hover{
     /* Yan menü gizli başlar */
     .menu {
         position: fixed;
-        right: -100%;
+        right: -100%; /*hamburger menunun sagden gelmesini sagliyor*/
         top: 0;
         height: 50%;
         width: 150px;
@@ -493,6 +494,7 @@ ul li a:hover{
         padding-top: 60px;
     }
 
+    /* */
     .menu ul {
         display: flex;
         flex-direction: column;
@@ -533,7 +535,7 @@ ul li a:hover{
         display: inline-block; /* X görünür hale gelir */
     }
 
-    /* Grid düzenlemesi mobilde */
+    /* Grid düzenlemesi mobilde Bunlar da daha sonra gorusulecek*/
     .grid-container {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto;
