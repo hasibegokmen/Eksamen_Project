@@ -86,7 +86,7 @@ header h1 {
 /* Yatay Menü Stilleri (Büyük Ekranlar) Menu Navbar*/
 .menu ul {
     display: flex;
-    gap: 0.6rem;
+    gap: 0.6rem;/*Bunu kontol et*/
     margin: 0;
     padding: 0;
     list-style: none;
