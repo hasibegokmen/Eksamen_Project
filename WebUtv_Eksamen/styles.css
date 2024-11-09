@@ -113,14 +113,14 @@ header h1 {
     font-weight: bold;
 }
 
-.menu a:hover {
-    color: #e9e3e4;
-    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.6);
-}
+/*
+
 
 /* Hamburger menu yapiminda https://www.youtube.com/watch?v=x3Zu_ncHpas&list=WL&index=6
 https://www.youtube.com/watch?v=uSHc2YLGBSM&t=1257s videolarindan yararlanildi.*/
-/* Hamburger Menü ve Yan Menü (Mobil Ekranlar) Uc cizgi */
+/* Hamburger Menü ve Yan Menü (Mobil Ekranlar) Uc cizgi. Hamburger menununun acilip kapanmasini
+saglamak icin ve bunu kontrol etmek icin gizli bir checkbox eklendi*/
+
 .kontrol {
     display: none; /* Büyük ekranlarda gizli */
 }
@@ -164,15 +164,18 @@ https://www.youtube.com/watch?v=uSHc2YLGBSM&t=1257s videolarindan yararlanildi.*
     font-size: 1rem;
 }
 
+/*linklerin gorunurlugunu artirmak icin hover effekt eklendi*/
 .side-link:hover {
     background-color: #1e867f;
 }
 
 /* Paneli Gizle Göster */
 .panel-toggle {
-    display: none;
+    display: none; /*Ilgili linke tiklanmadigi zaman gizli*/
 }
 
+/*side-linklere tiklandigi zaman bilgilerin gorunmesi icin info-panel eklendi.
+Ilk olarak kapali ayarlandi.Acildigi zamanki goruntusu*/
 /* Panel içeriği */
 .info-panel {
     display: none;
@@ -194,7 +197,8 @@ https://www.youtube.com/watch?v=uSHc2YLGBSM&t=1257s videolarindan yararlanildi.*
 }
 
 
-/*Panel açılınca gösterilecek. Panelin acilip acilmadigini kontrol icin*/
+/*Panel açılınca gösterilecek. Ilgili info-panelin radio butonu aktif oldugunda info-panel acilacak*/
+
 .panel-toggle:checked + .info-panel {
     display: block;
     visibility: visible; /* Görünür yap */
@@ -216,10 +220,16 @@ input[type="radio"]:checked + label + .info-panel {
     cursor: pointer;
 }
 
-.close-btn:hover {
-    color: #333;
+.samordlink{ /*link oldugu anlasilmasi icin mavi renk*/
+    color:blue;
 }
 
+.samordlink:visited {
+    color: purple; /* Ziyaret edildiginde link rengini mor yap */
+    text-decoration-color: rgb(78, 13, 110); /* Alt çizgi rengini de mor yap */
+}
+
+/*ACIT sayfasina yonlendiren buton olusturmak icin menydeki buton stilinden yararlanildi butunluk saglamak icin*/
 .acit-btn {
     background-color: #2e3b86;
     color: white;
@@ -229,9 +239,10 @@ input[type="radio"]:checked + label + .info-panel {
     display: inline-block;
 }
 
+
 .acit-btn:hover {
     color: #e9e3e4;
-    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.6);
+    text-decoration: underline;
 }
 
 
@@ -267,17 +278,15 @@ input[type="radio"]:checked + label + .info-panel {
     display: none;
   }
 
-/*Radio button for to show right studie prog*/
+/*Radio button for to show right studie prog. Ilgili programla ilgili radio butona tiklandiginda
+ilgili ders programinin acilmasi icin*/
 #matematik-fysikk:checked ~ .studie-table-container #matematik-fysikk-prog,
 #statistik-data:checked ~ .studie-table-container #statistik-data-prog,
 #vitenskapelige-beregninger:checked ~ .studie-table-container #vitenskapelige-beregninger-prog {
     display: block;
 }
 
-/*
-.table-toggle{
-    display: none;
-}*/
+
 
 /*studie program name are formated*/
 label {
@@ -292,26 +301,6 @@ label {
 
 label:hover {
     background-color: #0056b3;
-}
-
-/* Ders programindaki Linklerin altındaki çizgiyi mavi yap */
-.studie-table-container .table a {
-    color:darkblue;
-    text-decoration: underline; /* Alt çizgi eklemek */
-    text-decoration-color: darkblue; /* Alt çizgi rengini mavi yapmak */
-    /*color: inherit; /* Bağlantı metninin rengini mevcut metin renginde tutmak */
-}
-
-/* Link tıklandığında mor renkte kalması için tiklandiginda*/
-.studie-table-container .table a:visited {
-    color: purple; /* Tıklanmış link rengini mor yap */
-    text-decoration-color: rgb(78, 13, 110); /* Alt çizgi rengini de mor yap */
-}
-
-/* Linkin üzerine gelindiğinde alt çizgi rengini daha belirgin yapabilirsiniz */
-.studie-table-container .table a:hover {
-    color: blue; /* Üzerine gelindiğinde mavi renk */
-    text-decoration-color: darkblue; /* Alt çizgi rengini koyu mavi yap */
 }
 
 
@@ -337,7 +326,7 @@ label:hover {
     /* Additional styling specific to this image */
 }
 
-/* Sağ side
+/* Sağ side Burasi tusa donusecek o zaman burayla ilgili stillerde silinecek
 
 /* Ana konteyner stilleri */
 .extra-info {
@@ -374,12 +363,35 @@ label:hover {
     color: #555;
 }
 
-/*Buton olmadigi icin bundan emin degilim*/
-/* Hover efekti */
-.shortinfo:hover {
-    background-color: #f0f0f0; /* Üzerine gelindiğinde arka plan rengini değiştir */
-    transition: background-color 0.3s ease;
-}
+/*Silinecek aside ile ilgili stil burada bitiyor*/
+
+/*Home page ikinci kisim stilleri burada basliyor*/
+
+
+
+/*Home page ikinci kisim stilleri burada bitiyor*/
+
+
+/*Activity ikinci kisim stilleri burada basliyor*/
+
+
+
+/*Activity ikinci kisim stilleri burada bitiyor*/
+
+
+/*Accesibility ikinci kisim stilleri burada basliyor*/
+
+
+
+/*Accesibiity ikinci kisim stilleri burada bitiyor*/
+
+
+/*Github page*/
+
+
+
+
+
 
 
 
