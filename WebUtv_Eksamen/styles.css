@@ -553,5 +553,66 @@ ul li a:hover{
     }
 }
 
+/* CSS-stiler for aktivitetsiden */
+
+.aktivitetsoverskrift {
+    text-align: center;
+    color: var(--semi-dark-teal);
+    margin: 2rem;
+    font-size: 2.5rem; 
+}
+
+/* Sentraliserer og setter maks bredde */
+.main {
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+/* Bruker Grid til å organisere innholdet */
+.innholdsinnpakking {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Første kolonne tar 2/3 av plassen, andre kolonne tar 1/3 */
+    gap: 1rem; /* Mellomrom mellom elementene i gridet */
+    padding: 1rem; /* Innfelt plass på hver side */
+    /*background-color: #00b3a7; /* Farge av bakgrunn */
+    text-align: justify; /* Justerer teksten til begge sider */
+    border-radius: 10px; /* Avrunder hjørnene */
+}
+
+/* Tittelstil */
+.innholdsinnpakking h3 {
+    color: #2e3b86;
+}
+
+/* Bilde i gridet, får full bredde og skyggeeffekt */
+.innholdsinnpakking img {
+    width: 100%; /* Görselin genişliği %100 olacak */
+    height: auto; /* Yükseklik orantılı olarak ayarlanacak */
+    object-fit: cover; /* Görselin kapsayıcıya uyacak şekilde kesileceği ayar */
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.1); /* Bilde için gölge ekler */
+    border-radius: 4px; /* Bilde köşe yuvarlaması */
+    max-width: 100%; /* Görselin maksimum genişliği %100 olacak */
+}
+
+/* Tekstinnhold får mer plass i gridet */
+.tekst-innhold {
+    display: grid; /* Grid düzenini kullan */
+    grid-template-rows: auto; /* İçerik satırları otomatik yüksekliğe göre ayarlanır */
+    gap: 1rem; /* Grid elemanları arasında boşluk */
+    font-size: 1.2rem; /* Yazı boyutunu artırır */
+    line-height: 1.6; /* Satır aralığını artırır */
+}
+
+
+/* Figure-elementet (bildet med bildetekst) */
+.figure {
+    display: flex;
+    justify-content: center; /* Sentrerer bildet */
+    align-items: center; /* Sentrerer vertikalt */
+    max-width: 100%;
+ /* Figure öğesinin genişliği de %100 olacak */
+}
+
+
 
 
