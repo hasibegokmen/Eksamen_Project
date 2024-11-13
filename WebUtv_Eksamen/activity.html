@@ -2,32 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--for responsive-->
     <title>Home - Mathematical Modelling</title>
+    <!--for hamburger menu using. Hamburber menu symbol and "X" symbol-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"><!--for contact til Styles-->
 </head>
 <body>
 
-<header>
-    <div class="header-logo">
-        <a href="index.html">OsloMet</a>
-    </div>
-
-    <!--Search-->
-    <div class="search-box">
+<!--When we choise HTML Element, we took advantage of link= https://www.w3schools.com/html/html_blocks.asp-->
+<header> 
+        <img class="header-logo" src="oslometlogo2.jpg" alt="The image cannot find!">
+   
+     <!--Search-->
+     <div class="search-box">
         <input type="text" placeholder="Search...">
         <a href="#">
             <i class="fas fa-search"></i>
         </a>
     </div>
 
-    
-    <h1>Mathematical Modelling</h1>
-    <nav>
+    <nav class="navbar"> <!--Navbar-->
         <!-- Checkbox for toggling the menu -->
         <input type="checkbox" id="kontrol">
-        <!-- Label for hamburger icon -->
+        <!-- Label for hamburger icon and closs-button on Navbar -->
         <label for="kontrol" class="kontrol">
             <i class="fa fa-bars"></i>
             <i class="fa fa-times"></i>
@@ -43,3 +41,4 @@
         </div>
     </nav>
 </header>
+
