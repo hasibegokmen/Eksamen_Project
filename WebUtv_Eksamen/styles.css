@@ -648,7 +648,7 @@ ul li a:hover{
 }
 
 /* Kart düzeni */
-.grid-item-activity {
+.grid-item-activity:nth-child(even) {
   display: grid;
   grid-template-columns: 2fr 3fr;
   grid-template-areas: "image content";
