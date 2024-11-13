@@ -637,7 +637,7 @@ ul li a:hover{
  /* Figure öğesinin genişliği de %100 olacak */
 }
 /* Ana konteyner */
-.grid-container {
+.grid-container-activity {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
@@ -648,7 +648,7 @@ ul li a:hover{
 }
 
 /* Kart düzeni */
-.grid-item {
+.grid-item-activity {
   display: grid;
   grid-template-columns: 2fr 3fr;
   grid-template-areas: "image content";
@@ -662,7 +662,7 @@ ul li a:hover{
   }
 
 /* Yazı ve görsel hizalaması */
-.grid-item artikel {
+.grid-item-activity artikel {
   padding: 1rem;
   display: grid; /* Grid düzenini kullan */
   width:50%;
@@ -672,7 +672,7 @@ ul li a:hover{
   line-height: 1.6; /* Satır aralığını artırır */
 }
 
-.grid-item figure {
+.grid-item-activity figure {
   width: 100%;
   height: auto;
   border-radius: 5px;
@@ -680,20 +680,20 @@ ul li a:hover{
 }
 
 /* Çift numaralı kartların düzenini ters çevir */
-.grid-item:nth-child(even) {
+.grid-item-activity:nth-child(even) {
   grid-template-areas: "content image";
   grid-template-columns: 1fr 1fr;
   /*flex-direction: row-reverse;*/
 }
 
 /* Grid alanları tanımlaması */
-.grid-item artikel {
+.grid-item-activity artikel {
   grid-area: content;
   width: 100%;
    /*width: 50%;*/
 }
 
-.grid-item img {
+.grid-item-activity img {
   width: 100%;
   border-radius: 5px;
   height: auto; /* Yükseklik orantılı olarak ayarlanacak */
@@ -705,14 +705,14 @@ ul li a:hover{
 }
 
 /* Başlıklar */
-.grid-item h3,
+.grid-item-activity h3,
 h4,
 h5,
 h6 {
   color: #05b8dc;
   line-height: 3rem;
 }
-.grid-item figure {
+.grid-item-activity figure {
     grid-area: image;
     width: 100%;
     /*width:50%;*/
