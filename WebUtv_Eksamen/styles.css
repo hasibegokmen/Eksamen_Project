@@ -637,7 +637,7 @@ ul li a:hover{
  /* Figure öğesinin genişliği de %100 olacak */
 }
 /* Ana konteyner */
-.grid-container {
+.grid-container-activity {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
@@ -648,7 +648,7 @@ ul li a:hover{
 }
 
 /* Kart düzeni */
-.grid-item-activity:nth-child(even) {
+.grid-item-activity {
   display: grid;
   grid-template-columns: 2fr 3fr;
   grid-template-areas: "image content";
