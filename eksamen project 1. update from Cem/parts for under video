@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Genel stiller */
+    .accordion {
+      width: 100%;
+      max-width: 600px;
+      margin: 10px auto;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+      color: white;
+    }
+
+    /* Başlık stili */
+    .accordion label {
+      display: block;
+      padding: 15px;
+      background-color: #00093C;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* Gizli checkbox ile içerik kontrolü */
+    .accordion input[type="checkbox"] {
+      display: none;
+    }
+
+    /* Panelin içerik stili */
+    .content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      background-color: rgb(255, 255, 255);
+      padding: 0 15px;
+      color: black;
+    }
+
+    /* Açık olduğunda içeriğin gösterilmesi */
+    .accordion input[type="checkbox"]:checked ~ .content {
+      max-height: 1000px; /* İçeriğe göre değeri ayarlayabilirsiniz */
+      padding: 15px;
+    }
+
+    /* 1. panel link dizayni*/
+    .link-design{
+
+
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="accordion">
+  <input type="checkbox" id="panel1">
+  <label for="panel1">Du er kanskje også interessert i disse?</label>
+  <div class="content">
+    <div>
+      <div class="link-design">
+        <a href="https://www.oslomet.no/studier/tkd/anvendt-datateknologi">
+          <p>Anvendt datateknologi</p>
+          <p>Bachelorprogram &vert; 3 år &vert; Pilestredet i Oslo &vert; Heltid</p></a>
+      </div>
+      <div class="link-design">
+        <a href="https://www.oslomet.no/studier/tkd/bioteknologi-kjemiingenior">
+          <p>Bioteknologi- og kjemiingeniør</p>
+          <p>Bachelorprogram &vert; 3 år &vert; Pilestredet i Oslo &vert; Heltid</p>
+        </a>
+      </div>
+      <div class="link-design">
+        <a href="https://www.oslomet.no/studier/tkd/byggingenior">
+          <p>Byggingeniør</p>
+          <p>Bachelorprogram &vert; 3 år &vert; Pilestredet i Oslo &vert; Heltid</p>
+        </a>
+      </div>
+      <div class="link-design">
+        <a href="https://www.oslomet.no/studier/tkd/dataingenior">
+          <p>Dataingeniør</p>
+          <p>Bachelorprogram &vert; 3 år &vert; Pilestredet i Oslo &vert; Heltid</p>
+        </a>
+      </div>
+      <div class="link-design">
+        <a href="https://www.oslomet.no/studier/tkd/elektronikkingenior">
+          <p>Elektronikkingeniør</p>
+          <p>Bachelorprogram &vert; 3 år &vert; Pilestredet i Oslo &vert; Heltid</p>
+        </a>
+      </div>
+      <div class="link-design">
+        <a href="https://www.oslomet.no/studier/tkd/informasjonsteknologi">
+          <p>Informasjonsteknologi</p>
+          <p>Bachelorprogram &vert; 3 år &vert; Pilestredet i Oslo &vert; Heltid</p>
+        </a>
+      </div>
+      <div class="link-design">
+        <a href="https://www.oslomet.no/studier/tkd/maskiningenior">
+          <p>Maskiningeniør</p>
+          <p>Bachelorprogram &vert; 3 år &vert; Pilestredet i Oslo &vert; Heltid</p>
+        </a>
+      </div>
+      <div class="link-design">
+        <a href="https://www.oslomet.no/studier/tkd/tre-termin-ingenior">
+          <p>Tre-terminsordning til ingeniørutdanning</p>
+          <p>Bachelorprogram &vert; 3 år &vert; Pilestredet i Oslo &vert; Heltid</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="accordion">
+  <input type="checkbox" id="panel2">
+  <label for="panel2">Studenthistorier</label>
+  <div class="content">
+    <div>
+      <div> <a href="https://www.oslomet.no/studier/studenthistorier?student_story=147">
+        <p>Teknologi og design</p>
+      </a>
+      </div>
+      <div>
+        <a href="https://www.oslomet.no/studier/studenthistorier/spa-fremtiden-matematikk-datavitenskap">
+          <p>Spå fremtiden med matematikk og datavitenskap</p>
+          <p>Har du lyst til å finne ut hva som vil skje i fremtiden? Lær å bruke verktøy for å forutsi alt fra været og strømprisene til utviklingen i boligmarkedet.</p>
+        </a></div>
+      <div>
+        <a href="https://www.oslomet.no/studier/studenthistorier">
+          <p>Flere studenthistorier</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
