@@ -146,7 +146,7 @@ saglamak icin ve bunu kontrol etmek icin gizli bir checkbox eklendi*/
     grid-template-columns: 15% 70% 15%;
     gap: o.6rem;
     padding: 1.2rem;
-    height: calc(100vh - 70px);
+    height: calc(140vh - 70px);
 }
 
 /* Home page Sol Menü */
@@ -396,6 +396,67 @@ label:hover {
 
 
 /*Github page*/
+
+
+
+
+
+
+
+/*Video altina gelen kisim*/
+
+/* Genel stiller */
+.accordion {
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    color: white;
+}
+
+/* Başlık stili */
+.accordion label {
+    display: block;
+    padding: 15px;
+    background-color: #00093C;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Gizli checkbox ile içerik kontrolü */
+.accordion input[type="checkbox"] {
+    display: none;
+}
+
+/* Panelin içerik stili */
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background-color: rgb(255, 255, 255);
+    padding: 0 15px;
+    color: black;
+}
+
+/* Açık olduğunda içeriğin gösterilmesi */
+.accordion input[type="checkbox"]:checked ~ .content {
+    max-height: 1000px; /* İçeriğe göre değeri ayarlayabilirsiniz */
+    padding: 15px;
+}
+
+/* 1. panel link dizayni*/
+.link-design{
+    border-bottom-style: solid;
+
+
+}
+.images-613{
+    width: 450px;
+}
 
 
 
