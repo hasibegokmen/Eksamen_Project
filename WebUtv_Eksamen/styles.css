@@ -634,73 +634,86 @@ ul li a:hover{
     justify-content: center; /* Sentrerer bildet */
     align-items: center; /* Sentrerer vertikalt */
     max-width: 100%;
+    max-width: 1200px;
  /* Figure öğesinin genişliği de %100 olacak */
 }
 /* Ana konteyner */
 .grid-container-activity {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  padding: 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    
 }
 
-/* Kart düzeni */
 .grid-item-activity {
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  grid-template-areas: "image content";
-  gap: 2rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  padding: 1rem;
-  border-radius: 20px;
-  background-color: #fff;
-  align-items: center;
-  margin: 2rem 0;
-  }
+    display: flex;
+    gap: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+    align-items: center;
+    max-width: 1000px; /* Set max-width for better control */
+    width: 100%;
+    margin-bottom: 2rem;/*added space between boxes*/
+    max-width: 1800px;
+    border: 3px solid #00a1b3;
+}
 
-/* Yazı ve görsel hizalaması */
-.grid-item-activity artikel {
-  padding: 1rem;
-  display: grid; /* Grid düzenini kullan */
-  width:50%;
-  grid-template-rows: auto; /* İçerik satırları otomatik yüksekliğe göre ayarlanır */
-  gap: 1rem; /* Grid elemanları arasında boşluk */
-  font-size: 1.2rem; /* Yazı boyutunu artırır */
-  line-height: 1.6; /* Satır aralığını artırır */
+.grid-item-activity article,
+.grid-item-activity figure {
+    flex: 1; /* Ensures each takes up equal space */
 }
 
 .grid-item-activity figure {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  
-}
-
-/* Çift numaralı kartların düzenini ters çevir */
-.grid-item-activity:nth-child(even) {
-  grid-template-areas: "content image";
-  grid-template-columns: 1fr 1fr;
-  /*flex-direction: row-reverse;*/
-}
-
-/* Grid alanları tanımlaması */
-.grid-item-activity artikel {
-  grid-area: content;
-  width: 100%;
-   /*width: 50%;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
 }
 
 .grid-item-activity img {
-  width: 100%;
-  border-radius: 5px;
-  height: auto; /* Yükseklik orantılı olarak ayarlanacak */
-  object-fit: cover; /* Görselin kapsayıcıya uyacak şekilde kesileceği ayar */
-  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.1); /* Bilde için gölge ekler */
-  border-radius: 4px; /* Bilde köşe yuvarlaması */
-  max-width: 100%; /* Görselin maksimum genişliği %100 olacak */
+    width: 100%;
+    max-width: 400px; /* Set a max-width for consistency */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for aesthetics */
+}
+
+.grid-item-activity:nth-child(even) {
+    flex-direction: row-reverse; /*flex-direction: row-reverse;*/
+    
+}
+
+  
+
+.grid-item-activity:nth-child(odd) {
+   
+    flex-direction: row;
+    
+    
+    
+   
+    /*flex-direction: row-reverse;*/
+  }
+
+/* Grid alanları tanımlaması */
+.grid-item-activity artikel {
+    flex: 1;
+  font-size: 1rem;
+  line-height: 1.6;
+  
+}
+
+.grid-item-activity img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+   
 
 }
 
@@ -711,12 +724,19 @@ h5,
 h6 {
   color: #05b8dc;
   line-height: 3rem;
+  font-size:large ;
 }
 .grid-item-activity figure {
     grid-area: image;
     width: 100%;
     /*width:50%;*/
 }
+figure, .figure, .grid-item-activity figure {
+    margin: 0;
+    display: block;
+    width: 100%;
+  }
+  
 
 /* Dış link stil */
 .link {
@@ -730,9 +750,3 @@ figcaption {
   font-style: italic;
 }
 /* finish activitet side*/
-
-
-
-
-
-
