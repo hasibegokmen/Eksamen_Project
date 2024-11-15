@@ -146,8 +146,7 @@ saglamak icin ve bunu kontrol etmek icin gizli bir checkbox eklendi*/
     grid-template-columns: 15% 70% 15%;
     gap: o.6rem;
     padding: 1.2rem;
-    height: calc(160vh - 70px);
-
+    height: calc(100vh - 70px);
 }
 
 /* Home page Sol Menü */
@@ -402,64 +401,6 @@ label:hover {
 
 
 
-/*Video altina gelen kisim*/
-
-/* Genel stiller */
-.accordion {
-    width: 100%;
-    max-width: 600px;
-    margin: 10px auto;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    color: white;
-}
-
-/* Başlık stili */
-.accordion label {
-    display: block;
-    padding: 15px;
-    background-color: #00093C;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    border-bottom: 1px solid #ddd;
-}
-
-/* Gizli checkbox ile içerik kontrolü */
-.accordion input[type="checkbox"] {
-    display: none;
-}
-
-/* Panelin içerik stili */
-.content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-    background-color: rgb(255, 255, 255);
-    padding: 0 15px;
-    color: black;
-}
-
-/* Açık olduğunda içeriğin gösterilmesi */
-.accordion input[type="checkbox"]:checked ~ .content {
-    max-height: 1000px; /* İçeriğe göre değeri ayarlayabilirsiniz */
-    padding: 15px;
-}
-
-/* 1. panel link dizayni*/
-.link-design{
-    border-bottom-style: solid;
-
-
-}
-.images-613{
-    width: 450px;
-}
-
-
-
-
 
 
 
@@ -467,9 +408,10 @@ label:hover {
 footer{
     width: 100%;
     position: relative;
+    bottom: 0;
     background: linear-gradient(to right, #00093c, #2d0b00);
     color: white;
-    padding: 20px 0;
+    padding: 10px 0;
     font-size: 13px;
     line-height: 20px;
 }
@@ -481,21 +423,35 @@ footer{
     flex-wrap: wrap;
     align-items:flex-start ;
     justify-content: space-between;
+    gap:1rem; /*decrerases the distance between the rows*/
     
 }
 .column{
-    
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px;
     flex: 1;
     max-width: 300px;
 }
 
-
+.column p {
+    font-size: 1.2rem; /* Yazı boyutunu büyütün */
+    line-height: 1.4; /* Satır aralığını ayarlayın */
+}
+.column p a{
+    font-size: 1.3rem;;
+}
 
 .column h3{
     color: white;
-   font-size: medium;
-   margin-top:10px ;
+   font-size: x-large;
+   margin-top:5px ;
+   font-weight: bold;
+  white-space: nowrap;
+   padding: 2rem;
+   margin-bottom: 0;
+   
 }
 .contact-link {
     display: block; /* Linki yeni satıra taşır */
@@ -503,7 +459,8 @@ footer{
     font-size: 1rem;
     text-decoration: none;
     color: white;
-    margin-top: 40px; /* Üstten biraz boşluk ekler */
+    margin-top: 60px; /* Üstten biraz boşluk ekler */
+    text-decoration: underline;
 }
     .contact-link:hover{
         text-decoration: underline;
@@ -513,12 +470,12 @@ ul li{
     margin-bottom: 12px;
 }
 ul li a{
-    text-decoration:none ;
+    text-decoration:underline ;
     color: white;
+    
 }
-ul li a:hover{
-    text-decoration: underline;
-}
+
+
 .column i{
     display: block;
     margin-bottom: 10px;
@@ -527,7 +484,7 @@ ul li a:hover{
 }
 .column a{
     color: white;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 10px;
     display: block;
     transition: transform 0.3s ease;
@@ -538,6 +495,36 @@ ul li a:hover{
     transform: scale(1.1);
     /*kutucuk seklinde gozuksun istenirse outline: 2px solid white; bu eklenebilir*/
     outline-offset: 4px;
+}
+
+/* Sosyal medya ikonları için 2x2 grid ayarları */
+.social-media-grid {
+    padding: 4rem;
+    display: grid;
+    gap: 10px;
+    text-align: center;
+    width: 100%;
+  
+}
+
+.social-media-grid a {
+    color: white;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+    text-decoration: underline; /*underlines the names of the links*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.social-media-grid a:hover {
+    transform: scale(1.1);
+}
+
+.social-media-grid i {
+    margin-right: 8px;
+    font-size: 1.8rem; /* İkon boyutu */
 }
 
 /* Footer kodlari burada bitiyor Duzenlenecek*/
@@ -693,73 +680,86 @@ ul li a:hover{
     justify-content: center; /* Sentrerer bildet */
     align-items: center; /* Sentrerer vertikalt */
     max-width: 100%;
+    max-width: 1200px;
  /* Figure öğesinin genişliği de %100 olacak */
 }
 /* Ana konteyner */
 .grid-container-activity {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  padding: 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    
 }
 
-/* Kart düzeni */
 .grid-item-activity {
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  grid-template-areas: "image content";
-  gap: 2rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  padding: 1rem;
-  border-radius: 20px;
-  background-color: #fff;
-  align-items: center;
-  margin: 2rem 0;
-  }
+    display: flex;
+    gap: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+    align-items: center;
+    max-width: 1000px; /* Set max-width for better control */
+    width: 100%;
+    margin-bottom: 2rem;/*added space between boxes*/
+    max-width: 1800px;
+    border: 3px solid #00a1b3;
+}
 
-/* Yazı ve görsel hizalaması */
-.grid-item-activity artikel {
-  padding: 1rem;
-  display: grid; /* Grid düzenini kullan */
-  width:50%;
-  grid-template-rows: auto; /* İçerik satırları otomatik yüksekliğe göre ayarlanır */
-  gap: 1rem; /* Grid elemanları arasında boşluk */
-  font-size: 1.2rem; /* Yazı boyutunu artırır */
-  line-height: 1.6; /* Satır aralığını artırır */
+.grid-item-activity article,
+.grid-item-activity figure {
+    flex: 1; /* Ensures each takes up equal space */
 }
 
 .grid-item-activity figure {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  
-}
-
-/* Çift numaralı kartların düzenini ters çevir */
-.grid-item-activity:nth-child(even) {
-  grid-template-areas: "content image";
-  grid-template-columns: 1fr 1fr;
-  /*flex-direction: row-reverse;*/
-}
-
-/* Grid alanları tanımlaması */
-.grid-item-activity artikel {
-  grid-area: content;
-  width: 100%;
-   /*width: 50%;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
 }
 
 .grid-item-activity img {
-  width: 100%;
-  border-radius: 5px;
-  height: auto; /* Yükseklik orantılı olarak ayarlanacak */
-  object-fit: cover; /* Görselin kapsayıcıya uyacak şekilde kesileceği ayar */
-  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.1); /* Bilde için gölge ekler */
-  border-radius: 4px; /* Bilde köşe yuvarlaması */
-  max-width: 100%; /* Görselin maksimum genişliği %100 olacak */
+    width: 100%;
+    max-width: 400px; /* Set a max-width for consistency */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for aesthetics */
+}
+
+.grid-item-activity:nth-child(even) {
+    flex-direction: row-reverse; /*flex-direction: row-reverse;*/
+    
+}
+
+  
+
+.grid-item-activity:nth-child(odd) {
+   
+    flex-direction: row;
+    
+    
+    
+   
+    /*flex-direction: row-reverse;*/
+  }
+
+/* Grid alanları tanımlaması */
+.grid-item-activity artikel {
+    flex: 1;
+  font-size: 1rem;
+  line-height: 1.6;
+  
+}
+
+.grid-item-activity img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+   
 
 }
 
@@ -770,12 +770,19 @@ h5,
 h6 {
   color: #05b8dc;
   line-height: 3rem;
+  font-size:large ;
 }
 .grid-item-activity figure {
     grid-area: image;
     width: 100%;
     /*width:50%;*/
 }
+figure, .figure, .grid-item-activity figure {
+    margin: 0;
+    display: block;
+    width: 100%;
+  }
+  
 
 /* Dış link stil */
 .link {
@@ -789,8 +796,3 @@ figcaption {
   font-style: italic;
 }
 /* finish activitet side*/
-
-
-
-
-
