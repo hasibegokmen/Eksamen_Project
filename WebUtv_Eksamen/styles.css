@@ -408,9 +408,10 @@ label:hover {
 footer{
     width: 100%;
     position: relative;
+    bottom: 0;
     background: linear-gradient(to right, #00093c, #2d0b00);
     color: white;
-    padding: 20px 0;
+    padding: 10px 0;
     font-size: 13px;
     line-height: 20px;
 }
@@ -422,21 +423,35 @@ footer{
     flex-wrap: wrap;
     align-items:flex-start ;
     justify-content: space-between;
+    gap:1rem; /*decrerases the distance between the rows*/
     
 }
 .column{
-    
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px;
     flex: 1;
     max-width: 300px;
 }
 
-
+.column p {
+    font-size: 1.2rem; /* Yazı boyutunu büyütün */
+    line-height: 1.4; /* Satır aralığını ayarlayın */
+}
+.column p a{
+    font-size: 1.3rem;;
+}
 
 .column h3{
     color: white;
-   font-size: medium;
-   margin-top:10px ;
+   font-size: x-large;
+   margin-top:5px ;
+   font-weight: bold;
+  white-space: nowrap;
+   padding: 2rem;
+   margin-bottom: 0;
+   
 }
 .contact-link {
     display: block; /* Linki yeni satıra taşır */
@@ -444,7 +459,8 @@ footer{
     font-size: 1rem;
     text-decoration: none;
     color: white;
-    margin-top: 40px; /* Üstten biraz boşluk ekler */
+    margin-top: 60px; /* Üstten biraz boşluk ekler */
+    text-decoration: underline;
 }
     .contact-link:hover{
         text-decoration: underline;
@@ -454,12 +470,12 @@ ul li{
     margin-bottom: 12px;
 }
 ul li a{
-    text-decoration:none ;
+    text-decoration:underline ;
     color: white;
+    
 }
-ul li a:hover{
-    text-decoration: underline;
-}
+
+
 .column i{
     display: block;
     margin-bottom: 10px;
@@ -468,7 +484,7 @@ ul li a:hover{
 }
 .column a{
     color: white;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 10px;
     display: block;
     transition: transform 0.3s ease;
@@ -479,6 +495,36 @@ ul li a:hover{
     transform: scale(1.1);
     /*kutucuk seklinde gozuksun istenirse outline: 2px solid white; bu eklenebilir*/
     outline-offset: 4px;
+}
+
+/* Sosyal medya ikonları için 2x2 grid ayarları */
+.social-media-grid {
+    padding: 4rem;
+    display: grid;
+    gap: 10px;
+    text-align: center;
+    width: 100%;
+  
+}
+
+.social-media-grid a {
+    color: white;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+    text-decoration: underline; /*underlines the names of the links*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.social-media-grid a:hover {
+    transform: scale(1.1);
+}
+
+.social-media-grid i {
+    margin-right: 8px;
+    font-size: 1.8rem; /* İkon boyutu */
 }
 
 /* Footer kodlari burada bitiyor Duzenlenecek*/
