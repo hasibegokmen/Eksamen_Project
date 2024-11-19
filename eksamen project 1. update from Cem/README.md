@@ -1,2 +1,0 @@
-# Eksamen_Prosjekt
-Website_OsloMet_Mat

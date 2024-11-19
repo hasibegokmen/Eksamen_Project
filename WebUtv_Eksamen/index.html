@@ -1,53 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"><!--Since we will use Norwegian in the content, the HTML codes must also be suitable for this.-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--for responsive-->
-    <title>Home - Mathematical Modelling</title>
-    <!--for hamburger menu using. Hamburber menu symbol and "X" symbol-->
+    <title>Mathematisk Modellering og Datavitenskap - Ingeniør</title>
+     <!--link for hamburger menu using. Icons used in Hamburber menu symbol, "X" symbol, searching and sosial media links-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="styles.css"><!--for contact til Styles-->
+    <link rel="stylesheet" href="./css/styles.css"><!--for contact til Styles-->
 </head>
 <body>
 
 <!--When we choise HTML Element, we took advantage of link= https://www.w3schools.com/html/html_blocks.asp-->
+<!--Header Section -->
 <header> 
-        <img class="header-logo" src="oslometlogo2.jpg" alt="The image cannot find!">
+    <!--Navbar-->
+    <nav class="navbar" id="navbar"> 
+    <!--Link til hjem side from the logo-->
+    <a href="index.html">
+        <img class="header-logo" src="./images/oslometlogo2.jpg" alt="Oslomet Logo"><!--Oslomet LOgo-->
+    </a>
    
-     <!--Search-->
+     <!--Search Box-->
      <div class="search-box">
-        <input type="text" placeholder="Search...">
+        <input type="text" placeholder="Search..."><!--Search input-->
         <a href="#">
-            <i class="fas fa-search"></i>
+            <i class="fas fa-search"></i><!--Search icon-->
         </a>
     </div>
 
-    <nav class="navbar"> <!--Navbar-->
         <!-- Checkbox for toggling the menu -->
         <input type="checkbox" id="kontrol">
-        <!-- Label for hamburger icon and closs-button on Navbar -->
+        <!-- Label with hamburger and closs icons on Navbar -->
         <label for="kontrol" class="kontrol">
-            <i class="fa fa-bars"></i>
-            <i class="fa fa-times"></i>
+            <i class="fa fa-bars"></i><!-- Hamburger icon -->
+            <i class="fa fa-times"></i><!-- Close icon -->
         </label>
-        <!-- Side menu -->
+        <!-- menu for navigation -->
         <div class="menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="accessibility.html">Accessibility</a></li>
+            <ul><!--Navigation links-->
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="accessibility.html">Tilgjengelighet</a></li>
                 <li><a href="github.html">GitHub</a></li>
-                <li><a href="activity.html">Activity</a></li>
+                <li><a href="activity.html">Aktivitet</a></li>
             </ul>
         </div>
     </nav>
 </header>
 
 
-<!--Home page content-->
-<main class="grid-container">
+<!--Main Content Section for home page-->
+<main class="grid-container-home">
+    <!--left sidebar-->
     <aside class="side-menu">
 
-    <!--Side link at the home page on the left. I use for to open info-panel and close with click another link-->   
+    <!--Side link at the home page on the left. I use radio button for to open info-panel and close with click another link-->   
     <input type="radio" id="panel-reset" name="info-panel" class="panel-toggle" checked>
         <label for="panel1" class="side-link">Opptakskrav og poeng</label>
         <label for="panel2" class="side-link">Slik søker du</label>
@@ -61,13 +67,14 @@
         <label for="panel10" class="side-link">Additional information</label>
     </aside>
 
-    <!--Middle section on the home page-->
-    <section class="main-content" id="main-content">
+    <!--Main Content Area-->
+    <section class="main-content-home" id="main-content-home">
         <h1 class="page-header">Matematisk Modellering og Datavitenskap – Ingeniør</h1>
-            <h3>Bachelorprogram</h3>
-            <!--to add video and we use to video tag for accesibility and right koding-->
+            <h2>Bachelorprogram</h2>
+            
+            <!--Embedded video for visual content/to add video and we use to video tag for accesibility and right koding-->
             <video class="video" controls>
-                <source src="mathematical.mp4" alt="mathematical video" type="video/mp4">
+                <source src="./images/mathematical.mp4" alt="mathematical video" type="video/mp4">
             </video>
 
 

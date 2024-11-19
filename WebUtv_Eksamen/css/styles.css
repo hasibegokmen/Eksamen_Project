@@ -1,0 +1,859 @@
+/* Genel Stil Ayarları */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "header"
+        "content";
+    font-family: Arial, sans-serif;
+}
+/*Navbar Design Tum sayfalar icin ortak*/
+/* Header */
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 1rem;
+    background-color: #000064;
+    color: rgb(250, 250, 250);
+}
+
+/*Logo OsloMet logo degisince bu kalkabilir */
+
+.header-logo {
+    height: 100px; 
+    width: auto; 
+    margin-left: 1rem;
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+}
+
+/*Search-box yapiminda https://youtu.be/AmdIfgxMqY8?si=7BBZOvS828VnkFan dan yararlanildi*/
+
+.search-box {
+    display: flex;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-style: outset;
+    border-color: #ddd;
+    border-radius: 30px;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    margin-left: auto;
+    margin-right: 2rem;
+    }
+    .search-box:hover input {
+        width: 100%;
+    }
+    .search-box input {
+        width: 0;
+        outline: none;
+        border: none;
+        font-weight: 500;
+        transition: 0.8s;
+        background: transparent;
+        color: #ddd;
+    }
+    .search-box a .fas{
+        color:#ddd;
+        font-size:18px;
+    }
+
+    /* Video */
+.video{
+    width: 100%;
+    height: 300;
+}
+.page-header{
+    display: flex;
+    justify-content: center;
+}
+
+/* Menü at Navbar*/
+.navbar{
+    display: flex;
+    align-items: center;
+}
+.menu {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Yatay Menü Stilleri (Büyük Ekranlar) Menu Navbar*/
+.menu ul {
+    display: flex;
+    gap: 0.6rem;/*Bunu kontol et*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+}
+
+/*Menu Navbar links*/
+.menu ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0.20rem;
+    margin: 0;
+    line-height: 1.80rem;
+    text-align: center;
+}
+
+/*Menu Navbar links format*/
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0.3rem 0.8rem;
+    background-color: #000064;
+    border-radius: 0.3rem;
+    font-weight: bold;
+}
+
+
+
+
+/* Hamburger menu yapiminda https://www.youtube.com/watch?v=x3Zu_ncHpas&list=WL&index=6 and
+https://www.youtube.com/watch?v=uSHc2YLGBSM&t=1257s videolarindan yararlanildi.*/
+/* Hamburger Menü ve Yan Menü (Mobil Ekranlar) Uc cizgi. Hamburger menununun acilip kapanmasini
+saglamak icin ve bunu kontrol etmek icin gizli bir checkbox eklendi*/
+
+.kontrol {
+    display: none; /* Büyük ekranlarda gizli */
+}
+
+#kontrol {
+    display: none; /* Checkbox gizli */
+}
+
+/*Home Page Design*/
+/* Ana İçerik Yapısı */
+.grid-container-home {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    gap: o.6rem;
+    padding: 1.2rem;
+    height: calc(140vh - 70px);
+}
+
+/* Home page Sol Menü */
+.side-menu {
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+/* Acilan bilgi paneli icin bu siteden yararlandim https://www.quora.com/How-do-I-make-a-div-visible-on-clicking-a-link-using-only-HTML-and-CSS*/
+/*https://css-tricks.com/css-grid-can-do-auto-height-transitions/ and  https://css-tricks.com/hide-scrollbars-during-an-animation/*/
+/*Sol menu linkler at Home page*/
+.side-link {
+    width: 100%;
+    padding: 0.6rem;
+    margin-bottom: 0.3rem;
+    background-color: #007acd;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1rem;
+}
+
+/*linklerin gorunurlugunu artirmak icin hover effekt eklendi*/
+.side-link:hover {
+    background-color: #00093c;
+}
+
+/* Paneli Gizle Göster */
+.panel-toggle {
+    display: none; /*Ilgili linke tiklanmadigi zaman gizli*/
+}
+
+/*side-linklere tiklandigi zaman bilgilerin gorunmesi icin info-panel eklendi.
+Ilk olarak kapali ayarlandi.Acildigi zamanki goruntusu*/
+/* Panel içeriği */
+.info-panel {
+    display: none;
+    background-color: #f8f8f8;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    margin-top: 1rem;
+    border-radius: 0.3rem;
+    position: absolute;
+    top: 0; /* Üstten başlayacak */
+    left: 0;
+    width: 100%;  /*Ana içerik kadar genişlik */
+    max-width: 100%; /* Panelin genişliği, ekran boyutunu aşmaz */
+    text-align: left; /* Yazıları sola yasla */
+    visibility: hidden; /* Başlangıçta gizli */
+    overflow: hidden;
+    word-wrap: break-word; /* Uzun metinler satır içinde kırılır */
+    transition: max-height 0.5s ease-out;
+}
+
+
+/*Panel açılınca gösterilecek. Ilgili info-panelin radio butonu aktif oldugunda info-panel acilacak*/
+
+.panel-toggle:checked + .info-panel {
+    display: block;
+    visibility: visible; /* Görünür yap */
+    max-height: none; /* Açıldığında yüksekliği ayarla */
+}
+
+input[type="radio"]:checked + label + .info-panel {
+    display: block;
+}
+/* Kapatma Butonu info panel yan linkler icin anasayfa*/
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.samordlink{ /*link oldugu anlasilmasi icin mavi renk*/
+    color:blue;
+}
+
+.samordlink:visited {
+    color: purple; /* Ziyaret edildiginde link rengini mor yap */
+    text-decoration-color: rgb(78, 13, 110); /* Alt çizgi rengini de mor yap */
+}
+
+/*ACIT sayfasina yonlendiren buton olusturmak icin menydeki buton stilinden yararlanildi butunluk saglamak icin*/
+.acit-btn {
+    background-color: #2e3b86;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    text-decoration: none;
+    border-radius: 5%;
+    display: inline-block;
+}
+
+
+.acit-btn:hover {
+    color: #e9e3e4;
+    text-decoration: underline;
+}
+
+
+/* Style for the side menu */
+.side-link[aria-expanded="true"] {
+    background-color: #1e867f;
+}
+
+/*Style for Table of studie program*/ 
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #2d3223;
+  }
+  
+  th {
+    background-color: rgb(4, 37, 88);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  tr:second-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  .table {
+    display: none;
+  }
+
+/*Radio button for to show right studie prog. Ilgili programla ilgili radio butona tiklandiginda
+ilgili ders programinin acilmasi icin*/
+#matematik-fysikk:checked ~ .studie-table-container #matematik-fysikk-prog,
+#statistik-data:checked ~ .studie-table-container #statistik-data-prog,
+#vitenskapelige-beregninger:checked ~ .studie-table-container #vitenskapelige-beregninger-prog {
+    display: block;
+}
+
+
+
+/*studie program name are formated*/
+label {
+    padding: 8px 15px;
+    background-color: #01336a;
+    color: white;
+    margin-right: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+label:hover {
+    background-color: #0056b3;
+}
+
+
+/* Ana İçerik */
+.main-content-home {
+    background-color: #e9e9e9;
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    position: relative;
+
+}
+
+.video-preview {
+    width: 100%;
+    display: block;
+    margin-bottom: 1rem; /* Space below the image */
+    text-align: center; /* Center the image if needed */
+}
+.video-preview img {
+    max-width: 100%; /* Scale down on smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounds the corners of the image */
+    /* Additional styling specific to this image */
+}
+
+/* Sağ side Burasi tusa donusecek o zaman burayla ilgili stillerde silinecek
+
+/* Ana konteyner stilleri */
+.extra-info {
+    background-color: #f9f9f9; /* Hafif bir arka plan rengi */
+    padding: 20px;
+    border-radius: 8px; /* Köşeleri yuvarla */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    max-width: 400px; /* Genişliği sınırlandır */
+    margin: 20px auto; /* Ortala */
+}
+
+/* Her bir bilgi bloğu için stil */
+.shortinfo {
+    padding: 15px 0; /* Yukarıdan ve aşağıdan boşluk bırak */
+    border-bottom: 1px solid #00093c; /* Alt çizgi ekle */
+}
+
+/* Son öğedeki alt çizgiyi kaldır */
+.shortinfo:last-child {
+    border-bottom: none;
+}
+
+/* Başlık stilini daha belirgin yap */
+.shortinfo h3 {
+    font-size: 1.1em;
+    color: #333;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Bilgi metni için stil */
+.shortinfo p {
+    margin: 5px 0 0; /* Başlığın altında küçük bir boşluk */
+    color: #555;
+}
+
+/*Silinecek aside ile ilgili stil burada bitiyor*/
+
+/*Home page ikinci kisim stilleri burada basliyor*/
+
+
+
+/*Home page ikinci kisim stilleri burada bitiyor*/
+
+
+/*Activity ikinci kisim stilleri burada basliyor*/
+
+
+
+/*Activity ikinci kisim stilleri burada bitiyor*/
+
+
+/*Accesibility ikinci kisim stilleri burada basliyor*/
+
+
+
+/*Accesibiity ikinci kisim stilleri burada bitiyor*/
+
+
+/*Github page*/
+
+
+
+
+
+
+
+/*Video altina gelen kisim*/
+
+/* Genel stiller */
+.accordion {
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    color: white;
+}
+
+/* Başlık stili */
+.accordion label {
+    display: block;
+    padding: 15px;
+    background-color: #00093C;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Gizli checkbox ile içerik kontrolü */
+.accordion input[type="checkbox"] {
+    display: none;
+}
+
+/* Panelin içerik stili */
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background-color: rgb(255, 255, 255);
+    padding: 0 15px;
+    color: black;
+}
+
+/* Açık olduğunda içeriğin gösterilmesi */
+.accordion input[type="checkbox"]:checked ~ .content {
+    max-height: 1000px; /* İçeriğe göre değeri ayarlayabilirsiniz */
+    padding: 15px;
+}
+
+/* 1. panel link dizayni*/
+.link-design{
+    border-bottom-style: solid;
+
+
+}
+.images-613{
+    width: 450px;
+}
+
+
+
+
+
+
+
+
+/*Footer*/
+footer{
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    color: white;
+    padding: 10px 0;
+    font-size: 13px;
+    line-height: 20px;
+}
+   
+.row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:flex-start ;
+    justify-content: space-between;
+    gap:1rem; /*decrerases the distance between the rows*/
+    
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px;
+    flex: 1;
+    max-width: 300px;
+}
+
+.column p {
+    font-size: 1.2rem; /* Yazı boyutunu büyütün */
+    line-height: 1.4; /* Satır aralığını ayarlayın */
+}
+.column p a{
+    font-size: 1.3rem;;
+}
+
+.column h3{
+    color: white;
+   font-size: x-large;
+   margin-top:5px ;
+   font-weight: bold;
+  white-space: nowrap;
+   padding: 2rem;
+   margin-bottom: 0;
+   
+}
+.contact-link {
+    display: block; /* Linki yeni satıra taşır */
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    margin-top: 60px; /* Üstten biraz boşluk ekler */
+    text-decoration: underline;
+}
+    .contact-link:hover{
+        text-decoration: underline;
+    }
+ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+ul li a{
+    text-decoration:underline ;
+    color: white;
+    
+}
+
+
+.column i{
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 2rem; /*to make the social media icons bigger*/
+}
+.column a{
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: block;
+    transition: transform 0.3s ease;
+    padding: 5px 10px;
+}
+.column a:hover,
+.column a:focus{
+    transform: scale(1.1);
+    /*kutucuk seklinde gozuksun istenirse outline: 2px solid white; bu eklenebilir*/
+    outline-offset: 4px;
+}
+
+/* Sosyal medya ikonları için 2x2 grid ayarları */
+.social-media-grid {
+    padding: 4rem;
+    display: grid;
+    gap: 10px;
+    text-align: center;
+    width: 100%;
+  
+}
+
+.social-media-grid a {
+    color: white;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+    text-decoration: underline; /*underlines the names of the links*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.social-media-grid a:hover {
+    transform: scale(1.1);
+}
+
+.social-media-grid i {
+    margin-right: 8px;
+    font-size: 1.8rem; /* İkon boyutu */
+}
+
+/* Footer kodlari burada bitiyor Duzenlenecek*/
+
+
+
+/*Telefon boyutuna gelince olacak degisiklikler*/
+/* Mobilde Sağdan Açılan Yan Menü */
+@media (max-width: 600px) {
+    /* Hamburger menü simgesi */
+    .kontrol {
+        display: block;
+        font-size: 2rem;
+        color: white;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        cursor: pointer;
+        z-index: 20;
+        transition: transform 0.3s ease;
+    }
+
+    /* Yan menü gizli başlar */
+    .menu {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        height: 50%;
+        width: 150px;
+        background-color: #00093c;
+        transition: right 0.5s ease;
+        z-index: 15;
+        padding-top: 60px;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu ul li {
+        text-align: left;
+        padding: 1rem;
+    }
+
+    .menu a {
+        background-color:#00093c;
+
+    }
+
+    /* Menü açılınca sağdan göster */
+    #kontrol:checked ~ .menu {
+        right: 0;
+    }
+
+    /* Başlangıçta sadece üç çizgi (fa-bars) görünür */
+    .kontrol .fa-bars {
+        display: inline-block;  
+    }
+
+    .kontrol .fa-times {
+        display: none; /* X başlangıçta gizli */
+    }
+
+    /* Hamburger menü açıldığında ikon değişir */
+    #kontrol:checked + .kontrol .fa-bars {
+        display: none; /* Üç çizgi gizlenir */
+    }
+
+    #kontrol:checked + .kontrol .fa-times {
+        display: inline-block; /* X görünür hale gelir */
+    }
+
+    /* Grid düzenlemesi mobilde */
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    .side-menu,
+    .extra-info {
+        display: none; /* Mobilde yan paneller gizlenir */
+    }
+
+    header h1 {
+        display: none; /* Mobilde baslik gizlenir */
+    }
+
+    .main-content {
+        grid-column: span 1;
+    }
+}
+
+
+
+
+/* CSS-stiler for aktivitetsiden */
+
+.aktivitetsoverskrift {
+    text-align: center;
+    color: var(--semi-dark-teal);
+    margin: 2rem;
+    font-size: 2.5rem; 
+}
+
+/* Sentraliserer og setter maks bredde */
+.main {
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+/* Bruker Grid til å organisere innholdet */
+.innholdsinnpakking {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Første kolonne tar 2/3 av plassen, andre kolonne tar 1/3 */
+    gap: 1rem; /* Mellomrom mellom elementene i gridet */
+    padding: 1rem; /* Innfelt plass på hver side */
+    background-color: #00a1b3; /* Farge av bakgrunn */
+    text-align: justify; /* Justerer teksten til begge sider */
+    border-radius: 10px; /* Avrunder hjørnene */
+}
+
+/* Tittelstil */
+.innholdsinnpakking h3 {
+    color: #2e3b86;
+}
+
+/* Bilde i gridet, får full bredde og skyggeeffekt */
+.innholdsinnpakking img {
+    width: 100%; /* Görselin genişliği %100 olacak */
+    height: auto; /* Yükseklik orantılı olarak ayarlanacak */
+    object-fit: cover; /* Görselin kapsayıcıya uyacak şekilde kesileceği ayar */
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.1); /* Bilde için gölge ekler */
+    border-radius: 4px; /* Bilde köşe yuvarlaması */
+    max-width: 100%; /* Görselin maksimum genişliği %100 olacak */
+}
+
+/* Tekstinnhold får mer plass i gridet */
+.tekst-innhold {
+    display: grid; /* Grid düzenini kullan */
+    grid-template-rows: auto; /* İçerik satırları otomatik yüksekliğe göre ayarlanır */
+    gap: 1rem; /* Grid elemanları arasında boşluk */
+    font-size: 1.2rem; /* Yazı boyutunu artırır */
+    line-height: 1.6; /* Satır aralığını artırır */
+}
+
+
+/* Figure-elementet (bildet med bildetekst) */
+.figure {
+    display: flex;
+    justify-content: center; /* Sentrerer bildet */
+    align-items: center; /* Sentrerer vertikalt */
+    max-width: 100%;
+    max-width: 1200px;
+ /* Figure öğesinin genişliği de %100 olacak */
+}
+/* Ana konteyner */
+.grid-container-activity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    
+}
+
+.grid-item-activity {
+    display: flex;
+    gap: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+    align-items: center;
+    max-width: 1000px; /* Set max-width for better control */
+    width: 100%;
+    margin-bottom: 2rem;/*added space between boxes*/
+    max-width: 1800px;
+    border: 3px solid #00a1b3;
+}
+
+.grid-item-activity article,
+.grid-item-activity figure {
+    flex: 1; /* Ensures each takes up equal space */
+}
+
+.grid-item-activity figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.grid-item-activity img {
+    width: 100%;
+    max-width: 400px; /* Set a max-width for consistency */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for aesthetics */
+}
+
+.grid-item-activity:nth-child(even) {
+    flex-direction: row-reverse; /*flex-direction: row-reverse;*/
+    
+}
+
+  
+
+.grid-item-activity:nth-child(odd) {
+   
+    flex-direction: row;
+    
+    
+    
+   
+    /*flex-direction: row-reverse;*/
+  }
+
+/* Grid alanları tanımlaması */
+.grid-item-activity artikel {
+    flex: 1;
+  font-size: 1rem;
+  line-height: 1.6;
+  
+}
+
+.grid-item-activity img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+   
+
+}
+
+/* Başlıklar */
+.grid-item-activity h3,
+h4,
+h5,
+h6 {
+  color: #05b8dc;
+  line-height: 3rem;
+  font-size:large ;
+}
+.grid-item-activity figure {
+    grid-area: image;
+    width: 100%;
+    /*width:50%;*/
+}
+figure, .figure, .grid-item-activity figure {
+    margin: 0;
+    display: block;
+    width: 100%;
+  }
+  
+
+/* Dış link stil */
+.link {
+  color: rgb(0, 30, 128);
+  text-decoration: none;
+}
+
+/* Görsel açıklama */
+figcaption {
+  padding: 0.5rem;
+  font-style: italic;
+}
+/* finish activitet side*/
