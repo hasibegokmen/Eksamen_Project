@@ -19,37 +19,36 @@ body {
 header {
     grid-area: header;
     display: grid;
-    grid-template-columns: 1fr 3fr;
     align-items: center;
-    justify-content: space-between;
-    padding-right: 1rem;
+    padding:0 1rem;
     background-color: #000064;
     color: rgb(250, 250, 250);
+    
 }
 
-/*Logo OsloMet logo degisince bu kalkabilir */
-
+/*Oslomet Logo*/
 .header-logo {
     height: 100px; 
     width: auto; 
     margin-left: 1rem;
 }
 
-
+/*Search Box*/
 /*Search-box yapiminda https://youtu.be/AmdIfgxMqY8?si=7BBZOvS828VnkFan dan yararlanildi*/
-
 .search-box {
     display: flex;
-    cursor: pointer;
-    padding: 5px 15px;
+    /*cursor: pointer;
     border-style: outset;
-    border-color: #ddd;
-    border-radius: 30px;
     align-items: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
     margin-left: auto;
-    margin-right: 2rem;
+    margin-right: 2rem;*/
+    justify-self: center; /* Ortalanıyor */
+    padding: 5px 15px;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     }
+
     .search-box:hover input {
         width: 100%;
     }
@@ -67,7 +66,7 @@ header {
         font-size:18px;
     }
 
-    /* Video */
+/* Video */
 .video{
     width: 100%;
     height: 300;
@@ -77,20 +76,25 @@ header {
     justify-content: center;
 }
 
-/* Menü at Navbar*/
+/* Meny at Navbar*/
+
+
 .navbar{
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
 }
+
 .menu {
     display: flex;
     gap: 1rem;
+    justify-self: end; /* Menü sağa hizalanıyor */
 }
 
 /* Yatay Menü Stilleri (Büyük Ekranlar) Menu Navbar*/
 .menu ul {
     display: flex;
-    gap: 0.6rem;/*Bunu kontol et*/
+    gap: 1rem;/*Bunu kontol et*/
     margin: 0;
     padding: 0;
     list-style: none;
@@ -100,25 +104,23 @@ header {
 /*Menu Navbar links*/
 .menu ul li {
     list-style-type: none;
-    display: inline-block;
-    padding: 0.20rem;
-    margin: 0;
-    line-height: 1.80rem;
-    text-align: center;
+    
 }
 
 /*Menu Navbar links format*/
 .menu a {
     color: white;
     text-decoration: none;
-    font-size: 1.5rem;
-    padding: 0.3rem 0.8rem;
+    font-size: 1.3rem;
+    padding: 0.5rem 0.8rem;
     background-color: #000064;
-    border-radius: 0.3rem;
     font-weight: bold;
+    position: relative;
 }
 
-
+.menu a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
 
 
 /* Hamburger menu yapiminda https://www.youtube.com/watch?v=x3Zu_ncHpas&list=WL&index=6 and
@@ -139,7 +141,7 @@ saglamak icin ve bunu kontrol etmek icin gizli bir checkbox eklendi*/
 .grid-container-home {
     grid-area: content;
     display: grid;
-    grid-template-columns: 15% 70% 15%;
+    grid-template-columns: 18% 82%;
     gap: o.6rem;
     padding: 1.2rem;
     height: calc(140vh - 70px);
@@ -166,7 +168,7 @@ saglamak icin ve bunu kontrol etmek icin gizli bir checkbox eklendi*/
     border: none;
     cursor: pointer;
     text-align: left;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 /*linklerin gorunurlugunu artirmak icin hover effekt eklendi*/

@@ -15,34 +15,38 @@
 <header> 
     <!--Navbar-->
     <nav class="navbar" id="navbar"> 
-    <!--Link til hjem side from the logo-->
-    <a href="index.html">
-        <img class="header-logo" src="./images/oslometlogo2.jpg" alt="Oslomet Logo"><!--Oslomet LOgo-->
-    </a>
+        <div class="logo" id="logo">
+            <!--Link til hjem side from the logo-->
+            <a href="index.html">
+                <img class="header-logo" src="./images/oslometlogo2.jpg" alt="Oslomet Logo"><!--Oslomet LOgo-->
+            </a>
+        </div>
    
-     <!--Search Box-->
-     <div class="search-box">
-        <input type="text" placeholder="Search..."><!--Search input-->
-        <a href="#">
-            <i class="fas fa-search"></i><!--Search icon-->
-        </a>
-    </div>
+        <!--Search Box-->
+        <div class="search-box">
+            <input type="text" placeholder="Search..."><!--Search input-->
+            <a href="#">
+                <i class="fas fa-search"></i><!--Search icon-->
+            </a>
+        </div>
 
-        <!-- Checkbox for toggling the menu -->
-        <input type="checkbox" id="kontrol">
-        <!-- Label with hamburger and closs icons on Navbar -->
-        <label for="kontrol" class="kontrol">
-            <i class="fa fa-bars"></i><!-- Hamburger icon -->
-            <i class="fa fa-times"></i><!-- Close icon -->
-        </label>
-        <!-- menu for navigation -->
-        <div class="menu">
-            <ul><!--Navigation links-->
-                <li><a href="index.html">Hjem</a></li>
-                <li><a href="accessibility.html">Tilgjengelighet</a></li>
-                <li><a href="github.html">GitHub</a></li>
-                <li><a href="activity.html">Aktivitet</a></li>
-            </ul>
+        <div class="Hamburger-menu" id="Hamburger-menu">
+            <!-- Checkbox for toggling the menu -->
+            <input type="checkbox" id="kontrol">
+            <!-- Label with hamburger and closs icons on Navbar -->
+            <label for="kontrol" class="kontrol">
+                <i class="fa fa-bars"></i><!-- Hamburger icon -->
+                <i class="fa fa-times"></i><!-- Close icon -->
+            </label>
+            <!-- menu for navigation -->
+            <div class="menu">
+                <ul><!--Navigation links-->
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="accessibility.html">Tilgjengelighet</a></li>
+                    <li><a href="github.html">GitHub</a></li>
+                    <li><a href="activity.html">Aktivitet</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 </header>
@@ -78,6 +82,8 @@
                 <source src="./images/mathematical.mp4" alt="mathematical video" type="video/mp4">
             </video>
 
+
+            <!--Info-panels-->
             <section class="info-panel-sec" id="info-panel-sec">
 
                  <!-- Info Panels: Dynamically displayed content based on sidebar links -->
