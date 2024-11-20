@@ -683,175 +683,151 @@ ul li a{
 
 
 /* CSS-stiler for aktivitetsiden */
-
-.aktivitetsoverskrift {
-    text-align: center;
-    color: var(--semi-dark-teal);
-    margin: 2rem;
-    font-size: 2.5rem; 
-}
-
 /* Sentraliserer og setter maks bredde */
 .main {
-    max-width: 1200px;
-    margin: 2rem auto;
+    max-width: 1200px; /* İçeriği genişlik olarak sınırla */
+    margin: 0 auto; /* Ortala */
 }
 
-/* Bruker Grid til å organisere innholdet */
-.innholdsinnpakking {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Første kolonne tar 2/3 av plassen, andre kolonne tar 1/3 */
-    gap: 1rem; /* Mellomrom mellom elementene i gridet */
-    padding: 1rem; /* Innfelt plass på hver side */
-    background-color: #00a1b3; /* Farge av bakgrunn */
-    text-align: justify; /* Justerer teksten til begge sider */
-    border-radius: 10px; /* Avrunder hjørnene */
-}
+   
 
-/* Tittelstil */
-.innholdsinnpakking h3 {
-    color: #2e3b86;
-}
+    .background-container {
+        max-width: 100%; /* Genişliği tamamen yay */
+        gap:2rem
+        padding: 20px; /* İçerik ile kenarlar arasında boşluk bırak */
+        background-color: #b3e5fc; /* Açık mavi tonu */
+        border-radius: 10px; /* Köşeleri yuvarla */
+        box-sizing: border-box; /* Padding'in genişliği etkilememesi için */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    }
 
-/* Bilde i gridet, får full bredde og skyggeeffekt */
-.innholdsinnpakking img {
-    width: 100%; /* Görselin genişliği %100 olacak */
-    height: auto; /* Yükseklik orantılı olarak ayarlanacak */
-    object-fit: cover; /* Görselin kapsayıcıya uyacak şekilde kesileceği ayar */
-    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.1); /* Bilde için gölge ekler */
-    border-radius: 4px; /* Bilde köşe yuvarlaması */
-    max-width: 100%; /* Görselin maksimum genişliği %100 olacak */
-}
 
-/* Tekstinnhold får mer plass i gridet */
-.tekst-innhold {
-    display: grid; /* Grid düzenini kullan */
-    grid-template-rows: auto; /* İçerik satırları otomatik yüksekliğe göre ayarlanır */
-    gap: 1rem; /* Grid elemanları arasında boşluk */
-    font-size: 1.2rem; /* Yazı boyutunu artırır */
-    line-height: 1.6; /* Satır aralığını artırır */
+.introduksjontittel{
+    padding: 1rem;
+    text-align: center;
 }
 
 
-/* Figure-elementet (bildet med bildetekst) */
-.figure {
-    display: flex;
-    justify-content: center; /* Sentrerer bildet */
-    align-items: center; /* Sentrerer vertikalt */
-    max-width: 100%;
-    max-width: 1200px;
- /* Figure öğesinin genişliği de %100 olacak */
-}
-/* Ana konteyner */
-.grid-container-activity {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.aktivitetsoversikt {
+    text-align: center;
+    color: var(--semi-dark-teal);
+    font-size: 1.5rem; 
+    width: 100%;
+    padding-top: 1rem; /*tekstin ustten uzaklasmasini saglar*/
+    line-height: 1.8; /* Satır aralığını artır */
     padding: 2rem;
-    max-width: 1200px;
-    margin: auto;
+   
+
+}
+.aktivitetsoversikt p{
+    text-align: justify;
+}
+.image-container {
+    display: grid; /* Yan yana dizmek için flexbox */
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; /* Resimler arasında boşluk */
+    justify-content: center; /* Resimleri ortalar */
+    align-items: flex-start; /* Resimlerin üst hizasını sağlar */
+   
+}
+.image-container img{
+    width: 200px; /* Resmin genişliği */
+    height: 350px; /* Resmin yüksekliği */
+    object-fit: cover; /* Resmi keserek alanı doldurur, orantıları korur */
+    border: 1px solid #333; /* Görünürlük için kenarlık ekledik */
+}
+.aktivitetsoversikt p{
+    font-size: smaller;
+}
+
+.image-figure-intro{
+
+  text-align: center; /* Alt açıklamayı ortalamak için */
+
+  
+}
+
+.image-figure-intro img {
+    width: 500px; /* Resmin genişliğini ayarla */
+    width: 100%;
+  
+  }
+  
+  .image-figure-intro figcaption {
+    font-size: 14px; /* Alt açıklama yazı boyutu */
+    color: #555; /* Yazı rengi */
+    margin-top: 0rem; /* Resimle alt açıklama arasına boşluk */
+    padding-top: 0;
+  }
+
+
+
+
+
+.grid-container-activity {
+    display: grid; /* Grid düzenini etkinleştir */
+    gap: 20px; /* Kutular arasındaki boşluk */
+    margin-top: 40px; /* Yukarıdaki bölümden boşluk bırak */
+    padding: 20px;
     
 }
 
 .grid-item-activity {
-    display: flex;
-    gap: 2rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-    padding: 2rem;
-    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* İki sütun oluştur */
+    
     background-color: #ffffff;
-    align-items: center;
-    max-width: 1000px; /* Set max-width for better control */
-    width: 100%;
-    margin-bottom: 2rem;/*added space between boxes*/
-    max-width: 1800px;
-    border: 3px solid #00a1b3;
-}
-
-.grid-item-activity article,
-.grid-item-activity figure {
-    flex: 1; /* Ensures each takes up equal space */
-}
-
-.grid-item-activity figure {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-}
-
-.grid-item-activity img {
-    width: 100%;
-    max-width: 400px; /* Set a max-width for consistency */
-    height: auto;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    object-fit: cover;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for aesthetics */
+    padding-left: 2rem;
+    box-shadow: 6px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
-
-.grid-item-activity:nth-child(even) {
-    flex-direction: row-reverse; /*flex-direction: row-reverse;*/
+.grid-item-activity article{
+    margin: auto;
+    display: grid;
+    justify-content: center; /* Yatay hizalama */
     
-}
-
-  
-
-.grid-item-activity:nth-child(odd) {
-   
-    flex-direction: row;
-    
-    
-    
-   
-    /*flex-direction: row-reverse;*/
-  }
-
-/* Grid alanları tanımlaması */
-.grid-item-activity artikel {
-    flex: 1;
-  font-size: 1rem;
-  line-height: 1.6;
-  
 }
 
 .grid-item-activity img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-   
-
+    width: 95%;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+  
 }
 
-/* Başlıklar */
-.grid-item-activity h3,
-h4,
-h5,
-h6 {
+/* sub-titles */
+.grid-item-activity h3{
   color: #05b8dc;
   line-height: 3rem;
   font-size:large ;
-}
-.grid-item-activity figure {
-    grid-area: image;
-    width: 100%;
-    /*width:50%;*/
-}
-figure, .figure, .grid-item-activity figure {
-    margin: 0;
-    display: block;
-    width: 100%;
-  }
   
+}
+
+.grid-item-activity figure{
+    margin-right: 0;
+    flex: 0 0 auto;
+    justify-content: flex-end;
+}
+
+
+/*resimlerin altinda  kaynaklarinin yazildigi yer*/
+.grid-item-activity figcaption{
+    color: #4b4848;
+    padding: 0.5rem;
+  font-style: italic;
+  text-align: center;/*resmin altina aciklama yazisini ortalar*/
+}
 
 /* Dış link stil */
-.link {
-  color: rgb(0, 30, 128);
+.grid-item-activity link {
+  color: rgb(2, 31, 128);
   text-decoration: none;
+  
 }
 
-/* Görsel açıklama */
-figcaption {
-  padding: 0.5rem;
-  font-style: italic;
-}
+
 /* finish activitet side*/
+
+
