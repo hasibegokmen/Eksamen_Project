@@ -685,14 +685,13 @@ ul li a{
 /* CSS-stiler for aktivitetsiden */
 /* Sentraliserer og setter maks bredde */
 .main {
-    max-width: 1200px; /* İçeriği genişlik olarak sınırla */
+    max-width: 1800px; /* İçeriği genişlik olarak sınırla */
     margin: 0 auto; /* Ortala */
 }
 
-   
 
     .background-container {
-        max-width: 100%; /* Genişliği tamamen yay */
+        max-width: 1200%; /* Genişliği tamamen yay */
         gap:2rem
         padding: 20px; /* İçerik ile kenarlar arasında boşluk bırak */
         background-color: #b3e5fc; /* Açık mavi tonu */
@@ -705,22 +704,34 @@ ul li a{
 .introduksjontittel{
     padding: 1rem;
     text-align: center;
+    font-size: 3.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 
 .aktivitetsoversikt {
     text-align: center;
-    color: var(--semi-dark-teal);
-    font-size: 1.5rem; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     width: 100%;
     padding-top: 1rem; /*tekstin ustten uzaklasmasini saglar*/
     line-height: 1.8; /* Satır aralığını artır */
-    padding: 2rem;
+    padding: 1rem;
    
 
 }
-.aktivitetsoversikt p{
+.aktivitetsoversikt h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3rem;
+    text-align: center;
+}
+.aktivitetsoversikt article{
     text-align: justify;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    max-width: 90%;
+    
+    
 }
 .image-container {
     display: grid; /* Yan yana dizmek için flexbox */
@@ -732,18 +743,14 @@ ul li a{
 }
 .image-container img{
     width: 200px; /* Resmin genişliği */
-    height: 350px; /* Resmin yüksekliği */
+    height: 600px; /* Resmin yüksekliği */
     object-fit: cover; /* Resmi keserek alanı doldurur, orantıları korur */
     border: 1px solid #333; /* Görünürlük için kenarlık ekledik */
 }
-.aktivitetsoversikt p{
-    font-size: smaller;
-}
+
 
 .image-figure-intro{
-
   text-align: center; /* Alt açıklamayı ortalamak için */
-
   
 }
 
@@ -754,7 +761,7 @@ ul li a{
   }
   
   .image-figure-intro figcaption {
-    font-size: 14px; /* Alt açıklama yazı boyutu */
+    font-size: 1.5rem; /* Alt açıklama yazı boyutu */
     color: #555; /* Yazı rengi */
     margin-top: 0rem; /* Resimle alt açıklama arasına boşluk */
     padding-top: 0;
@@ -766,42 +773,54 @@ ul li a{
 
 .grid-container-activity {
     display: grid; /* Grid düzenini etkinleştir */
-    gap: 20px; /* Kutular arasındaki boşluk */
-    margin-top: 40px; /* Yukarıdaki bölümden boşluk bırak */
+    gap: 3rem; /* Kutular arasındaki boşluk */
     padding: 20px;
+    margin: 0 auto;/*kutulari ekrana ortalar*/
+    max-width: 90%; /*kutularin boyutunu belirler*/
     
 }
 
 .grid-item-activity {
     display: grid;
     grid-template-columns: 1fr 1fr; /* İki sütun oluştur */
-    
+    gap:4.5rem;
     background-color: #ffffff;
-    border: 1px solid #ddd;
+    border: 1px solid #292727;
     border-radius: 8px;
     padding-left: 2rem;
-    box-shadow: 6px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
-.grid-item-activity article{
-    margin: auto;
-    display: grid;
-    justify-content: center; /* Yatay hizalama */
+.grid-item-activity article {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top:3rem;
+    font-size: 1.5rem;
+    display: inline;
     
+    
+}
+.grid-item-activity p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.3rem;
+    display: grid;
 }
 
 .grid-item-activity img {
     width: 95%;
+    margin-top: 1.5rem;
+
     box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
     border-radius: 4px;
   
 }
 
+
 /* sub-titles */
 .grid-item-activity h3{
   color: #05b8dc;
   line-height: 3rem;
-  font-size:large ;
+  font-size:2.1rem ;
+  
   
 }
 
@@ -816,8 +835,10 @@ ul li a{
 .grid-item-activity figcaption{
     color: #4b4848;
     padding: 0.5rem;
+    margin-bottom: 2rem;
   font-style: italic;
   text-align: center;/*resmin altina aciklama yazisini ortalar*/
+  font-size: 1.3rem;
 }
 
 /* Dış link stil */
