@@ -1,49 +1,68 @@
+<!--When we choise HTML Element, we took advantage of link= https://www.w3schools.com/html/html_blocks.asp-->
 <!DOCTYPE html>
-<html lang="en">
+<!-- Set the language of the page to Norwegian for compatibility with Norwegian characters -->
+<html lang="no">
 <head>
-    <meta charset="UTF-8"><!--Since we will use Norwegian in the content, the HTML codes must also be suitable for this.-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--for responsive-->
+    <!-- Meta tags for encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--for responsiveness-->
+
+    <!--SEO meta tags-->
+     <!-- Keywords for better search engine optimization -->
+    <meta name="keywords" content="Oslomet, Mathematisk Modellering, Datavitenskap, Ingeniør"/>
+     <!-- Page description for search engines -->
+    <meta name="description" content="The page contains information about OslaMet's Matematisk Modellering og Datavitenskap - Ingeniør"/>
+    
+    <!-- Title of the webpage -->
     <title>Mathematisk Modellering og Datavitenskap - Ingeniør</title>
-     <!--link for hamburger menu using. Icons used in Hamburber menu symbol, "X" symbol, searching and sosial media links-->
+
+     <!-- Link to Font Awesome for icons used in the menu. Icons used in Hamburber menu symbol, "X" symbol, searching and sosial media links-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="./css/styles.css"><!--for contact til Styles-->
+    <!-- Link to external CSS for page styling -->
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
 
-<!--When we choise HTML Element, we took advantage of link= https://www.w3schools.com/html/html_blocks.asp-->
+
 <!--Header Section -->
 <header> 
-    <!--Navbar-->
+    <!-- Navigation Bar-->
     <nav class="navbar" id="navbar"> 
-    <!--Link til hjem side from the logo-->
-    <a href="index.html">
-        <img class="header-logo" src="./images/oslometlogo2.jpg" alt="Oslomet Logo"><!--Oslomet LOgo-->
-    </a>
+        <!--Logo Section-->
+        <section class="logo" id="logo">
+            <!--Link til hjem side from the logo-->
+            <a href="index.html">
+                <img class="header-logo" src="./images/oslometlogo2.jpg" alt="Oslomet Logo"><!--Oslomet LOgo-->
+            </a>
+        </section>
    
-     <!--Search Box-->
-     <div class="search-box">
-        <input type="text" placeholder="Search..."><!--Search input-->
-        <a href="#">
-            <i class="fas fa-search"></i><!--Search icon-->
-        </a>
-    </div>
+        <!--Search Box-->
+        <section class="search-box">
+            <input type="text" placeholder="Search..."><!--Search input-->
+            <a href="#">
+                <i class="fas fa-search"></i><!--Search icon-->
+            </a>
+        </section>
 
-        <!-- Checkbox for toggling the menu -->
-        <input type="checkbox" id="kontrol">
-        <!-- Label with hamburger and closs icons on Navbar -->
-        <label for="kontrol" class="kontrol">
-            <i class="fa fa-bars"></i><!-- Hamburger icon -->
-            <i class="fa fa-times"></i><!-- Close icon -->
-        </label>
-        <!-- menu for navigation -->
-        <div class="menu">
-            <ul><!--Navigation links-->
-                <li><a href="index.html">Hjem</a></li>
-                <li><a href="accessibility.html">Tilgjengelighet</a></li>
-                <li><a href="github.html">GitHub</a></li>
-                <li><a href="activity.html">Aktivitet</a></li>
-            </ul>
-        </div>
+        <!-- Hamburger Menu Section -->
+        <section class="Hamburger-menu" id="Hamburger-menu">
+            <!-- Checkbox for toggling the menu -->
+            <input type="checkbox" id="kontrol">
+            <!-- Label with hamburger and closs icons on Navbar -->
+            <label for="kontrol" class="kontrol">
+                <i class="fa fa-bars"></i><!-- Hamburger icon -->
+                <i class="fa fa-times"></i><!-- Close icon -->
+            </label>
+            <!-- Navigation Menu -->
+            <section class="menu">
+                <ul><!--List of navigation links-->
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="accessibility.html">Tilgjengelighet</a></li>
+                    <li><a href="github.html">GitHub</a></li>
+                    <li><a href="activity.html">Aktivitet</a></li>
+                </ul>
+            </section>
+        </section>
     </nav>
 </header>
 
@@ -79,254 +98,304 @@
             </video>
 
 
-        <!-- Video altina gelen kisim -->
-        <section class="accordion">
-            <input type="checkbox" id="panel100">
-            <label for="panel100">Du er kanskje også interessert i disse?</label>
-            <section class="content">
-                <section>
-                    <div class="link-design">
-                        <a href="https://www.oslomet.no/studier/tkd/anvendt-datateknologi">
-                            <p>Anvendt datateknologi</p>
-                            <p>Bachelorprogram &vert; 3 år &vert; Pilestredet i Oslo &vert; Heltid</p></a>
-                    </div>
-                    <div class="link-design">
-                        <a href="https://www.oslomet.no/studier/tkd/bioteknologi-kjemiingenior">
-                            <p>Bioteknologi- og kjemiingeniør</p>
-                            <p>Bachelorprogram &vert; 3 år &vert; Pilestredet i Oslo &vert; Heltid</p>
-                        </a>
-                    </div>
-                    <div class="link-design">
-                        <a href="https://www.oslomet.no/studier/tkd/byggingenior">
-                            <p>Byggingeniør</p>
-                            <p>Bachelorprogram &vert; 3 år &vert; Pilestredet i Oslo &vert; Heltid</p>
-                        </a>
-                    </div>
-                    <div class="link-design">
-                        <a href="https://www.oslomet.no/studier/tkd/dataingenior">
-                            <p>Dataingeniør</p>
-                            <p>Bachelorprogram &vert; 3 år &vert; Pilestredet i Oslo &vert; Heltid</p>
-                        </a>
-                    </div>
-                    <div class="link-design">
-                        <a href="https://www.oslomet.no/studier/tkd/elektronikkingenior">
-                            <p>Elektronikkingeniør</p>
-                            <p>Bachelorprogram &vert; 3 år &vert; Pilestredet i Oslo &vert; Heltid</p>
-                        </a>
-                    </div>
-                    <div class="link-design">
-                        <a href="https://www.oslomet.no/studier/tkd/informasjonsteknologi">
-                            <p>Informasjonsteknologi</p>
-                            <p>Bachelorprogram &vert; 3 år &vert; Pilestredet i Oslo &vert; Heltid</p>
-                        </a>
-                    </div>
-                    <div class="link-design">
-                        <a href="https://www.oslomet.no/studier/tkd/maskiningenior">
-                            <p>Maskiningeniør</p>
-                            <p>Bachelorprogram &vert; 3 år &vert; Pilestredet i Oslo &vert; Heltid</p>
-                        </a>
-                    </div>
-                    <div class="link-design">
-                        <a href="https://www.oslomet.no/studier/tkd/tre-termin-ingenior">
-                            <p>Tre-terminsordning til ingeniørutdanning</p>
-                            <p>Bachelorprogram &vert; 3 år &vert; Pilestredet i Oslo &vert; Heltid</p>
-                        </a>
-                    </div>
-                </section>
-            </section>
-        </section>
+            <!--Info-panels-->
+            <section class="info-panel-sec" id="info-panel-sec">
 
-        <section class="accordion">
-            <input type="checkbox" id="panel200">
-            <label for="panel200">Studenthistorier</label>
-            <section class="content">
-                <section>
-                    <div class="link-design"> <a href="https://www.oslomet.no/studier/studenthistorier?student_story=147">
-                        <p>Teknologi og design</p>
+                 <!-- Info Panels: Dynamically displayed content based on sidebar links -->
+                 <!-- Each section is displayed when the respective radio button is selected -->
+
+                <!--Toggleable Panels with radiobutton. When user click side-link, info-panel will open middle of the home page. 
+                    Therefore user don't need scrool down to read information. Important informations are easy to see for user. -->
+
+                <!-- Info Panel: Opptakskrav og poeng-->
+                <input type="radio" id="panel1" name="info-panel" class="panel-toggle">
+                <div class="info-panel" aria-labelledby="panel1">
+                    <label for="panel-reset" class="close-btn">
+                        <i class="fa fa-times"></i>
+                    </label>
+                    <!--We also put the titles in the info panel so that the user can easily see which section he/she is reading.-->
+                    <h3>Opptakskrav og poeng</h3>
+                    <article>
+                        <p>For å søke på dette programmet må du ha:</p>
+                        <ul>
+                            <li>
+                                <a href="https://www.samordnaopptak.no/" class="samordlink" 
+                                target="_blank" rel="noopener">Generell studiekompetanse
+                                </a> 
+                                eller oppfylle kravene til realkompetanse
+                            </li>
+                            <li>Matematikk R1 og R2</li>
+                            <li>Fysikk 1</li>
+                        </ul>
+                        <p>Det kan være konkurranse om plassene. Ved forrige opptak kom alle kvalifiserte søkere inn.</p>
+                        <p>Hvis du mangler generell studiekompetanse eller enkelte fag fra videregående skole, 
+                            kan du søke på dette studiet om du har bestått ettårig forkurs for ingeniørutdanning.</p>
+                    </article>
+                </div>
+
+                <!--Info-panel: "Slik søker du"-->
+                <input type="radio" id="panel2" name="info-panel" class="panel-toggle">
+                <div class="info-panel" aria-labelledby="panel2">
+                    <label for="panel-reset" class="close-btn">
+                        <i class="fa fa-times"></i>
+                    </label>
+                    <h3>Slik søker du</h3>
+                    <article>
+                        <p>Du søker på Samordna opptak med studiekode 215 503.</p>
+                        <ul>
+                            <li>15. april: ordinær søknadsfrist</li>
+                            <li>1. mars: frist for enkelte søkere</li>
+                        </ul>
+                        <!--target="_blank" rel="noopener" ile yan sekmede guvenli acilmasi saglanmistir-->
+                        <p>
+                            <a href="https://www.oslomet.no/studier/soknad-og-opptak/opptak-til-bachelor-aarsstudier" 
+                            target="_blank" rel="noopener">
+                            Mer om å søke på bachelor.
+                            </a>
+                        </p>
+                    </article>
+                </div>
+
+                <!--Info-panel: "Hva lærer du"-->
+                <input type="radio" id="panel3" name="info-panel" class="panel-toggle">
+                <div class="info-panel" aria-labelledby="panel3">
+                    <label for="panel-reset" class="close-btn">
+                        <i class="fa fa-times"></i>
+                    </label>
+                    <h3>Hva lærer du</h3>
+                    <article>
+                        <p>Bachelor i matematisk modellering og datavitenskap kobler sammen matematikk, informatikk, fysikk og statistikk. </p>
+                        <p>Du får innsikt i matematiske modeller som brukes i praktisk problemløsning blant annet i medisinsk kjemi, biologiske prosesser og ulike samfunnssystemer. </p>
+                        <p>Det første studieåret har du emner i blant annet matematikk, programmering, fysikk og kjemi for å få en felles forståelse av tematikken.</p>
+                        <p>Det siste semesteret skriver du en bacheloroppgave tett knyttet til problemstillinger i arbeidslivet.</p>
+                        <p>Første året velger du hvilken av disse spesialiseringene du vil ta.</p>
+                    </article>
+                </div>
+
+                <!--Info panel: Studiets Oppbygging-->
+                <!--Every student wants to get information about which courses they will take when choosing a department. 
+                    That's why we made the complicated course table on the website more readable and understandable and added it to the new page.-->
+                <input type="radio" id="panel4" name="info-panel" class="panel-toggle">
+                <div class="info-panel" aria-labelledby="panel4">
+                    <label for="panel-reset" class="close-btn">
+                        <i class="fa fa-times"></i>
+                    </label>
+                    <h3>
+                        <a href="studiepro.html"
+                        target="_blank" rel="noopener">Studiets oppbygging
+                        </a>
+                    </h3>
+                    <!--Buraya ders tablosu gelecek ya da ders tablosu ayri sayfa olacak-->
+                </div>
+
+                <!--Info-panel: "Hvordan foregår undervisning"-->
+                <input type="radio" id="panel5" name="info-panel" class="panel-toggle">
+                <div class="info-panel" aria-labelledby="panel5">
+                    <label for="panel-reset" class="close-btn">
+                        <i class="fa fa-times"></i>
+                    </label>
+                    <h3>Hvordan foregår undervisning</h3>
+                    <article>
+                        <p>Undervisningen er en kombinasjon av</p>
+                        <ul>
+                            <li>Prosjektarbeid</li>
+                            <li>Workshop</li>
+                            <li>Presentasjoner</li>
+                            <li>Veiledninger</li>
+                            <li>Diskusjoner og refleksjoner</li>
+                            <li>Forelesninger</li>
+                            <li>Selvstudier</li>
+                            <li>Gruppearbeid</li>
+                            <li>Arbeidslivsrelevant bacheloroppgave</li>
+                        </ul>
+                        <p>For å gjennomføre studiet på normert tid, må du regne med å bruke om lag 40 timer per uke på studierelatert arbeid gjennom hele semesteret.</p>
+                    </article>
+                </div>
+
+                <!--info panel: "Hva koster det?"-->
+                <input type="radio" id="panel6" name="info-panel" class="panel-toggle">
+                <div class="info-panel" aria-labelledby="panel6">
+                    <label for="panel-reset" class="close-btn">
+                        <i class="fa fa-times"></i>
+                    </label>
+                    <h3>Hva koster det?</h3>
+                    <p>
+                        <a href="https://student.oslomet.no/semesteravgift" 
+                        target="_blank" rel="noopener">Du betaler en semesteravgift hvert semester (student.oslomet.no).
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://student.oslomet.no/studieavgift-for-internasjonale-studenter-utenfor-eu-eos" 
+                        target="_blank" rel="noopener">Er du internasjonal student fra utenfor EU og EØS, må du betale studieavgift (student.oslomet.no).
+                        </a> Det er mulig å søke om unntak for betaling av denne studieavgiften.
+                    </p>
+                </div>
+
+                <!--info panel: "Hva kan du jobbe som?"-->
+                <input type="radio" id="panel7" name="info-panel" class="panel-toggle">
+                <div class="info-panel" aria-labelledby="panel7">
+                    <label for="panel-reset" class="close-btn">
+                        <i class="fa fa-times"></i>
+                    </label>
+                    <article>
+                        <h3>Hva kan du jobbe som?</h3>
+                        <p>
+                            Med dette studiet får du IT-kompetanse som er etterspurt i arbeidslivet, særlig om du velger spesialiseringene 
+                            vitenskapelige beregninger eller statistiske og datadrevne metoder. 
+                        </p>
+                        <p>Spesialiseringen i matematikk og fysikk retter seg mer mot videre studier, men også her får du etterspurt 
+                            kompetanse i arbeidslivet etter bachelorstudiet. 
+                        </p>    
+                        <p>Matematisk modellering og datavitenskap blir stadig viktigere som basisgrunnlag, i for eksempel beregninger knyttet 
+                            til klima, forsikring og finans, og datadrevne metoder for verdiskaping. 
+                        </p>
+                        <p>
+                            Datadrevne metoder og maskinlæring er i dag svært mye brukt i arbeidslivet. 
+                        </p>
+                    </article>
+                </div>
+
+                <!--info panel: "Utveksling"-->
+                <input type="radio" id="panel8" name="info-panel" class="panel-toggle">
+                <div class="info-panel" aria-labelledby="panel8">
+                    <label for="panel-reset" class="close-btn">
+                        <i class="fa fa-times"></i>
+                    </label>
+                    <h3>Utveksling</h3>
+                    <p>Du kan dra på utveksling i femte semester.</p>
+                </div>
+
+                <!--Info panel: Videre studiemuligheter ved OsloMet-->
+                <input type="radio" id="panel9" name="info-panel" class="panel-toggle">
+                <div class="info-panel" aria-labelledby="panel9">
+                    <label for="panel-reset" class="close-btn">
+                        <i class="fa fa-times"></i>
+                    </label>
+                    <h3>Videre studiemuligheter ved OsloMet</h3>
+                    <p>Anvendt data- og informasjonsteknologi (ACIT)</p>
+                    <p>Masterprogram | 2 år | Pilestredet i Oslo | Heltid </p>
+                    <a href="https://www.oslomet.no/studier/tkd/anvendt-data-informasjonsteknologi" class="acit-btn" 
+                    target="_blank" rel="noopener">Mer info om ACIT
                     </a>
+                </div>
+
+                <!--Info Panel: Om Studie-->
+                <input type="radio" id="panel10" name="info-panel" class="panel-toggle">
+                <div class="info-panel" aria-labelledby="panel10">
+                    <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
+                    <div class="shortinfo">
+                        <h3>Studiested</h3>
+                        <p>Pilestredet i Oslo</p>
                     </div>
-                    <div class="link-design">
-                        <a href="https://www.oslomet.no/studier/studenthistorier/spa-fremtiden-matematikk-datavitenskap">
-                            <p >Spå fremtiden med matematikk og datavitenskap</p>
-                            <img class="images-613" src="images/613c6efdb147-matematikk_oslomet_smilefjes.jpg">
-                            <p>Har du lyst til å finne ut hva som vil skje i fremtiden? Lær å bruke verktøy for å forutsi alt fra været og strømprisene til utviklingen i boligmarkedet.</p>
-                        </a></div>
-                    <div class="link-design">
-                        <a href="https://www.oslomet.no/studier/studenthistorier">
-                            <p>Flere studenthistorier</p>
-                        </a>
+                    <div class="shortinfo">
+                        <h3>Varighet</h3>
+                        <p>3 år</p>
                     </div>
+                    <div class="shortinfo">
+                        <h3>Omfang</h3>
+                        <p>Heltid</p>
+                    </div>
+                    <div class="shortinfo">
+                        <h3>Studiepoeng</h3>
+                        <p>180</p>
+                    </div>
+                    <div class="shortinfo">
+                        <h3>Studiestart</h3>
+                        <p>August</p>
+                    </div>
+                    <div class="shortinfo">
+                        <h3>Undervisningsspråk</h3>
+                        <p>Norsk</p>
+                        <p>Engelsk</p>
+                    </div>
+                    <div class="shortinfo">
+                        <h3>Studieplasser</h3>
+                        <p>40</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Video altina gelen kisim -->
+            <section class="accordion">
+                <input type="checkbox" id="panel100">
+                <label for="panel100">Du er kanskje også interessert i disse?</label>
+                <section class="content">
+                    <section>
+                        <div class="link-design">
+                            <a href="https://www.oslomet.no/studier/tkd/anvendt-datateknologi">
+                                <p>Anvendt datateknologi</p>
+                                <p>Bachelorprogram &vert; 3 år &vert; Pilestredet i Oslo &vert; Heltid</p></a>
+                        </div>
+                        <div class="link-design">
+                            <a href="https://www.oslomet.no/studier/tkd/bioteknologi-kjemiingenior">
+                                <p>Bioteknologi- og kjemiingeniør</p>
+                                <p>Bachelorprogram &vert; 3 år &vert; Pilestredet i Oslo &vert; Heltid</p>
+                            </a>
+                        </div>
+                        <div class="link-design">
+                            <a href="https://www.oslomet.no/studier/tkd/byggingenior">
+                                <p>Byggingeniør</p>
+                                <p>Bachelorprogram &vert; 3 år &vert; Pilestredet i Oslo &vert; Heltid</p>
+                            </a>
+                        </div>
+                        <div class="link-design">
+                            <a href="https://www.oslomet.no/studier/tkd/dataingenior">
+                                <p>Dataingeniør</p>
+                                <p>Bachelorprogram &vert; 3 år &vert; Pilestredet i Oslo &vert; Heltid</p>
+                            </a>
+                        </div>
+                        <div class="link-design">
+                            <a href="https://www.oslomet.no/studier/tkd/elektronikkingenior">
+                                <p>Elektronikkingeniør</p>
+                                <p>Bachelorprogram &vert; 3 år &vert; Pilestredet i Oslo &vert; Heltid</p>
+                            </a>
+                        </div>
+                        <div class="link-design">
+                            <a href="https://www.oslomet.no/studier/tkd/informasjonsteknologi">
+                                <p>Informasjonsteknologi</p>
+                                <p>Bachelorprogram &vert; 3 år &vert; Pilestredet i Oslo &vert; Heltid</p>
+                            </a>
+                        </div>
+                        <div class="link-design">
+                            <a href="https://www.oslomet.no/studier/tkd/maskiningenior">
+                                <p>Maskiningeniør</p>
+                                <p>Bachelorprogram &vert; 3 år &vert; Pilestredet i Oslo &vert; Heltid</p>
+                            </a>
+                        </div>
+                        <div class="link-design">
+                            <a href="https://www.oslomet.no/studier/tkd/tre-termin-ingenior">
+                                <p>Tre-terminsordning til ingeniørutdanning</p>
+                                <p>Bachelorprogram &vert; 3 år &vert; Pilestredet i Oslo &vert; Heltid</p>
+                            </a>
+                        </div>
+                    </section>
                 </section>
             </section>
-        </section>
-        
 
-        <!-- Info Panels: Dynamically displayed content based on sidebar links -->
-        <!-- Each section is displayed when the respective radio button is selected -->
-
-        <!--Toggleable Panels with radiobutton. When user click side-link, info-panel will open middle of the home page. Therefore user don't need scrool down 
-        to read information. Important informations are easy to see for user.
-        -->
-
-        <!-- Info Panel: Opptakskrav og poeng-->
-        <input type="radio" id="panel1" name="info-panel" class="panel-toggle">
-        <div class="info-panel" aria-labelledby="panel1">
-            <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
-            <h3>Opptakskrav og poeng</h3><!--We also put the titles in the info panel so that the user can easily see which section he/she is reading.-->
-            <article>
-            <p>For å søke på dette programmet må du ha:</p>
-            <ul>
-                <li><a href="https://www.samordnaopptak.no/" class="samordlink">Generell studiekompetanse</a> 
-                eller oppfylle kravene til realkompetanse
-                </li>
-                <li>Matematikk R1 og R2</li>
-                <li>Fysikk 1</li>
-            </ul>
-            <p>Det kan være konkurranse om plassene. Ved forrige opptak kom alle kvalifiserte søkere inn.</p>
-            <p>Hvis du mangler generell studiekompetanse eller enkelte fag fra videregående skole, 
-                kan du søke på dette studiet om du har bestått ettårig forkurs for ingeniørutdanning.</p>
-            </article>
-        </div>
-
-        <!--Info-panel: "Slik søker du"-->
-        <input type="radio" id="panel2" name="info-panel" class="panel-toggle">
-        <div class="info-panel" aria-labelledby="panel2">
-            <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
-            <h3>Slik søker du</h3>
-            <article>
-            <p>Du søker på Samordna opptak med studiekode 215 503.</p>
-            <ul>
-                <li>15. april: ordinær søknadsfrist</li>
-                <li>1. mars: frist for enkelte søkere</li>
-            </ul>
-            <!--target="_blank" rel="noopener" ile yan sekmede guvenli acilmasi saglanmistir-->
-            <p><a href="https://www.oslomet.no/studier/soknad-og-opptak/opptak-til-bachelor-aarsstudier" target="_blank" rel="noopener">Mer om å søke på bachelor.</a></p>
-            </article>
-        </div>
-
-        <!--Info-panel: "Hva lærer du"-->
-        <input type="radio" id="panel3" name="info-panel" class="panel-toggle">
-        <div class="info-panel" aria-labelledby="panel3">
-            <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
-            <h3>Hva lærer du</h3>
-            <article>
-                <p>Bachelor i matematisk modellering og datavitenskap kobler sammen matematikk, informatikk, fysikk og statistikk. </p>
-                <p>Du får innsikt i matematiske modeller som brukes i praktisk problemløsning blant annet i medisinsk kjemi, biologiske prosesser og ulike samfunnssystemer. </p>
-                <p>Det første studieåret har du emner i blant annet matematikk, programmering, fysikk og kjemi for å få en felles forståelse av tematikken.</p>
-                <p>Det siste semesteret skriver du en bacheloroppgave tett knyttet til problemstillinger i arbeidslivet.</p>
-                <p>Første året velger du hvilken av disse spesialiseringene du vil ta.</p>
-            </article>
-        </div>
-
-        <!--Info panel: Studiets Oppbygging-->
-        <!--Every student wants to get information about which courses they will take when choosing a department. 
-        That's why we made the complicated course table on the website more readable and understandable and added it to the new page.-->
-        <input type="radio" id="panel4" name="info-panel" class="panel-toggle">
-        <div class="info-panel" aria-labelledby="panel4">
-            <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
-            <h3><a href="studiepro.html">Studiets oppbygging</a></h3>
-             <!--Buraya ders tablosu gelecek ya da ders tablosu ayri sayfa olacak-->
-        </div>
-
-        <!--Info-panel: "Hvordan foregår undervisning"-->
-        <input type="radio" id="panel5" name="info-panel" class="panel-toggle">
-        <div class="info-panel" aria-labelledby="panel5">
-            <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
-            <h3>Hvordan foregår undervisning</h3>
-            <article>
-            <p>Undervisningen er en kombinasjon av</p>
-            <ul>
-                <li>Prosjektarbeid</li>
-                <li>Workshop</li>
-                <li>Presentasjoner</li>
-                <li>Veiledninger</li>
-                <li>Diskusjoner og refleksjoner</li>
-                <li>Forelesninger</li>
-                <li>Selvstudier</li>
-                <li>Gruppearbeid</li>
-                <li>Arbeidslivsrelevant bacheloroppgave</li>
-            </ul>
-            <p>For å gjennomføre studiet på normert tid, må du regne med å bruke om lag 40 timer per uke på studierelatert arbeid gjennom hele semesteret.</p>
-            </article>
-        </div>
-
-        <!--info panel: "Hva koster det?"-->
-        <input type="radio" id="panel6" name="info-panel" class="panel-toggle">
-        <div class="info-panel" aria-labelledby="panel6">
-            <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
-            <h3>Hva koster det?</h3>
-            <p><a href="https://student.oslomet.no/semesteravgift" target="_blank" rel="noopener">Du betaler en semesteravgift hvert semester (student.oslomet.no).</a></p>
-            <p><a href="https://student.oslomet.no/studieavgift-for-internasjonale-studenter-utenfor-eu-eos" target="_blank" rel="noopener">Er du internasjonal student fra utenfor EU og EØS, må du betale studieavgift (student.oslomet.no).</a> Det er mulig å søke om unntak for betaling av denne studieavgiften.</p>
-        </div>
-
-        <!--info panel: "Hva kan du jobbe som?"-->
-        <input type="radio" id="panel7" name="info-panel" class="panel-toggle">
-        <div class="info-panel" aria-labelledby="panel7">
-            <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
-            <article>
-                <p><h3>Hva kan du jobbe som?</h3></p>
-                <p>Med dette studiet får du IT-kompetanse som er etterspurt i arbeidslivet, særlig om du velger spesialiseringene 
-                    vitenskapelige beregninger eller statistiske og datadrevne metoder. </p>
-                <p>Spesialiseringen i matematikk og fysikk retter seg mer mot videre studier, men også her får du etterspurt 
-                    kompetanse i arbeidslivet etter bachelorstudiet. </p>    
-                <p>Matematisk modellering og datavitenskap blir stadig viktigere som basisgrunnlag, i for eksempel beregninger knyttet til klima, 
-                    forsikring og finans, og datadrevne metoder for verdiskaping. </p>
-                <p>Datadrevne metoder og maskinlæring er i dag svært mye brukt i arbeidslivet. </p>
-            </article>
-        </div>
-
-        <!--info panel: "Utveksling"-->
-        <input type="radio" id="panel8" name="info-panel" class="panel-toggle">
-        <div class="info-panel" aria-labelledby="panel8">
-            <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
-            <p><h3>Utveksling</h3></p>
-            <p>Du kan dra på utveksling i femte semester.</p>
-        </div>
-
-        <!--Info panel: Videre studiemuligheter ved OsloMet-->
-        <input type="radio" id="panel9" name="info-panel" class="panel-toggle">
-        <div class="info-panel" aria-labelledby="panel9">
-            <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
-            <h3>Videre studiemuligheter ved OsloMet</h3>
-            <p>Anvendt data- og informasjonsteknologi (ACIT)</p>
-            <p>Masterprogram | 2 år | Pilestredet i Oslo | Heltid </p>
-                <a href="https://www.oslomet.no/studier/tkd/anvendt-data-informasjonsteknologi" class="acit-btn" target="_blank" rel="noopener">Mer info om ACIT</a>
-        </div>
-
-        <!--Info Panel: Om Studie-->
-        <input type="radio" id="panel10" name="info-panel" class="panel-toggle">
-        <div class="info-panel" aria-labelledby="panel10">
-            <label for="panel-reset" class="close-btn"><i class="fa fa-times"></i></label>
-            <div class="shortinfo">
-                <h3>Studiested</h3>
-                <p>Pilestredet i Oslo</p>
-            </div>
-            <div class="shortinfo">
-                <h3>Varighet</h3>
-                <p>3 år</p>
-            </div>
-            <div class="shortinfo">
-                <h3>Omfang</h3>
-                <p>Heltid</p>
-            </div>
-            <div class="shortinfo">
-                <h3>Studiepoeng</h3>
-                <p>180</p>
-            </div>
-            <div class="shortinfo">
-                <h3>Studiestart</h3>
-                <p>August</p>
-            </div>
-            <div class="shortinfo">
-                <h3>Undervisningsspråk</h3>
-                <p>Norsk</p>
-                <p>Engelsk</p>
-            </div>
-            <div class="shortinfo">
-                <h3>Studieplasser</h3>
-                <p>40</p>
-            </div>
-        </div>
+            <section class="accordion">
+                <input type="checkbox" id="panel200">
+                <label for="panel200">Studenthistorier</label>
+                <section class="content">
+                    <section>
+                        <div class="link-design"> <a href="https://www.oslomet.no/studier/studenthistorier?student_story=147">
+                            <p>Teknologi og design</p>
+                        </a>
+                        </div>
+                        <div class="link-design">
+                            <a href="https://www.oslomet.no/studier/studenthistorier/spa-fremtiden-matematikk-datavitenskap">
+                                <p >Spå fremtiden med matematikk og datavitenskap</p>
+                                <img class="images-613" src="images/613c6efdb147-matematikk_oslomet_smilefjes.jpg">
+                                <p>Har du lyst til å finne ut hva som vil skje i fremtiden? Lær å bruke verktøy for å forutsi alt fra været og strømprisene til utviklingen i boligmarkedet.</p>
+                            </a></div>
+                        <div class="link-design">
+                            <a href="https://www.oslomet.no/studier/studenthistorier">
+                                <p>Flere studenthistorier</p>
+                            </a>
+                        </div>
+                    </section>
+                </section>
+            </section>
         
     </section>
     
@@ -369,7 +438,7 @@
 
 
 <!--FOOTER CODING-->
-<footer>
+<footer class="footer" id="footer">
     <div class="row">
         <div class="column"> <!--Bu kisim footerda cok yer kapliyor, uygun bir yere alinacak, grup toplantisindan sonra-->
             <h3>Links</h3>
