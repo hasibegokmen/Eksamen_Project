@@ -165,8 +165,6 @@ Inspired by the following tutorial:
     /* Additional styling specific to this image */
 }
 
-
-
 /* Hamburger menu design: 
    Inspired by the following tutorials:
    - https://www.youtube.com/watch?v=x3Zu_ncHpas&list=WL&index=6
@@ -397,7 +395,7 @@ label:hover {
     grid-column: 1 / 3;
     grid-row: 2;
     width: 100%;
-    max-width: 600px;
+    max-width: 70%;
     margin: 10px auto;
     border: 1px solid #ddd;
     border-radius: 5px;
