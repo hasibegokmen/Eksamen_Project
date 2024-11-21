@@ -378,17 +378,18 @@ input[type="radio"]:checked + label + .info-panel {
     border-radius: 5px;
     overflow: hidden;
     color: white;
+    font-family: Arial, sans-serif;
 }
 
 /* Başlık stili */
 .accordion label {
     display: block;
     padding: 15px;
-    background-color: #00093C;
+    background-color: #007acd;
     cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 19.2px;
     border-bottom: 1px solid #ddd;
+    font-weight: 400;
 }
 
 /* Gizli checkbox ile içerik kontrolü */
@@ -413,15 +414,58 @@ input[type="radio"]:checked + label + .info-panel {
 }
 
 /* 1. panel link dizayni*/
-.link-design{
+.link-design1{
     border-bottom-style: solid;
-
+    border-bottom-color: #222;
+    font-family: Arial, sans-serif;
+}
+.link-design2{
+}
+.link-design3{
+    font-weight: 700;
+}
+.link-design4{
+    color: #222;
 
 }
 .images-613{
-    width: 450px;
+    width: 650px;
+}
+.bilde-design{
+    display: flex; /* Flexbox etkinleştirilir */
+    justify-content: center; /* Yatay ortalama */
+
+}
+.st-his-link-design1{
+    color: #222;
+    font-weight: 600;
+    font-size: 16px;
 }
 
+.st-his-link-design2{
+    text-decoration: none;
+}
+.st-his-link-design2-1{
+    font-size: 28px;
+    margin-top: 50px;
+    color: #222;
+    font-weight: 700;
+}
+.st-his-link-design2-2{
+    font-size: 18px;
+    margin-top: -10px;
+    color: #222;
+    font-weight: 400;
+}
+.st-his-link-design3{
+    font-size: 28px;
+    margin-top: 40px;
+    color: #222;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex; /* Flexbox etkinleştirilir */
+    justify-content: center; /* Yatay ortalama */
+}
 
 
 
