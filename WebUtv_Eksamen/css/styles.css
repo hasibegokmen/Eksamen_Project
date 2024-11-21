@@ -413,7 +413,32 @@ input[type="radio"]:checked + label + .info-panel {
     padding: 15px;
 }
 
-/* 1. panel link dizayni*/
+/* 1. panel dizayni */
+.spør-link-design1{
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+}
+
+.spør-link-design2{
+    color: black;
+    font-size: 28px;
+    font-family: Arial, sans-serif;
+    font-weight: 800;
+
+}
+.spør-link-design3{
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+}
+.spør-link-design4{
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+}
+
+/* 2. panel link dizayni*/
 .link-design1{
     border-bottom-style: solid;
     border-bottom-color: #222;
@@ -427,6 +452,8 @@ input[type="radio"]:checked + label + .info-panel {
 .link-design4{
     color: #222;
 
+    /* 3. panel dizayni */
+
 }
 .images-613{
     width: 650px;
@@ -437,18 +464,15 @@ input[type="radio"]:checked + label + .info-panel {
 
 }
 .st-his-link-design1{
-    color: #222;
     font-weight: 600;
     font-size: 16px;
 }
 
 .st-his-link-design2{
-    text-decoration: none;
 }
 .st-his-link-design2-1{
     font-size: 28px;
     margin-top: 50px;
-    color: #222;
     font-weight: 700;
 }
 .st-his-link-design2-2{
@@ -460,9 +484,7 @@ input[type="radio"]:checked + label + .info-panel {
 .st-his-link-design3{
     font-size: 28px;
     margin-top: 40px;
-    color: #222;
     font-weight: 700;
-    text-decoration: none;
     display: flex; /* Flexbox etkinleştirilir */
     justify-content: center; /* Yatay ortalama */
 }
