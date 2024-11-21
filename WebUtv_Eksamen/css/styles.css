@@ -1,6 +1,6 @@
-/* Genel Stil Ayarları */
+/* Genel Style Settings */
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
 }
 
 body {
@@ -8,45 +8,47 @@ body {
     padding: 0;
     height: 100vh;
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto 1fr auto; /* Header, content, and footer layout */
     grid-template-areas:
         "header"
-        "content";
+        "content"
+        "footer";
     font-family: Arial, sans-serif;
 }
-/*Navbar Design Tum sayfalar icin ortak*/
-/* Header */
+
+/* Navbar Design - Common for all pages */
+/* Header Section */
 header {
     grid-area: header;
     display: grid;
-    align-items: center;
-    padding:0 1rem;
+    align-items: center;/* Vertically aligns the header content */
+    padding:0 1rem; /* Horizontal padding */
     background-color: #000064;
-    color: rgb(250, 250, 250);
+    color: rgb(250, 250, 250); /* White text color */
     
 }
 
-/*Oslomet Logo*/
+/*Oslomet Logo Styling */
 .header-logo {
-    height: 100px; 
-    width: auto; 
-    margin-left: 1rem;
+    height: 6.25rem; 
+    width: auto; /* Maintains aspect ratio */
+    margin-left: 1rem; /* Spacing from the left */
 }
 
 /*Search Box*/
-/*Search-box yapiminda https://youtu.be/AmdIfgxMqY8?si=7BBZOvS828VnkFan dan yararlanildi*/
+/* Design inspired by https://youtu.be/AmdIfgxMqY8?si=7BBZOvS828VnkFan*/
 .search-box {
     display: flex;
-    /*cursor: pointer;
-    border-style: outset;
+    /* Changes the cursor to a pointer (hand icon) to indicate the item is clickable */
+    cursor: pointer;
     align-items: center;
-    margin-left: auto;
-    margin-right: 2rem;*/
-    justify-self: center; /* Ortalanıyor */
-    padding: 5px 15px;
-    border: 2px solid #ddd;
-    border-radius: 30px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    margin-left: auto; /* Pushes the search box to the right */
+    margin-right: 2rem; /* Spacing from the edge */
+    justify-self: right; 
+    padding: 0.3rem 0.9rem;
+    border: 0.125rem solid #ddd;
+    border-radius: 1.8rem;
+    box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.3);
     }
 
     .search-box:hover input {
@@ -54,270 +56,100 @@ header {
     }
     .search-box input {
         width: 0;
-        outline: none;
+        outline: none;/* Removes focus outline */
         border: none;
-        font-weight: 500;
+        font-weight: 500;/* Medium font weight */
         transition: 0.8s;
         background: transparent;
         color: #ddd;
     }
     .search-box a .fas{
         color:#ddd;
-        font-size:18px;
+        font-size:1.1rem;
     }
 
-/* Video */
-.video{
-    width: 100%;
-    height: 300;
-}
-.page-header{
-    display: flex;
-    justify-content: center;
-}
-
-/* Meny at Navbar*/
 
 
+/* Navbar Menu Section*/
 .navbar{
     display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
+    grid-template-columns: auto 1fr auto;/* Logo, menu, and search box layout */
+    align-items: center;/* Vertically aligns navbar content */
 }
 
+/* Menu Styling */
 .menu {
     display: flex;
-    gap: 1rem;
-    justify-self: end; /* Menü sağa hizalanıyor */
+    gap: 1rem; /* Spacing between menu items */
+    justify-self: end; /* Aligns the menu to the right */
 }
 
-/* Yatay Menü Stilleri (Büyük Ekranlar) Menu Navbar*/
+/* Horizontal Menu Styles for Large Screens */
 .menu ul {
     display: flex;
-    gap: 1rem;/*Bunu kontol et*/
     margin: 0;
     padding: 0;
-    list-style: none;
+    list-style: none; /* Removes bullet points */
     
 }
 
-/*Menu Navbar links*/
-.menu ul li {
-    list-style-type: none;
-    
-}
-
-/*Menu Navbar links format*/
+/* Menu Links Formatting*/
 .menu a {
     color: white;
-    text-decoration: none;
+    text-decoration: none; /* Removes underline when not on*/
     font-size: 1.3rem;
-    padding: 0.5rem 0.8rem;
+    padding: 0.5rem 0.8rem; /* Padding around the link */
     background-color: #000064;
     font-weight: bold;
-    position: relative;
+    position: relative; /* Enables additional styling, like hover effects */
 }
 
 .menu a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline; /* Adds underline when hovered */
 }
 
+/*-----------Home Page Design------------------*/
 
-/* Hamburger menu yapiminda https://www.youtube.com/watch?v=x3Zu_ncHpas&list=WL&index=6 and
-https://www.youtube.com/watch?v=uSHc2YLGBSM&t=1257s videolarindan yararlanildi.*/
-/* Hamburger Menü ve Yan Menü (Mobil Ekranlar) Uc cizgi. Hamburger menununun acilip kapanmasini
-saglamak icin ve bunu kontrol etmek icin gizli bir checkbox eklendi*/
+/*For Grid structure
+Inspired by the following tutorial:
+-https://www.youtube.com/watch?v=kI77jbuMU1Y&list=WL&index=11
+*/
 
-.kontrol {
-    display: none; /* Büyük ekranlarda gizli */
-}
-
-#kontrol {
-    display: none; /* Checkbox gizli */
-}
-
-/*Home Page Design*/
-/* Ana İçerik Yapısı */
+/* Main Content Layout */
 .grid-container-home {
-    grid-area: content;
+    grid-area: content; /* Assigns this grid container to the content area */
     display: grid;
-    grid-template-columns: 18% 82%;
+    grid-template-columns: 18% 82%;/* Defines the side menu and main content width */
+    grid-template-rows: auto auto; /* new row for the accordion */
+    grid-template-areas: 
+        "side-menu main-content"
+        "accordion accordion"; /* accordion takes full width at the second row */
     gap: o.6rem;
     padding: 1.2rem;
-    height: calc(140vh - 70px);
+    height: auto;/* Sets the height based on viewport with a specific offset */
 }
 
-/* Home page Sol Menü */
-.side-menu {
-    background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-}
-
-/* Acilan bilgi paneli icin bu siteden yararlandim https://www.quora.com/How-do-I-make-a-div-visible-on-clicking-a-link-using-only-HTML-and-CSS*/
-/*https://css-tricks.com/css-grid-can-do-auto-height-transitions/ and  https://css-tricks.com/hide-scrollbars-during-an-animation/*/
-/*Sol menu linkler at Home page*/
-.side-link {
-    width: 100%;
-    padding: 0.6rem;
-    margin-bottom: 0.3rem;
-    background-color: #007acd;
-    color: white;
-    border: none;
-    cursor: pointer;
-    text-align: left;
-    font-size: 1.2rem;
-}
-
-/*linklerin gorunurlugunu artirmak icin hover effekt eklendi*/
-.side-link:hover {
-    background-color: #00093c;
-}
-
-/* Paneli Gizle Göster */
-.panel-toggle {
-    display: none; /*Ilgili linke tiklanmadigi zaman gizli*/
-}
-
-/*side-linklere tiklandigi zaman bilgilerin gorunmesi icin info-panel eklendi.
-Ilk olarak kapali ayarlandi.Acildigi zamanki goruntusu*/
-/* Panel içeriği */
-.info-panel {
-    display: none;
-    background-color: #f8f8f8;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    margin-top: 1rem;
-    border-radius: 0.3rem;
-    position: absolute;
-    top: 0; /* Üstten başlayacak */
-    left: 0;
-    width: 100%;  /*Ana içerik kadar genişlik */
-    max-width: 100%; /* Panelin genişliği, ekran boyutunu aşmaz */
-    text-align: left; /* Yazıları sola yasla */
-    visibility: hidden; /* Başlangıçta gizli */
-    overflow: hidden;
-    word-wrap: break-word; /* Uzun metinler satır içinde kırılır */
-    transition: max-height 0.5s ease-out;
-}
-
-
-/*Panel açılınca gösterilecek. Ilgili info-panelin radio butonu aktif oldugunda info-panel acilacak*/
-
-.panel-toggle:checked + .info-panel {
-    display: block;
-    visibility: visible; /* Görünür yap */
-    max-height: none; /* Açıldığında yüksekliği ayarla */
-}
-
-input[type="radio"]:checked + label + .info-panel {
-    display: block;
-}
-/* Kapatma Butonu info panel yan linkler icin anasayfa*/
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    color: #666;
-    font-size: 1.2rem;
-    cursor: pointer;
-}
-
-.samordlink{ /*link oldugu anlasilmasi icin mavi renk*/
-    color:blue;
-}
-
-.samordlink:visited {
-    color: purple; /* Ziyaret edildiginde link rengini mor yap */
-    text-decoration-color: rgb(78, 13, 110); /* Alt çizgi rengini de mor yap */
-}
-
-/*ACIT sayfasina yonlendiren buton olusturmak icin menydeki buton stilinden yararlanildi butunluk saglamak icin*/
-.acit-btn {
-    background-color: #2e3b86;
-    color: white;
-    padding: 0.3rem 0.8rem;
-    text-decoration: none;
-    border-radius: 5%;
-    display: inline-block;
-}
-
-
-.acit-btn:hover {
-    color: #e9e3e4;
-    text-decoration: underline;
-}
-
-
-/* Style for the side menu */
-.side-link[aria-expanded="true"] {
-    background-color: #1e867f;
-}
-
-/*Style for Table of studie program*/ 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  th, td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid #2d3223;
-  }
-  
-  th {
-    background-color: rgb(4, 37, 88);
-    color: white;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  tr:second-child(even) {
-    background-color: #f2f2f2;
-  }
-
-  .table {
-    display: none;
-  }
-
-/*Radio button for to show right studie prog. Ilgili programla ilgili radio butona tiklandiginda
-ilgili ders programinin acilmasi icin*/
-#matematik-fysikk:checked ~ .studie-table-container #matematik-fysikk-prog,
-#statistik-data:checked ~ .studie-table-container #statistik-data-prog,
-#vitenskapelige-beregninger:checked ~ .studie-table-container #vitenskapelige-beregninger-prog {
-    display: block;
-}
-
-
-
-/*studie program name are formated*/
-label {
-    padding: 8px 15px;
-    background-color: #01336a;
-    color: white;
-    margin-right: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-label:hover {
-    background-color: #0056b3;
-}
-
-
-/* Ana İçerik */
+/* The home page main-content */
 .main-content-home {
+    grid-area: main-content;
+    grid-column: 2; 
+    grid-row: 1; 
     background-color: #e9e9e9;
     padding: 1.2rem;
     font-size: 1.1rem;
     position: relative;
 
+}
+
+/* Video Section */
+.video{
+    width: 100%; /* Full width of its container */
+    height: 28rem;
+}
+
+.page-header{
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
 }
 
 .video-preview {
@@ -333,80 +165,210 @@ label:hover {
     /* Additional styling specific to this image */
 }
 
-/* Sağ side Burasi tusa donusecek o zaman burayla ilgili stillerde silinecek
+/* Hamburger menu design: 
+   Inspired by the following tutorials:
+   - https://www.youtube.com/watch?v=x3Zu_ncHpas&list=WL&index=6
+   - https://www.youtube.com/watch?v=uSHc2YLGBSM&t=1257s 
+*/
 
-/* Ana konteyner stilleri */
-.extra-info {
-    background-color: #f9f9f9; /* Hafif bir arka plan rengi */
-    padding: 20px;
-    border-radius: 8px; /* Köşeleri yuvarla */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
-    max-width: 400px; /* Genişliği sınırlandır */
-    margin: 20px auto; /* Ortala */
+/* Hamburger Menu and Side Menu (Mobile Screens) */
+/* Hidden checkbox for controlling the hamburger menu */
+.kontrol {
+    display: none; /* Hidden on larger screens */
 }
 
-/* Her bir bilgi bloğu için stil */
+#kontrol {
+    display: none; /* Hides the checkbox itself */
+}
+
+/* Side Menu on the Home Page */
+.side-menu {
+    grid-area: side-menu;
+    background-color: #f4f4f4; /* Light gray background for the menu */
+    display: flex;
+    flex-direction: column;/* Align items vertically */
+    align-items: flex-start; /* Aligns items to the start of the container */
+    padding: 0.625rem; /* Padding equivalent to 10px */
+}
+
+/* 
+Information panel design: 
+Inspired by the following resources:
+- https://www.quora.com/How-do-I-make-a-div-visible-on-clicking-a-link-using-only-HTML-and-CSS
+- https://css-tricks.com/css-grid-can-do-auto-height-transitions/
+- https://css-tricks.com/hide-scrollbars-during-an-animation/
+- https://www.youtube.com/watch?v=9XiEm6RpCFU&list=WL&index=17
+*/
+
+/* Side menu links */
+.side-link {
+    width: 100%; /* Full width of the menu */
+    padding: 0.6rem;
+    margin-bottom: 0.3rem;
+    background-color: #007acd;
+    color: white;
+    border: none;
+    cursor: pointer;/* Adds pointer cursor for interactivity */
+    text-align: left;
+    font-size: 1.2rem;/* Larger font size for readability */
+}
+
+/* Hover effect to improve link visibility */
+.side-link:hover {
+    background-color: #00093c;
+}
+
+/* Toggle for opening/closing panels */
+.panel-toggle {
+    display: none; /* Initially hidden until triggered */
+}
+
+/* Info Panel (content displayed when side-link is clicked) */
+.info-panel {
+    display: none; /* Hidden by default */
+    background-color: #f8f8f8;
+    padding: 1rem;
+    border: 1px solid #ddd; /* Light gray border for separation */
+    margin-top: 1rem;
+    border-radius: 0.3rem;
+    position: absolute; /* Positioned relative to the parent */
+    top: 0; /* Aligns panel to the top */
+    left: 0; /* Aligns panel to the left */
+    width: 100%;  /* Full width of the content */
+    max-width: 100%; /* Ensures panel doesn’t exceed container width */
+    text-align: left; /* Aligns text to the left */
+    visibility: hidden; /* Initially invisible */
+    overflow: hidden; /* Hides content outside the container */
+    word-wrap: break-word; /* Breaks long text into multiple lines */
+    transition: max-height 0.5s ease-out; /* Smooth transition when opening/closing */
+}
+
+/* Displays the info panel when the corresponding radio button is checked */
+.panel-toggle:checked + .info-panel {
+    display: block;
+    visibility: visible; /* Makes the panel visible */
+    max-height: none; /* Removes height restriction when opened */
+}
+
+input[type="radio"]:checked + label + .info-panel {
+    display: block; /* Displays the panel */
+}
+
+/* Close button for the info panel */
+.close-btn {
+    position: absolute;
+    top: 0.625rem; 
+    right: 0.625rem; 
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Link styling */
+.samordlink{ 
+    color:blue; /* Blue to indicate a clickable link */
+}
+
+.samordlink:visited {
+    color: purple; /* Changes color after the link is visited */
+    text-decoration-color: rgb(78, 13, 110); /* Changes underline color to purple */
+}
+
+/* Button design for ACIT page redirection */
+.acit-btn {
+    background-color: #2e3b86;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    text-decoration: none;
+    border-radius: 5%;
+    display: inline-block;
+}
+
+/*to make the underline appear when hovering over the button*/
+.acit-btn:hover {
+    color: #e9e3e4;
+    text-decoration: underline;
+}
+
+/* Styling for each information block */
 .shortinfo {
-    padding: 15px 0; /* Yukarıdan ve aşağıdan boşluk bırak */
-    border-bottom: 1px solid #00093c; /* Alt çizgi ekle */
+    /*padding: 0.2rem 0;  Adds spacing top and bottom */
+    border-bottom: 1px solid #00093c; /* Adds a bottom border with a dark blue color */
 }
 
-/* Son öğedeki alt çizgiyi kaldır */
+/* Remove the bottom border for the last information block */
 .shortinfo:last-child {
     border-bottom: none;
 }
 
-/* Başlık stilini daha belirgin yap */
-.shortinfo h3 {
-    font-size: 1.1em;
-    color: #333;
-    margin: 0;
-    font-weight: bold;
-}
 
-/* Bilgi metni için stil */
+/* Style for informational text */
 .shortinfo p {
-    margin: 5px 0 0; /* Başlığın altında küçük bir boşluk */
+    margin: 0.1rem 0 0; /* Adds a small top margin below the title */
     color: #555;
 }
 
-/*Silinecek aside ile ilgili stil burada bitiyor*/
 
-/*Home page ikinci kisim stilleri burada basliyor*/
+/* Table Styles for Study Programs */
+  table {
+    width: 100%;
+    border-collapse: collapse; /* Collapses table borders */
+  }
+  
+  th, td {
+    padding: 0.4rem 0.6rem;
+    text-align: left;
+    border-bottom: 1px solid #2d3223;/* Dark border below each row */
+  }
+  
+  th {
+    margin:0.5rem;
+    background-color: rgb(4, 37, 88);
+    color: white;
+    text-align: center;
+    font-weight: bold; /* Makes header text bold */
+  }
+  
+  /* Study program tables are initially hidden */
+  .table {
+    display: none;
+  }
+
+/* Display the appropriate table when a specific radio button is selected */
+#matematik-fysikk:checked ~ .studie-table-container #matematik-fysikk-prog,
+#statistik-data:checked ~ .studie-table-container #statistik-data-prog,
+#vitenskapelige-beregninger:checked ~ .studie-table-container #vitenskapelige-beregninger-prog {
+    display: block;/* Shows the corresponding study program table */
+}
 
 
+/* Labels for selecting study programs */
+label {
+    padding: 0.5rem 0.9rem;
+    background-color: #2b6fb7;
+    color: white;
+    margin-right: 0.3rem;
+    border-radius: 0.3rem;/* Rounded corners */
+    cursor: pointer;/* Adds pointer cursor */
+    font-weight: bold;
+}
 
-/*Home page ikinci kisim stilleri burada bitiyor*/
-
-
-/*Activity ikinci kisim stilleri burada basliyor*/
-
-
-
-/*Activity ikinci kisim stilleri burada bitiyor*/
-
-
-/*Accesibility ikinci kisim stilleri burada basliyor*/
-
-
-
-/*Accesibiity ikinci kisim stilleri burada bitiyor*/
-
-
-/*Github page*/
-
-
-
-
-
+label:hover {
+    background-color: #01336a;
+}
 
 
 /*Video altina gelen kisim*/
 
 /* Genel stiller */
 .accordion {
+    grid-area: accordion;
+    grid-column: 1 / 3;
+    grid-row: 2;
     width: 100%;
-    max-width: 600px;
+    max-width: 50%;
     margin: 10px auto;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -455,9 +417,6 @@ label:hover {
 .images-613{
     width: 450px;
 }
-
-
-
 
 
 
@@ -589,10 +548,27 @@ ul li a{
 /* Footer kodlari burada bitiyor Duzenlenecek*/
 
 
+/*Activity ikinci kisim stilleri burada basliyor*/
+
+
+
+/*Activity ikinci kisim stilleri burada bitiyor*/
+
+
+/*Accesibility ikinci kisim stilleri burada basliyor*/
+
+
+
+/*Accesibiity ikinci kisim stilleri burada bitiyor*/
+
+
+/*Github page*/
+
+
 
 /*Telefon boyutuna gelince olacak degisiklikler*/
 /* Mobilde Sağdan Açılan Yan Menü */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     /* Hamburger menü simgesi */
     .kontrol {
         display: block;
@@ -679,6 +655,9 @@ ul li a{
     }
 }
 
+@media (max-width: 1024px) {
+}
+
 
 
 
@@ -692,7 +671,7 @@ ul li a{
 
     .background-container {
         max-width: 1200%; /* Genişliği tamamen yay */
-        gap:2rem
+        gap: 2rem;
         padding: 20px; /* İçerik ile kenarlar arasında boşluk bırak */
         background-color: #b3e5fc; /* Açık mavi tonu */
         border-radius: 10px; /* Köşeleri yuvarla */
