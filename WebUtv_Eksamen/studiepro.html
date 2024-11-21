@@ -67,29 +67,31 @@
 </header>
 
 
-
+<main>
 <!--https://www.w3schools.com/html/html_table_colspan_rowspan.asp-->
 <section class="studieprogTable">
   <h2>Studiets Oppbygning </h2>
   <h3>Velg Emnegruppe:</h3>
 
-  <!--Radio button for Matematik-Fysikk-->
-  <input type="radio" id="matematik-fysikk" name="emne-choise" class="table-toggle" checked>
-  <label for="matematik-fysikk">Matematikk og Fysikk</label>
+  <!--<section class="radio-btn-sec" id="radio-btn-sec">-->
+    <!--Radio button for Matematik-Fysikk-->
+    <input type="radio" class="radio-btn-stp" id="matematik-fysikk" name="emne-choise" class="table-toggle" checked>
+    <label for="matematik-fysikk" class="label-matematik">Matematikk og Fysikk</label>
 
-  <!--Radio button for Statistiske og datadrevne metoder-->
-  <input type="radio" id="statistik-data" name="emne-choise" class="table-toggle" checked>
-  <label for="statistik-data">Statistiske og datadrevne metoder</label>
+    <!--Radio button for Statistiske og datadrevne metoder-->
+    <input type="radio" id="statistik-data" name="emne-choise" class="table-toggle">
+    <label for="statistik-data" class="label-statistik">Statistiske og datadrevne metoder</label>
 
-  <!--Radio button for Vitenskapelige beregninger-->
-  <input type="radio" id="vitenskapelige-beregninger" name="emne-choise" class="table-toggle" checked>
-  <label for="vitenskapelige-beregninger">Vitenskapelige beregninger</label>
+    <!--Radio button for Vitenskapelige beregninger-->
+    <input type="radio" id="vitenskapelige-beregninger" name="emne-choise" class="table-toggle">
+    <label for="vitenskapelige-beregninger" class="label-vitenskapelige">Vitenskapelige beregninger</label>
+  <!--</section>-->
 
-  <p><a href="index.html">Gå Tilbake</a></p>
+  <p class="go-btn" id="go-btn"><a href="index.html">Gå Tilbake Hjem Side</a></p>
 
   <!-------------------Emnegruppe: Matematikk og Fysikk--------------------------->
-  <div class="studie-table-container">
-    <div class="table" id="matematik-fysikk-prog">
+  <section class="studie-table-container">
+    <section class="table" id="matematik-fysikk-prog">
       <table>
         <thead>
           <tr>
@@ -244,12 +246,12 @@
             </tr>
           </tbody>
       </table>  
-    </div>
-  </div>
+    </section>
+  </section>
 
   <!------------------------------------Statistiske og datadrevne metoder----------------->
-  <div class="studie-table-container">
-    <div class="table" id="statistik-data-prog">
+  <section class="studie-table-container">
+    <section class="table" id="statistik-data-prog">
       <table>
         <thead>
           <tr>
@@ -404,13 +406,13 @@
             </tr>
           </tbody>
       </table>  
-    </div>
-  </div>
+    </section>
+  </section>
 
 
   <!-----------------------------Emnegruppe: Vitenskapelige Beregninger---------------->
-  <div class="studie-table-container">
-    <div class="table" id="vitenskapelige-beregninger-prog">
+  <section class="studie-table-container">
+    <section class="table" id="vitenskapelige-beregninger-prog">
       <table>
         <thead>
           <tr>
@@ -567,6 +569,9 @@
             </tr>
           </tbody>
       </table>  
-    </div>
-  </div>
+    </section>
+  </section>
 </section>
+</main>
+</body>
+</html>

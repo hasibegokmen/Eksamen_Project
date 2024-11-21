@@ -211,6 +211,7 @@ Inspired by the following resources:
     cursor: pointer;/* Adds pointer cursor for interactivity */
     text-align: left;
     font-size: 1.2rem;/* Larger font size for readability */
+    border-radius: 0.3rem;
 }
 
 /* Hover effect to improve link visibility */
@@ -312,6 +313,32 @@ input[type="radio"]:checked + label + .info-panel {
 
 
 /* Table Styles for Study Programs */
+
+/* Display the appropriate table when a specific radio button is selected */
+#matematik-fysikk:checked ~ .studie-table-container #matematik-fysikk-prog,
+#statistik-data:checked ~ .studie-table-container #statistik-data-prog,
+#vitenskapelige-beregninger:checked ~ .studie-table-container #vitenskapelige-beregninger-prog {
+    display: block;/* Shows the corresponding study program table */
+}
+
+.label-matematik,
+.label-statistik,
+.label-vitenskapelige {
+    padding: 0.5rem 0.9rem;
+    color: white;
+    margin-right: 0.3rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #2b6fb7;
+}
+
+.label-matematik:hover,
+.label-statistik:hover,
+.label-vitenskapelige:hover {
+    background-color: #01336a;
+}
+
   table {
     width: 100%;
     border-collapse: collapse; /* Collapses table borders */
@@ -335,29 +362,6 @@ input[type="radio"]:checked + label + .info-panel {
   .table {
     display: none;
   }
-
-/* Display the appropriate table when a specific radio button is selected */
-#matematik-fysikk:checked ~ .studie-table-container #matematik-fysikk-prog,
-#statistik-data:checked ~ .studie-table-container #statistik-data-prog,
-#vitenskapelige-beregninger:checked ~ .studie-table-container #vitenskapelige-beregninger-prog {
-    display: block;/* Shows the corresponding study program table */
-}
-
-
-/* Labels for selecting study programs */
-label {
-    padding: 0.5rem 0.9rem;
-    background-color: #2b6fb7;
-    color: white;
-    margin-right: 0.3rem;
-    border-radius: 0.3rem;/* Rounded corners */
-    cursor: pointer;/* Adds pointer cursor */
-    font-weight: bold;
-}
-
-label:hover {
-    background-color: #01336a;
-}
 
 
 /*Video altina gelen kisim*/
@@ -569,6 +573,12 @@ ul li a{
 /*Telefon boyutuna gelince olacak degisiklikler*/
 /* Mobilde Sağdan Açılan Yan Menü */
 @media (max-width: 768px) {
+
+    .search-box {
+        justify-self: left;
+        margin-left:0;
+        margin-right:0; 
+    }
     /* Hamburger menü simgesi */
     .kontrol {
         display: block;
@@ -587,9 +597,9 @@ ul li a{
         position: fixed;
         right: -100%;
         top: 0;
-        height: 50%;
+        height: 40%;
         width: 150px;
-        background-color: #00093c;
+        background-color: #000064;
         transition: right 0.5s ease;
         z-index: 15;
         padding-top: 60px;
@@ -604,12 +614,12 @@ ul li a{
 
     .menu ul li {
         text-align: left;
-        padding: 1rem;
+        padding: 0.8rem;
     }
 
     .menu a {
-        background-color:#00093c;
-
+        background-color:#000064;
+        font-size: 1rem;
     }
 
     /* Menü açılınca sağdan göster */
@@ -636,23 +646,95 @@ ul li a{
     }
 
     /* Grid düzenlemesi mobilde */
-    .grid-container {
+    .grid-container-home {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto;
+        grid-template-areas: 
+            "side-menu"
+            "main-content"
+            "accordion";
     }
 
-    .side-menu,
-    .extra-info {
-        display: none; /* Mobilde yan paneller gizlenir */
+    .side-menu {
+        grid-area: side-menu;
+        display: flex;
+        flex-direction: column; /* Menü elemanlarını yatay hizalamak için */
+        justify-content: flex-start; /* Elemanları ortalayarak hizalamak için */
+        gap: 0.1rem; /* Menü elemanları arasındaki boşluk */
+        background-color: #ddd; /* Görsel ayrım için arka plan rengi */
+        z-index: 5;
+        padding: 0.1rem; /* Yatay menü için daha dar padding */
     }
 
-    header h1 {
-        display: none; /* Mobilde baslik gizlenir */
+
+    .main-content-home {
+        position: relative; /* Info-panel için referans sağlar */
+        z-index: 1; /* Panelin altında kalır */
+    } 
+
+
+        /* Mobil görünümde info-paneller */
+    .info-panel {
+        position: absolute; /* Parent öğeye göre konumlanır */
+        top: 0; /* Side-link'e göre üstten hizalanır */
+        left: 0; /* Side-link'e göre soldan hizalanır */
+        z-index: 10; /* Üstte görünmesi için yüksek bir değer atanır */
+        width: 100%; /* Mobilde tam genişlik */
+        max-width: none; /* Genişlik sınırı kaldırılır */
+        visibility: hidden; /* Varsayılan olarak gizli */
+        max-height: 0; /* Yüksekliği kapalıyken sıfır */
+        transition: all 0.5s ease-out; /* Yumuşak geçiş */
+        margin: 0; /* Paneller arasında boşluk kaldırılır */
+        overflow: hidden; /* İçeriğin taşması önlenir */
+        background-color: #f8f8f8; /* Panelin arka planı */
+        padding: 1rem; /* Panel içeriği için padding */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Gölgelendirme ile belirginlik */
     }
 
-    .main-content {
-        grid-column: span 1;
+    /* Panel görünümü tetiklendiğinde */
+    .panel-toggle:checked + .info-panel {
+        visibility: visible;
+        max-height: 300px; /* Açıkken maksimum yükseklik */
+        overflow: auto; /* Uzun içerik kaydırılabilir olur */
     }
+
+    /* Mobil side-link düzeni */
+    .side-link {
+        position: relative; /* Info-panel'in konumlanması için referans */
+        font-size: 1rem;
+        z-index: 5; /* Side-link'in panelden daha geride kalması sağlanır */
+        padding: 0.2rem;
+        margin-bottom: 0.15rem;
+    }
+
+
+    /* Kapatma düğmesi düzeni */
+    .close-btn {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        font-size: 1.2rem;
+        color: #000;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .label-matematik,
+    .label-statistik,
+    .label-vitenskapelige {
+    padding: 0.2rem 0.2rem;
+    color: white;
+    margin-right: 0.1rem;
+    border-radius: 0.1rem;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #2b6fb7;
+    font-weight:40%;
+    font-size: 0.7rem;
+}
+    
+
 }
 
 @media (max-width: 1024px) {
