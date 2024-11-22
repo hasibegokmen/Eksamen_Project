@@ -2,68 +2,69 @@
 <!DOCTYPE html>
 <!-- Set the language of the page to Norwegian for compatibility with Norwegian characters -->
 <html lang="no">
-
 <head>
     <!-- Meta tags for encoding and responsive design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--for responsiveness-->
 
     <!--SEO meta tags-->
-    <!-- Keywords for better search engine optimization -->
-    <meta name="keywords" content="Oslomet, Mathematisk Modellering, Datavitenskap, Ingeniør" />
-    <!-- Page description for search engines -->
-    <meta name="description"
-        content="The page contains information about OslaMet's Matematisk Modellering og Datavitenskap - Ingeniør" />
-
+     <!-- Keywords for better search engine optimization -->
+    <meta name="keywords" content="Oslomet, Mathematisk Modellering, Datavitenskap, Ingeniør"/>
+     <!-- Page description for search engines -->
+    <meta name="description" content="The page contains information about OslaMet's Matematisk Modellering og Datavitenskap - Ingeniør"/>
+    
     <!-- Title of the webpage -->
     <title>Mathematisk Modellering og Datavitenskap - Ingeniør</title>
 
-    <!-- Link to Font Awesome for icons used in the menu. Icons used in Hamburber menu symbol, "X" symbol, searching and sosial media links-->
+     <!-- Link to Font Awesome for icons used in the menu. Icons used in Hamburber menu symbol, "X" symbol, searching and sosial media links-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Link to external CSS for page styling -->
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
-<body>
 
-    <header>
+<!--Header Section -->
+<header> 
+    <!-- Navigation Bar-->
+    <nav class="navbar" id="navbar"> 
+        <!--Logo Section-->
+        <section class="logo" id="logo">
+            <!--Link til hjem side from the logo-->
+            <a href="index.html">
+                <img class="header-logo" src="./images/oslometlogo2.jpg" alt="Oslomet Logo"><!--Oslomet LOgo-->
+            </a>
+        </section>
+   
+        <!--Search Box-->
+        <section class="search-box">
+            <input type="text" placeholder="Search..." aria-label="Search Field">
+            <button type="submit" aria-label="Search">
+                <i class="fas fa-search" aria-hidden="true"></i>
+            </button>
+        </section>
+        
 
-        <nav class="navbar" id="navbar">
-
-            <section class="logo" id="logo">
-
-                <a href="index.html">
-                    <img class="header-logo" src="./images/oslometlogo2.jpg" alt="Oslomet Logo">
-                </a>
+        <!-- Hamburger Menu Section -->
+        <section class="Hamburger-menu" id="Hamburger-menu">
+            <!-- Checkbox for toggling the menu -->
+            <input type="checkbox" id="kontrol">
+            <!-- Label with hamburger and closs icons on Navbar -->
+            <label for="kontrol" class="kontrol">
+                <i class="fa fa-bars"></i><!-- Hamburger icon -->
+                <i class="fa fa-times"></i><!-- Close icon -->
+            </label>
+            <!-- Navigation Menu -->
+            <section class="menu">
+                <ul><!--List of navigation links-->
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="accessibility.html">Tilgjengelighet</a></li>
+                    <li><a href="github.html">GitHub</a></li>
+                    <li><a href="activity.html">Aktivitet</a></li>
+                </ul>
             </section>
-
-            <section class="search-box">
-                <input type="text" placeholder="Search...">
-                <a href="#">
-                    <i class="fas fa-search"></i>
-                </a>
-            </section>
-
-            <section class="Hamburger-menu" id="Hamburger-menu">
-
-                <input type="checkbox" id="kontrol">
-
-                <label for="kontrol" class="kontrol">
-                    <i class="fa fa-bars"></i>
-                    <i class="fa fa-times"></i>
-                </label>
-
-                <section class="menu">
-                    <ul>
-                        <li><a href="index.html">Hjem</a></li>
-                        <li><a href="accessibility.html">Tilgjengelighet</a></li>
-                        <li><a href="github.html">GitHub</a></li>
-                        <li><a href="activity.html">Aktivitet</a></li>
-                    </ul>
-                </section>
-            </section>
-        </nav>
-    </header>
+        </section>
+    </nav>
+</header>
 
     <main class="GitHubPageMain">
         <h1 class="GitHubPageHeader1">GitHub Page Edits:</h1>
