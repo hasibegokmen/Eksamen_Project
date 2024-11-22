@@ -415,6 +415,9 @@ input[type="radio"]:checked + label + .info-panel {
     border-bottom: 1px solid #ddd;
     font-weight: 400;
 }
+.accordion label:hover{
+    background-color: #00093c;
+}
 
 /* Gizli checkbox ile içerik kontrolü */
 .accordion input[type="checkbox"] {
