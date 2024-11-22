@@ -13,7 +13,7 @@ body {
         "header"
         "content"
         "footer";
-    font-family: Arial, sans-serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /* Navbar Design - Common for all pages */
@@ -166,14 +166,14 @@ Inspired by the following tutorial:
 .page-header1{
     display: flex;
     justify-content: center; /* Centers content horizontally */
-    font-size: 48px;
+    font-size: 40px;
     color: #222;
 }
 
 .page-header2{
-    font-size: 24px;
+    font-size: 28px;
     color: #222;
-    margin-left: 16px;
+    
 }
 
 .video-preview {
@@ -1244,6 +1244,14 @@ footer{
         height: auto; /* Yükseklik orantılı */
         margin-bottom: 1rem; /* Görselin altına boşluk */
     }
+}
+
+@media(min-width:320px) and (max-width:480px){
+
+}
+
+@media (min-width: 1920px) {
+    
 }
 
     
