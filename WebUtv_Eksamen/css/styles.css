@@ -988,7 +988,7 @@ ul li a{
 .introduksjontittel{
     padding: 1rem;
     text-align: center;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -1005,7 +1005,6 @@ ul li a{
 }
 .aktivitetsoversikt h2{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 3rem;
     text-align: center;
 }
 .aktivitetsoversikt article{
@@ -1020,16 +1019,20 @@ ul li a{
 .image-container {
     display: grid; /* Yan yana dizmek için flexbox */
     grid-template-columns: 1fr 1fr;
+    object-fit: contain;
+   line-height: 2rem;
     gap: 20px; /* Resimler arasında boşluk */
     justify-content: center; /* Resimleri ortalar */
-    align-items: flex-start; /* Resimlerin üst hizasını sağlar */
+    
+    
    
 }
 .image-container img{
-    width: 100px; /* Resmin genişliği */
-    height: 600px; /* Resmin yüksekliği */
-    object-fit: cover; /* Resmi keserek alanı doldurur, orantıları korur */
+    width: 100%; /* Resmin genişliği */
+    height: auto; /* Resmin yüksekliği */
+    object-fit: contain; /* Resmi keserek alanı doldurur, orantıları korur */
     border: 1px solid #333; /* Görünürlük için kenarlık ekledik */
+    height: 30rem; /* Resmin yüksekliği */
 }
 
 
@@ -1046,7 +1049,7 @@ ul li a{
   }
   
   .image-figure-intro figcaption {
-    font-size: 1.5rem; /* Alt açıklama yazı boyutu */
+    font-size: 1rem; /* Alt açıklama yazı boyutu */
     color: #555; /* Yazı rengi */
     margin-top: 0rem; /* Resimle alt açıklama arasına boşluk */
     padding-top: 0;
@@ -1080,15 +1083,17 @@ ul li a{
 .grid-item-activity article {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-top:3rem;
-    font-size: 1.5rem;
+    margin-left: 2rem;
     display: inline;
+    font-size: clamp(1rem, 1.5vw, 1.2rem); /* Metin boyutu sınırlandırılır */
     
     
 }
 .grid-item-activity p {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 1.3rem;
     display: grid;
+    line-height: 1.8rem;
+    font-size: clamp(1rem, 1.5vw, 1.2rem); /* Metin boyutu sınırlandırılır */
 }
 
 .grid-item-activity img {
@@ -1103,9 +1108,10 @@ ul li a{
 
 /* sub-titles */
 .grid-item-activity h3{
-  color: #05b8dc;
+  color: #0805f0;
   line-height: 3rem;
-  font-size:2.1rem ;
+  font-size: clamp(1rem, 1.5vw, 1.2rem); /* Metin boyutu sınırlandırılır */
+ ;
   
   
 }
@@ -1124,7 +1130,7 @@ ul li a{
     margin-bottom: 2rem;
   font-style: italic;
   text-align: center;/*resmin altina aciklama yazisini ortalar*/
-  font-size: 1.3rem;
+ 
 }
 
 /* Dış link stil */
@@ -1191,15 +1197,38 @@ ul li a{
         gap: 1rem; /* Kutular arası boşluğu azalt */
         margin: 1rem; /* Dış boşluğu küçült */
     }
-}
 
-
-
-    
+  
 footer{
     display: none; /*footer kucuk ekranda kaybolur*/
 }
 }
+/* Büyük ölçeklerde ve küçük ekranlarda tek sütuna düşür */
+@media (max-width: 1024px), (min-resolution: 192dpi) {
+   
+    
+    .grid-container-activity {
+        grid-template-columns: 1fr; /* buyuk ekranlarda Tek sütun düzeni */
+        gap: 2rem; /* Kutular arası boşluk */
+    }
+
+    .grid-item-activity {
+        display: flex;
+      flex-direction: column;
+        align-items: center; /* Ortala */
+        text-align: start; /* Metni ortala */
+    }
+
+    .grid-item-activity img {
+        width: 100%; /* Görsel genişliği tam */
+        height: auto; /* Yükseklik orantılı */
+        margin-bottom: 1rem; /* Görselin altına boşluk */
+    }
+}
+
+    
+
+
 
 /* finish activitet side*/
 
