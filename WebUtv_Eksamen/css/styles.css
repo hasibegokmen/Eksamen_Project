@@ -468,8 +468,7 @@ input[type="radio"]:checked + label + .info-panel {
     border-bottom-color: #222;
     font-family: Arial, sans-serif;
 }
-.link-design2{
-}
+
 .link-design3{
     font-weight: 700;
 }
@@ -492,8 +491,7 @@ input[type="radio"]:checked + label + .info-panel {
     font-size: 16px;
 }
 
-.st-his-link-design2{
-}
+
 .st-his-link-design2-1{
     font-size: 28px;
     margin-top: 50px;
@@ -734,7 +732,7 @@ ul li a{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 2rem;
     border-radius: 5px;
-    background-attachment: ;
+    /*background-attachment:*/
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth and emphasis */
   }
       
@@ -1305,7 +1303,6 @@ footer{
     margin-bottom: 1rem;
     font-size: 1rem;
 }
-
 
 @media (max-width: 768px) {
     .GitHubPageTextContent {
