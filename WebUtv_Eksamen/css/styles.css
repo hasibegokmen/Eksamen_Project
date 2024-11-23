@@ -74,14 +74,14 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #666; /* İkon rengi */
+        color: #ffffff; /* İkon rengi */
         font-size: 24px; /* İkon boyutu */
         transition: color 0.3s ease;
         margin-left: 10px;
     }
     
     .search-box button:hover {
-        color: #000; /* Hover efektinde renk değişimi */
+        color: #ffffff; /* Hover efektinde renk değişimi */
     }
     
 
