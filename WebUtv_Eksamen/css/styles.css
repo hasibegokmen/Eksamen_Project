@@ -119,9 +119,15 @@ header {
     position: relative; /* Enables additional styling, like hover effects */
 }
 
-.menu a:hover {
-    text-decoration: underline; /* Adds underline when hovered */
+/* .menu a:hover {
+    text-decoration: underline; /* Adds underline when hovered 
+}  */
+.menu a.active {
+    color: rgb(255, 255, 255);          /* Set text color to white */
+    font-weight: bold;                  /* Make the font bold */
+    border-bottom: 2px solid rgb(255, 255, 255); /* Add a white bottom border to the active link */
 }
+
 
 /*-----------Home Page Design------------------*/
 
