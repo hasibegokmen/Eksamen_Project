@@ -1,4 +1,6 @@
+
 /* "General Style Settings" */
+
 * {
     box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
 }
