@@ -728,21 +728,19 @@ ul li a{
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
+
 .grid-item-activity article {
     margin-top:3rem;
     margin-left: 2rem;
-    text-align: left;
+    text-align: left;/*keeps te text on the left side*/
     margin: 1rem;
-    display: inline;
-    font-size: clamp(1rem, 1.5vw, 1.2rem); /* Metin boyutu sınırlandırılır */
-    
+    font-size: clamp(1rem, 1.5vw, 1.2rem); /* used to adjust the size of font */  
     
 }
 .grid-item-activity p {
-   
     display: grid;
     line-height: 1.8rem;
-    font-size: clamp(1rem, 1.5vw, 1.2rem); /* Metin boyutu sınırlandırılır */
+    font-size: clamp(1rem, 1.5vw, 1.2rem); /* used for adjusting the size of font */
 }
 
 .grid-item-activity img {
@@ -750,9 +748,10 @@ ul li a{
     text-align: center;/*aligns the items in the center*/
     box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
     border-radius: 4px;
+  
   }
 
-/* sub-titles */
+/* sub-headings */
 .grid-item-activity h3{
   color: #0805f0;
   line-height: 3rem;
@@ -766,7 +765,7 @@ ul li a{
 }
 
 
-/*resimlerin altinda  kaynaklarinin yazildigi yer*/
+/*css codes of the figcaption*/
 .grid-item-activity figcaption{
     color: #4b4848;
     padding: 0.5rem;
@@ -776,12 +775,27 @@ ul li a{
  
 }
 
-/* Dış link stil */
-.grid-item-activity link {
-  color: rgb(2, 31, 128);
-  text-decoration: none;
+/* css coding of the links */
+/* it will be seen with these codes on the page*/
+.activity-knapp , .activity-link {
+    color: #007acd; /* links will be this color */
+    text-decoration: underline; /* text is underlined*/
+    font-weight: bold;/*make it bold for more visibility*/
   
 }
+
+/* Hover css of the links */
+.activity-knapp:hover, .activity-link:hover {
+    color: #0056b3; /* Hover sırasında koyulaşır */
+    text-decoration: underline; /* text is underlined for more visibility */
+}
+/* css for The links after thet clicked*/
+.activity-knapp:visited, .activity-link:visited {
+    color: #840db3; /* when it is clicked, the color turns to purple*/
+    
+}
+
+
 @media (max-width: 768px) {
     .image-container {
         grid-template-columns: 1fr;  
@@ -842,10 +856,7 @@ ul li a{
     }
 
 
-  
-footer{
-    display: none; /*footer kucuk ekranda kaybolur*/ 
-}
+
 }
 /* Büyük ölçeklerde ve küçük ekranlarda tek sütuna düşür */
 @media (max-width: 1024px), (min-resolution: 192dpi) {
@@ -870,10 +881,9 @@ footer{
     }
 }
 
-/*Activity pahe design css is finished here*/
+/*Activity page design css is finished here*/
 
 
-/*Accesibility ikinci kisim stilleri burada basliyor*/
 
 
 /*ACCESIBILITY STATUS REPORT OF THE WEBSITE PAGE CSS*/
