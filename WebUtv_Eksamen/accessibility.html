@@ -23,6 +23,10 @@
 </head>
 <body>
 
+<!--Used resources in the research process:
+https://www.w3.org/TR/UNDERSTANDING-WCAG20/intro.html
+https://www.w3schools.com/accessibility/
+-->
 
 <!--Header Section -->
 <header> 
@@ -73,29 +77,46 @@
     <section class="accesibility-page">
         <article>
    
-    <h1> Tilgjengelighetsrapport for Nettstedet </h1>
+    <h1> Tilgjengelighetsrapport for Nettsiden </h1>
     <p>Tilgjengelighet har vært en grunnleggende del av utviklingen av nettstedet vårt. 
         Vi har nøye vurdert universell design for å sikre at brukere med ulike evner kan 
         navigere og samhandle med nettstedet uten hindringer. Denne rapporten beskriver 
         tiltakene vi har tatt for å oppfylle WCAG 2.0s fire prinsipper for tilgjengelighet—oppfattbar,
-         opererbar, forståelig og robust.</p>
+         opererbar, forståelig og robust.  I tillegg til den automatiserte tilgengelighetskontrollen med Lighthouse, gjennomførte
+          vi også en manuell evaluering av tilgjengeligheten. Dette var en tidkrevende og krevende prosess for gruppen vår, men en viktig 
+          del av arbeidet for å sikre god kvalitet og brukervennlighet.</p>
+        <p> Skjermbildene viser resultatene av tilgjengelighetstesting på både desktop og mobil ved bruk av Lighthouse.</p>
     
         <div class="accesibility-page-images">
             <figure>
-            <img src="./images/accesibilit-test.png"
-            alt="Accesibility Test Score" />
+            <img src="./images/accesibility-scroe-home.png"
+            alt="Homepage Accesibility Test Score" />
             <figcaption>
-                Lighthouse Generated Accesibility Test Report of Home Page for Deskop
+                Lighthouse Generert Tilgjengelighetstest for Hjemmesiden på Desktop
             </figcaption>
         </figure>
         <figure >
-            <img src="./images/accesibilityonmobile.png"
-            alt="Accesibility Test Score for Mobile" />
+            <img src="./images/accesibility-score-activitypage.png"
+            alt="Activity page Accesibility Test Score " />
             <figcaption>
-                Lighthouse Generated Accesibility Test Report of Home Page for Mobile
+                Lighthouse Generert Tilgjengelighetstest for Aktivitetsiden på Desktop
                 
             </figcaption>
         </figure>  
+        <figure>
+            <img src="./images/accesibility-score-homepage-phone.png"
+            alt="Homepage Accesibility Test Score for Phone size" />
+            <figcaption>
+                Lighthouse Generert Tilgjengelighetstest for Hjemmesiden på Mobil
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="./images/accesibility-score-activitypage-phone.png"
+            alt="Activity Page Accesibility Test Score for Phone size" />
+            <figcaption>
+                **Lighthouse Generert Tilgjengelighetstest for Aktivitetsiden på Mobil**
+            </figcaption>
+        </figure>
     
          </div>
 
@@ -107,35 +128,28 @@
             <p> For å gjøre innholdet tilgjengelig for alle brukere, har vi fokusert på klarhet og tilrettelegging.
                 Vi har brukt semantisk HTML gjennom hele nettstedet, inkludert header, nav, main, 
                 footer,article og section for å gi en logisk struktur som hjelpemiddelteknologier lett kan bruke og forstå.
-                Alternativ tekst (alt-attributter) er lagt til for alle bilder. Dette sikrer at skjermlesere kan beskrive innholdet til synshemmede brukere. 
-                For eksempel;  Oslomet-logoen har et meningsfullt alt-attributt (alt="Oslomet Logo").
-                Videotilgjengelighet er ivaretatt med undertekster ved hjelp av track-elementet, slik at døve eller hørselshemmede brukere kan følge videoinnholdet.
-                 Kontrollfunksjonene gjør det mulig for brukere å pause, spole tilbake og justere avspillingshastigheten. 
+             Alternativ tekst (alt-attributter) er lagt til for alle bilder. Dette sikrer at skjermlesere kan beskrive innholdet
+              til synshemmede brukere.  For eksempel;  Oslomet-logoen har et meningsfullt alt-attributt (alt="Oslomet Logo").
+            Videotilgjengelighet er ivaretatt med undertekster ved hjelp av track-elementet, slik at døve eller hørselshemmede brukere
+             kan følge videoinnholdet. Kontrollfunksjonene gjør det mulig for brukere å pause, spole tilbake og justere avspillingshastigheten. 
                 Vi har valgt fargekontraster som oppfyller WCAG 2.1-kravene. Dette sikrer lesbarhet for brukere med nedsatt syn, samtidig som det forbedrer brukeropplevelsen for alle.
-                Som gruppe ble det laget medieopplegg for å sikre at nettsiden fungerer harmonisk og lesbar på telefon-, laptop- og skrivebordsskjermer. 
-                På denne måten ble tilgjengeligheten sikret på disse enhetene. </p>
+               Som gruppe ble det laget medieopplegg for å sikre at nettsiden fungerer harmonisk og lesbar på telefon-, laptop- og skrivebordsskjermer. 
+                På denne måten ble tilgjengeligheten sikret på disse enhetene. 
         </article>
         <article>
             <h2>2. Opererbar Navigasjon</h2>
-            <p>For å gjøre nettstedet enkelt å bruke, uavhengig av inputmetode, har vi implementert følgende:
-
-                Tastaturtilgjengelighet sikrer at brukere kan navigere ved hjelp av Tab-tasten og se fokusindikatorer på aktive elementer.
+            <p> Tastaturtilgjengelighet sikrer at brukere kan navigere ved hjelp av Tab-tasten og se fokusindikatorer på aktive elementer.
                 Hamburgermenyen er lett å navigere med tastatur og har tydelige ARIA-etiketter for å veilede brukere av skjermlesere.
                 Interaktive elementer, som toggleable accordion-paneler og sidemenyer, gjør det mulig å utvide eller skjule innhold dynamisk.
                  Dette gir brukere en mer fokusert opplevelse uten å overveldes av informasjon.
                 Søkefeltet inkluderer en klar aria-label ("Search Field"), som gjør det enkelt for skjermlesere å identifisere dets formål.
                 Videoavspillingskontroller og tydelige avslutningsknapper for dynamisk innhold gir brukerne fleksibilitet og kontroll over nettstedets funksjonalitet.
-                 </p>
-
-            
-
+            </p>
         </article>
 
         <article>
             <h2>3. Forståelig Innhold</h2>
-            <p>En enkel og logisk layout forbedrer brukeropplevelsen:
-
-                Beskrivende overskrifter gir en klar struktur som hjelper brukere med å finne informasjon raskt.
+            <p>Beskrivende overskrifter gir en klar struktur som hjelper brukere med å finne informasjon raskt.
                 Lesbar tekst er prioritert med passende skriftstørrelser, tilstrekkelig linjeavstand og kortfattede avsnitt.
                 Nettstedets primærspråk er angitt som norsk (lang="no"), noe som hjelper skjermlesere med korrekt uttale.
                 Dynamiske elementer, som sidebar-paneler, har intuitive etiketter som gjør det enkelt for brukere å forstå hvordan de skal samhandle med dem.
@@ -148,7 +162,6 @@
             <h2>4. Robust Arkitektur</h2>
             <p>
                 Nettstedet er designet for å fungere godt på tvers av plattformer og enheter:
-
                 HTML5-standarder og ARIA-attributter (f.eks. aria-expanded, aria-labelledby) forbedrer kompatibiliteten med hjelpemiddelteknologier.
                 Responsiv design sikrer at nettstedet fungerer optimalt på alt fra mobiltelefoner til store skjermer.
                 Dynamisk innhold som hamburgermenyen og accordion-panelene fungerer godt med fallback-mekanismer for miljøer uten JavaScript-støtte.
@@ -157,6 +170,11 @@
     </section>
     
 </main>
+
+<!--Inspired by 
+https://www.youtube.com/watch?v=dlsjiphBris&list=PL7wCz7NFX_Hcp94Mr8yFqcHnLDcdpfvhF&ab_channel=TarunCode-WebDesigner-
+https://www.youtube.com/watch?v=k3I8Ja61vEQ&list=PL7wCz7NFX_Hcp94Mr8yFqcHnLDcdpfvhF&index=3&ab_channel=TarunCode-WebDesigner
+->
 
 <!--FOOTER CODING-->
 <footer class="footer" id="footer">
