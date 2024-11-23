@@ -1,4 +1,6 @@
-/* General Style Settings */
+
+/* "General Style Settings" */
+
 * {
     box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
 }
@@ -67,10 +69,10 @@ header {
     
     /*button and icon*/
     .search-box button {
-        background: none; /* "The background is removed" */
-        border: none; /* "The frame is removed" */
-        padding: 0; /* "The spacing is removed" */
-        cursor: pointer; /* "Clickable cursor" */
+        background: none; /* "Background is removed" */
+        border: none; /* "Frame is removed" */
+        padding: 0; /* "Spacing is removed" */
+        cursor: pointer; /* "Clickable pointer" */
         display: flex;
         align-items: center;
         justify-content: center;
