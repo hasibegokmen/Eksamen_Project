@@ -1,4 +1,4 @@
-/* Genel Style Settings */
+/* General Style Settings */
 * {
     box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
 }
@@ -67,21 +67,21 @@ header {
     
     /*button and icon*/
     .search-box button {
-        background: none; /* Arka plan kaldırılır */
-        border: none; /* Çerçeve kaldırılır */
-        padding: 0; /* Boşluk kaldırılır */
-        cursor: pointer; /* Tıklanabilir işaretçi */
+        background: none; /* "The background is removed" */
+        border: none; /* "The frame is removed" */
+        padding: 0; /* "The spacing is removed" */
+        cursor: pointer; /* "Clickable cursor" */
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #ffffff; /* İkon rengi */
-        font-size: 24px; /* İkon boyutu */
+        color: #ffffff; /* "Icon color" */
+        font-size: 24px; /* "Icon size" */
         transition: color 0.3s ease;
         margin-left: 10px;
     }
     
     .search-box button:hover {
-        color: #ffffff; /* Hover efektinde renk değişimi */
+        color: #ffffff; /* "Color change on hover effect" */
     }
     
 
