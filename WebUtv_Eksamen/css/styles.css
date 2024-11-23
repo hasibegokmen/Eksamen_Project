@@ -645,10 +645,6 @@ ul li a{
 
 /*-----------Activity Page Design------------------*/
 
-
-
-/* CSS-stiler for aktivitetsiden */
-/* Sentraliserer og setter maks bredde */
 .main {
     max-width: 1800px; /* Limit the content width. */
     margin: 0 auto; /* centers the elements*/
@@ -672,24 +668,20 @@ ul li a{
 }
 
 .aktivitetsoversikt {
-    text-align: center;/*keeps the subtitle in the  center*/
+    text-align: center;/*keeps the title in the  center*/
     padding-top: 1rem; /*used to make a space between heading and the tekst*/
-    line-height: 1.8; /* Satır aralığını artır */
+    line-height: 1.8; /* used to increase the line spacing */
     padding: 1rem;
-   
 
 }
 .aktivitetsoversikt h2{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
+    text-align: center;/*keeps the subtitle in the center of the page*/
 }
 .aktivitetsoversikt article{
-    text-align: justify;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 1.5rem;
-    margin: 0 auto;
-    max-width: 90%;
-    
+    text-align: justify; /*tused to align the text to both the left and the right margins*/
+    font-size: 1.5rem;/*used this size to make it easier to read for the users*/
+    margin: 0 auto;/*used to leave equal margins on the sides*/
+    max-width: 90%;/*used to keep the content a bit smaller in the page and it fits better with this way*/
     
 }
 .image-container {
