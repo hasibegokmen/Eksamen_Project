@@ -764,7 +764,7 @@ ul li a{
 .grid-item-activity h3{
   color: #0805f0;
   line-height: 3rem;
-  font-size: clamp(1.5rem, 1.5vw, 1.2rem); /* Metin boyutu sınırlandırılır */
+  font-size: clamp(1.5rem, 1.5vw, 1.2rem); /* Text size is limited */
 }
 
 .grid-item-activity figure{
@@ -779,8 +779,8 @@ ul li a{
     color: #4b4848;
     padding: 0.5rem;
     margin-bottom: 2rem;
-  font-style: italic;
-  text-align: center;/*resmin altina aciklama yazisini ortalar*/
+    font-style: italic;
+    text-align: center;/*centers the caption below the image*/
  
 }
 
@@ -795,7 +795,7 @@ ul li a{
 
 /* Hover css of the links */
 .activity-knapp:hover, .activity-link:hover {
-    color: #0056b3; /* Hover sırasında koyulaşır */
+    color: #0056b3; /* Darkens during hover */
     text-decoration: underline; /* text is underlined for more visibility */
 }
 /* css for The links after thet clicked*/
@@ -811,11 +811,11 @@ ul li a{
       
     }
     .image-figure-intro img {
-        width: 100%; /* Görsel kutuya tam genişlikte oturur */
-        height: auto; /* Yükseklik, oranını koruyarak ayarlanır */
-        object-fit: contain; /* Görselin tamamını kutuya sığdırır */
-        display: block; /* Görselin çevresindeki boşlukları kaldırır */
-        margin: 0 auto; /* Ortalar */
+        width: 100%; /* Ensures the image takes up the full width of its container */
+        height: auto; 
+        object-fit: contain; /* Ensures the entire image fits within the container without cropping */
+        display: block; 
+        margin: 0 auto; 
     }
     .image-figure-intro figcaption {
         align-items: start;
@@ -823,70 +823,70 @@ ul li a{
         word-wrap: break-word;
     }
     .grid-container-activity {
-        grid-template-columns: 1fr; /* Tek sütun düzen */
-        gap: 2rem; /* Kutular arası boşluk */
+        grid-template-columns: 1fr; 
+        gap: 2rem; 
        
     }
 
     .grid-item-activity {
         display: grid;
         grid-template-columns: 1fr ;
-        align-items: center; /* İçeriği ortalar */
-        text-align: start; /* Metni ortalar */
+        align-items: center; /* Centers the content */
+        text-align: start; /* Centers the text */
         
         
     }
 
     .grid-item-activity figure {
         display: flex;
-        flex-direction: column; /* Görsel ve açıklamayı üst üste yerleştir */
-        align-items: center; /* Görsel ve açıklamayı yatayda ortala */
-        justify-content: center; /* Görsel ve açıklamayı dikeyde ortala */
+        flex-direction: column;/* Overlay image and description */
+        align-items: center; 
+        justify-content: center; 
         width: 100%;
         margin: 0 auto;
     }
 
     .grid-item-activity img {
-        width: 100%; /* Görseli kutuya sığdır */
-        height: auto; /* Oranını koru */
-        object-fit: contain; /* Görselin tamamını göster */
+        width: 100%; 
+        height: auto; 
+        object-fit: contain;
     }
 
     .grid-item-activity figcaption {
-        margin-top: 0.5rem; /* Görsel ile açıklama arasına boşluk ekle */
-        font-size: 1rem; /* Küçük ekranlarda açıklama yazı boyutunu küçült */
-        color: #555; /* Açıklama rengini belirle */
+        margin-top: 0.5rem; /* Add space between image and description */
+        font-size: 1rem; /* Reduce description text size on small screens */
+        color: #555; 
     }
    
     .accesibility-testing {
-        grid-template-columns: 1fr; /* Tek sütuna geç */
-        gap: 1rem; /* Kutular arası boşluğu azalt */
-        margin: 1rem; /* Dış boşluğu küçült */
+        grid-template-columns: 1fr; 
+        gap: 1rem; 
+        margin: 1rem; 
     }
 
 
 
 }
-/* Büyük ölçeklerde ve küçük ekranlarda tek sütuna düşür */
+/* Reduce to single column on large scales and small screens */
 @media (max-width: 1024px), (min-resolution: 192dpi) {
    
     
     .grid-container-activity {
-        grid-template-columns: 1fr; /* buyuk ekranlarda Tek sütun düzeni */
-        gap: 2rem; /* Kutular arası boşluk */
+        grid-template-columns: 1fr; /* Single column layout on large screens */
+        gap: 2rem; 
     }
 
     .grid-item-activity {
         display: flex;
-      flex-direction: column;
-        align-items: center; /* Ortala */
-        text-align: start; /* Metni ortala */
+        flex-direction: column;
+        align-items: center; 
+        text-align: start; 
     }
 
     .grid-item-activity img {
-        width: 100%; /* Görsel genişliği tam */
-        height: auto; /* Yükseklik orantılı */
-        margin-bottom: 1rem; /* Görselin altına boşluk */
+        width: 100%; 
+        height: auto; 
+        margin-bottom: 1rem; /* Space below the image */
     }
 }
 
