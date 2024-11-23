@@ -128,6 +128,7 @@ header {
     color: rgb(255, 255, 255);          /* Set text color to white */
     font-weight: bold;                  /* Make the font bold */
     border-bottom: 2px solid rgb(255, 255, 255); /* Add a white bottom border to the active link */
+    font-size: 150%;
 }
 
 
@@ -147,7 +148,7 @@ Inspired by the following tutorial:
     grid-template-areas: 
         "side-menu main-content"
         "accordion accordion"; /* accordion takes full width at the second row */
-    gap: o.6rem;
+    gap: 0.6rem;
     padding: 1.2rem;
     height: auto;/* Sets the height based on viewport with a specific offset */
 }
@@ -164,25 +165,32 @@ Inspired by the following tutorial:
 
 }
 
-/* Video Section */
-.video{
-    width: 100%; /* Full width of its container */
-    height: 42rem;
-}
+/*Homepage title*/
 
+.page-header{
+    justify-content: center;
+}
+/*HPT1*/
 .page-header1{
     display: flex;
-    justify-content: center; /* Centers content horizontally */
     font-size: 40px;
     color: #222;
+    margin-left: 1rem;
 }
-
+/*HPT2*/
 .page-header2{
     font-size: 28px;
     color: #222;
-    
+    margin-left: 1rem;
+
 }
 
+/*video preview*/
+.video{
+    width: 100%; /* Full width of its container */
+    height: 42rem;
+    margin-top: -2rem;
+}
 .video-preview {
     width: 100%;
     display: block;
@@ -1182,7 +1190,6 @@ ul li a{
     cursor: pointer;
     font-weight: bold;
     background-color: #2b6fb7;
-    font-weight:40%;
     font-size: 0.7rem;
 }
 /*activiy page deki grid item activity yi tek sutuna*/
@@ -1255,8 +1262,8 @@ https://www.w3schools.com/css/css3_images.asp
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    margin-bottom:
-    padding 0;
+    /*margin-bottom: ;*/
+    padding: 0;
 }
 
 .GitHubPageimage {
@@ -1306,8 +1313,15 @@ figcaption {
     line-height: 1.7;
     text-indent: 2.3rem;
 }
-
+/*css settings for ...... */
 @media (max-width: 768px) {
+    /*HOMEPAGE-CSS*/
+
+    /*Activity*/
+
+    /*GitHub*/
+
+    /*Accessibility*/
     .GitHubPageTextContent {
         text-align: center;
         padding: 1rem;
@@ -1325,8 +1339,39 @@ figcaption {
         grid-template-columns: 1fr;
     }
 }
+/*css settings for mobile*/
+
+
+/*Activity*/
+
+/*GitHub*/
+
+/*Accessibility*/
+
 
 @media (max-width: 480px) {
+    /*HOMEPAGE-CSS*/
+    .page-header{
+        justify-content: center;
+    }
+    .page-header1{
+        display: flex;
+        font-size: 1.8rem;
+        color: #222;
+        margin-left: 1rem;
+    }
+
+    .page-header2{
+        font-size: 1.5rem;
+        color: #222;
+        margin-left: 1rem;
+
+    }
+    .video{
+        width: 100%; /* Full width of its container */
+        height: 42rem;
+        margin-top: -2rem;
+    }
     .GitHubPageMain {
         padding: 1rem;
     }
@@ -1335,5 +1380,6 @@ figcaption {
         gap: 1rem;
     }
 }
+
 
 
