@@ -953,8 +953,8 @@ ul li a{
 
 
     .accesibility-page-images figcaption {
-      font-size: 1rem; /* Alt açıklama yazı boyutu */
-      color: #555; /* Yazı rengi */
+      font-size: 1rem; /* "Caption font size" */
+      color: #555; /* "Text color" */
       margin-top: 0;
       padding-top:1rem
 
@@ -986,21 +986,21 @@ ul li a{
   }
 
 
-    /* Ekran küçüldüğünde düzenleme */
+    /* "Adjustments for smaller screens" */
 @media (max-width: 768px) {
     .accesibility-page-images {
-        grid-template-columns: 1fr; /* Tek sütuna geçiş */
+        grid-template-columns: 1fr; /* "Switch to a single column" */
     }
 
         .accesibility-page-images img {
-            width: 100%; /* Küçük ekranlarda görsel genişliği cihaz genişliğiyle uyumlu olur */
+            width: 100%; /* "On small screens, the image width adapts to the device width" */
             height: auto;
         }
 
 
 
     .accesibility-page-images figcaption {
-        font-size: 1.2rem; /* Alt açıklamanın boyutunu küçült */
+        font-size: 1.2rem; /* "Reduce the size of the caption" */
     }
     .accesibility-testing{
         display: grid;
@@ -1023,15 +1023,15 @@ ul li a{
     color: #333; /* Makes the heading text dark for contrast */
 }
 }
-/*Accesibiity ikinci kisim stilleri burada bitiyor*/
+/*"Accessibility second section styles end here"*/
 
 
 /*Github page*/
 
 
 
-/*Telefon boyutuna gelince olacak degisiklikler*/
-/* Mobilde Sağdan Açılan Yan Menü */
+/*"Changes to be applied for phone size"*/
+/* "Right-Side Sliding Menu on Mobile"*/
 @media (max-width: 768px) {
 
     .search-box {
@@ -1039,7 +1039,7 @@ ul li a{
         margin-left:0;
         margin-right:0;
     }
-    /* Hamburger menü simgesi */
+    /* "Hamburger menu icon" */
     .kontrol {
         display: block;
         font-size: 2rem;
@@ -1052,7 +1052,7 @@ ul li a{
         transition: transform 0.3s ease;
     }
 
-    /* Yan menü gizli başlar */
+    /* "The sidebar starts hidden" */
     .menu {
         position: fixed;
         right: -100%;
@@ -1082,30 +1082,30 @@ ul li a{
         font-size: 1rem;
     }
 
-    /* Menü açılınca sağdan göster */
+    /* "Show from the right when the menu is opened" */
     #kontrol:checked ~ .menu {
         right: 0;
     }
 
-    /* Başlangıçta sadece üç çizgi (fa-bars) görünür */
+    /* "Initially, only the three lines (fa-bars) are visible" */
     .kontrol .fa-bars {
         display: inline-block;
     }
 
     .kontrol .fa-times {
-        display: none; /* X başlangıçta gizli */
+        display: none; /* "X is initially hidden"*/
     }
 
-    /* Hamburger menü açıldığında ikon değişir */
+    /* "The icon changes when the hamburger menu is opened" */
     #kontrol:checked + .kontrol .fa-bars {
-        display: none; /* Üç çizgi gizlenir */
+        display: none; /* "The three lines are hidden" */
     }
 
     #kontrol:checked + .kontrol .fa-times {
-        display: inline-block; /* X görünür hale gelir */
+        display: inline-block; /* "The X becomes visible"*/
     }
 
-    /* Grid düzenlemesi mobilde */
+    /* "Grid layout adjustment on mobile" */
     .grid-container-home {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto;
@@ -1118,57 +1118,57 @@ ul li a{
     .side-menu {
         grid-area: side-menu;
         display: flex;
-        flex-direction: column; /* Menü elemanlarını yatay hizalamak için */
-        justify-content: flex-start; /* Elemanları ortalayarak hizalamak için */
-        gap: 0.1rem; /* Menü elemanları arasındaki boşluk */
-        background-color: #ddd; /* Görsel ayrım için arka plan rengi */
+        flex-direction: column; /* "To align menu items horizontally" */
+        justify-content: flex-start; /* "To align the items by centering them" */
+        gap: 0.1rem; /* "Spacing between menu items" */
+        background-color: #ddd; /* "Background color for visual distinction" */
         z-index: 5;
-        padding: 0.1rem; /* Yatay menü için daha dar padding */
+        padding: 0.1rem; /* "Narrower padding for the horizontal menu" */
     }
 
 
     .main-content-home {
-        position: relative; /* Info-panel için referans sağlar */
-        z-index: 1; /* Panelin altında kalır */
+        position: relative; /* "Provides a reference for the info-panel" */
+        z-index: 1; /* "Remains below the panel" */
     }
 
 
-        /* Mobil görünümde info-paneller */
+        /* "Info-panels in mobile view" */
     .info-panel {
-        position: absolute; /* Parent öğeye göre konumlanır */
-        top: 0; /* Side-link'e göre üstten hizalanır */
-        left: 0; /* Side-link'e göre soldan hizalanır */
-        z-index: 10; /* Üstte görünmesi için yüksek bir değer atanır */
-        width: 100%; /* Mobilde tam genişlik */
-        max-width: none; /* Genişlik sınırı kaldırılır */
-        visibility: hidden; /* Varsayılan olarak gizli */
-        max-height: 0; /* Yüksekliği kapalıyken sıfır */
-        transition: all 0.5s ease-out; /* Yumuşak geçiş */
-        margin: 0; /* Paneller arasında boşluk kaldırılır */
-        overflow: hidden; /* İçeriğin taşması önlenir */
-        background-color: #f8f8f8; /* Panelin arka planı */
-        padding: 1rem; /* Panel içeriği için padding */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Gölgelendirme ile belirginlik */
+        position: absolute; /* "Positioned relative to the parent element" */
+        top: 0; /* "Aligned from the top relative to the side-link" */
+        left: 0; /* "Aligned from the left relative to the side-link" */
+        z-index: 10; /* "A high value is assigned for it to appear on top" */
+        width: 100%; /* "Full width on mobile" */
+        max-width: none; /* "The width limit is removed" */
+        visibility: hidden; /* "Hidden by default" */
+        max-height: 0; /* "The height is zero when closed" */
+        transition: all 0.5s ease-out; /* "Smooth transition" */
+        margin: 0; /* "The spacing between panels is removed" */
+        overflow: hidden; /* Content overflow is prevented */
+        background-color: #f8f8f8; /* The background of the panel */
+        padding: 1rem; /* Padding for the panel content */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Clarity with shading */
     }
 
-    /* Panel görünümü tetiklendiğinde */
+    /* When the panel appearance is triggered */
     .panel-toggle:checked + .info-panel {
         visibility: visible;
-        max-height: 300px; /* Açıkken maksimum yükseklik */
-        overflow: auto; /* Uzun içerik kaydırılabilir olur */
+        max-height: 300px; /* Maximum height when open */
+        overflow: auto; /* Long content becomes scrollable */
     }
 
-    /* Mobil side-link düzeni */
+    /* Mobile side-link layout */
     .side-link {
-        position: relative; /* Info-panel'in konumlanması için referans */
+        position: relative; /* Reference for positioning the info-panel */
         font-size: 1rem;
-        z-index: 5; /* Side-link'in panelden daha geride kalması sağlanır */
+        z-index: 5; /* The side-link is positioned behind the panel. */
         padding: 0.2rem;
         margin-bottom: 0.15rem;
     }
 
 
-    /* Kapatma düğmesi düzeni */
+    /* Close button layout */
     .close-btn {
         position: absolute;
         top: 0.5rem;
@@ -1192,31 +1192,31 @@ ul li a{
     background-color: #2b6fb7;
     font-size: 0.7rem;
 }
-/*activiy page deki grid item activity yi tek sutuna*/
+/*In the activity page, the grid item activity is set to a single column.*/
 .grid-container-activity {
-    grid-template-columns: 1fr; /* Tek sütuna geçiş */
-    gap: 2rem; /* Kutular arasındaki boşluk */
+    grid-template-columns: 1fr; /* Switch to a single column. */
+    gap: 2rem; /* The space between the boxes. */
 }
 
 .grid-item-activity {
     display: flex;
-    flex-direction: column; /* İçeriği dikey hizaya geçirin */
-    align-items: center; /* İçeriği ortalayın */
-    text-align: center; /* Metni ortalayın */
+    flex-direction: column; /* Align the content vertically. */
+    align-items: center; /* Center the content. */
+    text-align: center; /*Center the text. */
 }
 
 .grid-item-activity figure {
-    width: 100%; /* Resim kapsayıcı genişliği */
-    margin-bottom: 1rem; /* Metinle resim arasındaki boşluk */
+    width: 100%; /* Image container width */
+    margin-bottom: 1rem; /* The space between the text and the image. */
 }
 
 .grid-item-activity img {
-    width: 90%; /* Resmi daha küçük yaparak ortalayın */
-    height: auto; /* Oranı koruyarak yeniden boyutlandır */
+    width: 90%; /* Make the image smaller and center it. */
+    height: auto; /* Resize while keeping the aspect ratio. */
 }
 
 .grid-item-activity article {
-    width: 100%; /* Makale genişliğini ayarla */
+    width: 100%; /* Adjust the article width. */
 }
 
 
