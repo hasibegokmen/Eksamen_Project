@@ -1234,6 +1234,9 @@ ul li a{
 
 
 /* its starting  ---- GitHub side  ---- */
+/* Benefited with this nettside:
+https://www.w3schools.com/css/css3_images.asp
+*/
 
 .GitHubPageMain {
     padding: 2rem;
@@ -1245,14 +1248,31 @@ ul li a{
 
 .GitHubPageImages {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 2rem;
-    margin-bottom: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom:
+    padding 0; 
 }
 
 .GitHubPageimage {
     width: 100%;
     height: auto;
+    border-radius: 1rem;
+}
+.GitHubPageimage:hover {
+    transform: scale(1.09);
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+figcaption {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 0.3rem;
 }
 
 .GitHubPageTextContent {
@@ -1277,6 +1297,9 @@ ul li a{
 .GitHubPageTextContent p {
     margin-bottom: 1rem;
     font-size: 1rem;
+    text-align: left;
+    line-height: 1.7;
+    text-indent: 2.3rem;
 }
 
 @media (max-width: 768px) {
