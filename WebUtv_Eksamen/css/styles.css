@@ -395,9 +395,9 @@ input[type="radio"]:checked + label + .info-panel {
   }
 
 
-/*Video altina gelen kisim*/
+/*"The section below the video"*/
 
-/* Genel stiller */
+/* "General styles" */
 .accordion {
     grid-area: accordion;
     grid-column: 1 / 3;
@@ -412,7 +412,7 @@ input[type="radio"]:checked + label + .info-panel {
     font-family: Arial, sans-serif;
 }
 
-/* Başlık stili */
+/* Title style */
 .accordion label {
     display: block;
     padding: 15px;
@@ -426,12 +426,12 @@ input[type="radio"]:checked + label + .info-panel {
     background-color: #00093c;
 }
 
-/* Gizli checkbox ile içerik kontrolü */
+/* "Content control with a hidden checkbox" */
 .accordion input[type="checkbox"] {
     display: none;
 }
 
-/* Panelin içerik stili */
+/* "Panel content style" */
 .content {
     max-height: 0;
     overflow: hidden;
@@ -441,13 +441,13 @@ input[type="radio"]:checked + label + .info-panel {
     color: black;
 }
 
-/* Açık olduğunda içeriğin gösterilmesi */
+/* "Displaying content when open" */
 .accordion input[type="checkbox"]:checked ~ .content {
-    max-height: 1000px; /* İçeriğe göre değeri ayarlayabilirsiniz */
+    max-height: 1000px; /* "You can adjust the value based on the content" */
     padding: 15px;
 }
 
-/* 1. panel dizayni */
+/* "1st panel design" */
 .spør-link-design1{
     font-size: 18px;
     font-family: Arial, sans-serif;
@@ -472,7 +472,7 @@ input[type="radio"]:checked + label + .info-panel {
     font-weight: 400;
 }
 
-/* 2. panel link dizayni*/
+/* "2nd panel link design"*/
 .link-design1{
     border-bottom-style: solid;
     border-bottom-color: #222;
@@ -485,15 +485,15 @@ input[type="radio"]:checked + label + .info-panel {
 .link-design4{
     color: #222;
 
-    /* 3. panel dizayni */
+    /* "3rd panel design" */
 
 }
 .images-613{
     width: 650px;
 }
 .bilde-design{
-    display: flex; /* Flexbox etkinleştirilir */
-    justify-content: center; /* Yatay ortalama */
+    display: flex; /* "Flexbox is enabled" */
+    justify-content: center; /* "Horizontal alignment" */
 
 }
 .st-his-link-design1{
@@ -517,8 +517,8 @@ input[type="radio"]:checked + label + .info-panel {
     font-size: 28px;
     margin-top: 40px;
     font-weight: 700;
-    display: flex; /* Flexbox etkinleştirilir */
-    justify-content: center; /* Yatay ortalama */
+    display: flex; /* "Flexbox is activated" */
+    justify-content: center; /* "Horizontal centering" */
 }
 
 
@@ -556,8 +556,8 @@ footer{
 }
 
 .column p {
-    font-size: 1.2rem; /* Yazı boyutunu büyütün */
-    line-height: 1.4; /* Satır aralığını ayarlayın */
+    font-size: 1.2rem; /* "Increase the font size" */
+    line-height: 1.4; /* "Adjust the line spacing" */
 }
 .column p a{
     font-size: 1.3rem;;
@@ -574,12 +574,12 @@ footer{
    
 }
 .contact-link {
-    display: block; /* Linki yeni satıra taşır */
+    display: block; /* "Move the link to a new line" */
     font-weight: bold;
     font-size: 1rem;
     text-decoration: none;
     color: white;
-    margin-top: 60px; /* Üstten biraz boşluk ekler */
+    margin-top: 60px; /* "Adds some spacing from the top" */
     text-decoration: underline;
 }
     .contact-link:hover{
@@ -613,11 +613,11 @@ ul li a{
 .column a:hover,
 .column a:focus{
     transform: scale(1.1);
-    /*kutucuk seklinde gozuksun istenirse outline: 2px solid white; bu eklenebilir*/
+    /*"If it is desired to appear in a box shape, `outline: 2px solid white;` can be added."*/
     outline-offset: 4px;
 }
 
-/* Sosyal medya ikonları için 2x2 grid ayarları */
+/* "2x2 grid settings for social media icons" */
 .social-media-grid {
     padding: 4rem;
     display: grid;
@@ -644,10 +644,10 @@ ul li a{
 
 .social-media-grid i {
     margin-right: 8px;
-    font-size: 1.8rem; /* İkon boyutu */
+    font-size: 1.8rem; /* "Icon size" */
 }
 
-/* Footer kodlari burada bitiyor Duzenlenecek*/
+/* "Footer codes end here. To be edited."*/
 
 
 /*-----------Activity Page Design------------------*/
@@ -763,7 +763,7 @@ ul li a{
 .grid-item-activity h3{
   color: #0805f0;
   line-height: 3rem;
-  font-size: clamp(1.5rem, 1.5vw, 1.2rem); /* Metin boyutu sınırlandırılır */
+  font-size: clamp(1.5rem, 1.5vw, 1.2rem); /* "Text size is limited" */
 }
 
 .grid-item-activity figure{
@@ -779,7 +779,7 @@ ul li a{
     padding: 0.5rem;
     margin-bottom: 2rem;
   font-style: italic;
-  text-align: center;/*resmin altina aciklama yazisini ortalar*/
+  text-align: center;/*"Centers the caption below the image"*/
  
 }
 
@@ -794,7 +794,7 @@ ul li a{
 
 /* Hover css of the links */
 .activity-knapp:hover, .activity-link:hover {
-    color: #0056b3; /* Hover sırasında koyulaşır */
+    color: #0056b3; /* "Darkens on hover" */
     text-decoration: underline; /* text is underlined for more visibility */
 }
 /* css for The links after thet clicked*/
@@ -810,11 +810,11 @@ ul li a{
       
     }
     .image-figure-intro img {
-        width: 100%; /* Görsel kutuya tam genişlikte oturur */
-        height: auto; /* Yükseklik, oranını koruyarak ayarlanır */
-        object-fit: contain; /* Görselin tamamını kutuya sığdırır */
-        display: block; /* Görselin çevresindeki boşlukları kaldırır */
-        margin: 0 auto; /* Ortalar */
+        width: 100%; /* "The image fits the box at full width" */
+        height: auto; /* "The height is adjusted while maintaining its aspect ratio" */
+        object-fit: contain; /* "Fits the entire image into the box" */
+        display: block; /* "Removes the padding around the image" */
+        margin: 0 auto; /* "Centers" */
     }
     .image-figure-intro figcaption {
         align-items: start;
@@ -822,70 +822,70 @@ ul li a{
         word-wrap: break-word;
     }
     .grid-container-activity {
-        grid-template-columns: 1fr; /* Tek sütun düzen */
-        gap: 2rem; /* Kutular arası boşluk */
+        grid-template-columns: 1fr; /* "Single-column layout" */
+        gap: 2rem; /* "Spacing between boxes" */
        
     }
 
     .grid-item-activity {
         display: grid;
         grid-template-columns: 1fr ;
-        align-items: center; /* İçeriği ortalar */
-        text-align: start; /* Metni ortalar */
+        align-items: center; /* "Centers the content" */
+        text-align: start; /* "Centers the text" */
         
         
     }
 
     .grid-item-activity figure {
         display: flex;
-        flex-direction: column; /* Görsel ve açıklamayı üst üste yerleştir */
-        align-items: center; /* Görsel ve açıklamayı yatayda ortala */
-        justify-content: center; /* Görsel ve açıklamayı dikeyde ortala */
+        flex-direction: column; /*"Stack the image and the description on top of each other" */
+        align-items: center; /* "Center the image and the description horizontally" */
+        justify-content: center; /* "Center the image and the description vertically" */
         width: 100%;
         margin: 0 auto;
     }
 
     .grid-item-activity img {
-        width: 100%; /* Görseli kutuya sığdır */
-        height: auto; /* Oranını koru */
-        object-fit: contain; /* Görselin tamamını göster */
+        width: 100%; /* "Fit the image into the box" */
+        height: auto; /* "Maintain the aspect ratio" */
+        object-fit: contain; /* "Display the entire image" */
     }
 
     .grid-item-activity figcaption {
-        margin-top: 0.5rem; /* Görsel ile açıklama arasına boşluk ekle */
-        font-size: 1rem; /* Küçük ekranlarda açıklama yazı boyutunu küçült */
-        color: #555; /* Açıklama rengini belirle */
+        margin-top: 0.5rem; /* "Add spacing between the image and the caption" */
+        font-size: 1rem; /* "Reduce the caption font size on small screens" */
+        color: #555; /* "Set the caption color" */
     }
-   
+
     .accesibility-testing {
-        grid-template-columns: 1fr; /* Tek sütuna geç */
-        gap: 1rem; /* Kutular arası boşluğu azalt */
-        margin: 1rem; /* Dış boşluğu küçült */
+        grid-template-columns: 1fr; /* "Switch to a single column" */
+        gap: 1rem; /* "Reduce the spacing between the boxes" */
+        margin: 1rem; /* "Reduce the outer margin" */
     }
 
 
 
 }
-/* Büyük ölçeklerde ve küçük ekranlarda tek sütuna düşür */
+/* "Switch to a single column on large scales and small screens" */
 @media (max-width: 1024px), (min-resolution: 192dpi) {
-   
-    
+
+
     .grid-container-activity {
-        grid-template-columns: 1fr; /* buyuk ekranlarda Tek sütun düzeni */
-        gap: 2rem; /* Kutular arası boşluk */
+        grid-template-columns: 1fr; /* "Single-column layout on large screens" */
+        gap: 2rem; /* "Spacing between boxes" */
     }
 
     .grid-item-activity {
         display: flex;
       flex-direction: column;
-        align-items: center; /* Ortala */
-        text-align: start; /* Metni ortala */
+        align-items: center; /* "Center" */
+        text-align: start; /* "Center the text" */
     }
 
     .grid-item-activity img {
-        width: 100%; /* Görsel genişliği tam */
-        height: auto; /* Yükseklik orantılı */
-        margin-bottom: 1rem; /* Görselin altına boşluk */
+        width: 100%; /* "Full image width" */
+        height: auto; /* "Height proportional" */
+        margin-bottom: 1rem; /* "Add spacing below the image" */
     }
 }
 
@@ -897,10 +897,10 @@ ul li a{
 /*ACCESIBILITY STATUS REPORT OF THE WEBSITE PAGE CSS*/
 .accesibility-page{
     background-color: #ffffff;
-  margin: 0 auto; /*ortalamak icin*/
-  padding: 0 5%; /* Sağ ve sol tarafta ekran genişliğinin %5'i kadar boşluk bırakır */
+  margin: 0 auto; /*"To align in the center"*/
+  padding: 0 5%; /* "Leaves a 5% margin on the left and right sides of the screen" */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
-    
+
 }
 .accesibility-page h1{
     text-align: center; /*keeps the title in the center of the page*/
@@ -914,45 +914,45 @@ ul li a{
     padding-bottom: 0.1rem;/*used to make the space between paragraphs smaller*/
     line-height:2rem; /*used to leave spaces between the lines, to make it easier to read.*/
     margin-bottom:0.5rem;
-    
+
 }
 
 .accesibility-page-images{
-    display: grid; /* Yan yana dizmek için flexbox */
+    display: grid; /* "Use flexbox to arrange side by side" */
     grid-template-columns: 1fr 1fr;
-    gap: 20px; /* Resimler arasında boşluk */
-    justify-content: center; /* Resimleri ortalar */
-    align-items: start; /* Resimlerin üst hizasını sağlar */
-   
+    gap: 20px; /* "Spacing between images" */
+    justify-content: center; /* "Centers the images" */
+    align-items: start; /* "Aligns the top of the images" */
+
 }
 
 .accesibility-page-images figure {
     display: grid;
     align-items: center; /* Center-align the content */
     text-align: center; /* Center text within the figure */
-   
+
 }
 .accesibility-page-images img{
-    width: 100%; /* Kapsayıcıya göre genişler */
+    width: 100%; /* "Expands according to the container" */
     height: auto;
-    max-width: 100%; /* Resim kapsayıcıdan taşmaz */
-    aspect-ratio: 16/9; /* En-boy oranını sabitler */
-    object-fit: contain; /* Resmmin tamamini gostermek icin */
+    max-width: 100%; /* "The image does not overflow the container" */
+    aspect-ratio: 16/9; /* "Maintains the aspect ratio" */
+    object-fit: contain; /* "To display the entire image" */
     border-radius: 8px;
     border:solid #000064;
-   
+
 }
 
-  
-  
+
+
     .accesibility-page-images figcaption {
       font-size: 1rem; /* Alt açıklama yazı boyutu */
       color: #555; /* Yazı rengi */
       margin-top: 0;
       padding-top:1rem
-      
-     
-    
+
+
+
     }
     .accesibility-testing {
         grid-template-columns: repeat(3, 1fr); /* Three columns of equal width */
@@ -961,7 +961,7 @@ ul li a{
         display: grid;
         grid-template-columns: repeat(2, 1fr); /* Three columns of equal width */
         gap: 30px;
-        
+
 
         /*  styles of the subtitles in the accesibility-testing section */
     }
@@ -969,7 +969,7 @@ ul li a{
     margin-bottom: 2rem;
 
     }
-  
+
   /* styleling the articles inside the section */
   .accesibility-testing article {
     background-color: #a1d6fa;
@@ -979,20 +979,20 @@ ul li a{
     /*background-attachment:*/
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth and emphasis */
   }
-      
-    
+
+
     /* Ekran küçüldüğünde düzenleme */
 @media (max-width: 768px) {
     .accesibility-page-images {
         grid-template-columns: 1fr; /* Tek sütuna geçiş */
     }
-    
+
         .accesibility-page-images img {
             width: 100%; /* Küçük ekranlarda görsel genişliği cihaz genişliğiyle uyumlu olur */
             height: auto;
         }
-    
-    
+
+
 
     .accesibility-page-images figcaption {
         font-size: 1.2rem; /* Alt açıklamanın boyutunu küçült */
@@ -1032,7 +1032,7 @@ ul li a{
     .search-box {
         justify-self: left;
         margin-left:0;
-        margin-right:0; 
+        margin-right:0;
     }
     /* Hamburger menü simgesi */
     .kontrol {
@@ -1084,7 +1084,7 @@ ul li a{
 
     /* Başlangıçta sadece üç çizgi (fa-bars) görünür */
     .kontrol .fa-bars {
-        display: inline-block;  
+        display: inline-block;
     }
 
     .kontrol .fa-times {
@@ -1104,7 +1104,7 @@ ul li a{
     .grid-container-home {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto;
-        grid-template-areas: 
+        grid-template-areas:
             "side-menu"
             "main-content"
             "accordion";
@@ -1125,7 +1125,7 @@ ul li a{
     .main-content-home {
         position: relative; /* Info-panel için referans sağlar */
         z-index: 1; /* Panelin altında kalır */
-    } 
+    }
 
 
         /* Mobil görünümde info-paneller */
@@ -1214,7 +1214,7 @@ ul li a{
 .grid-item-activity article {
     width: 100%; /* Makale genişliğini ayarla */
 }
-    
+
 
 }
 
@@ -1229,10 +1229,10 @@ ul li a{
 }
 
 @media (min-width: 1920px) {
-    
+
 }
 
-    
+
 
 
 
@@ -1259,7 +1259,7 @@ https://www.w3schools.com/css/css3_images.asp
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     margin-bottom:
-    padding 0; 
+    padding 0;
 }
 
 .GitHubPageimage {
