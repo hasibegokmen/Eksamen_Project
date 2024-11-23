@@ -66,22 +66,19 @@
     </nav>
 </header>
 
+<!--https://www.w3.org/TR/UNDERSTANDING-WCAG20/intro.html-->
+
 <main class="accesibility-page">
     <section class="accesibility-page">
         <article>
    
-    <h1>ACCESIBILITY STATUS REPORT OF THE WEBSITE</h1>
-    <p>This report evaluates the accessibility of the "Matematisk Modellering og Datavitenskap - Ingeniør" webpage 
-        based on WCAG 2.1 AA standards.</p>
-    <p>Web Content Accessibility Guidelines (WCAG) 2.1 covers a wide range of recommendations for 
-        making Web content more accessible. Following these guidelines will make content more accessible to 
-        a wider range of people with disabilities, including accommodations for blindness and low vision, deafness 
-        and hearing loss, limited movement, speech disabilities, photosensitivity, and combinations of these, and 
-        some accommodation for learning disabilities and cognitive limitations; but will not address every user need
-         for people with these disabilities. These guidelines address accessibility of web content on desktops, laptops, 
-         tablets, and mobile devices. Following these guidelines will also often make Web content more usable to users in general.<!--The text is taken fromv https://www.w3.org/TR/WCAG21/-->
-         <a href="https://www.w3.org/TR/WCAG21/">Read more.</a>
-        </p> 
+    <h1> Tilgjengelighetsrapport for Nettstedet Vårt</h1>
+    <p>Tilgjengelighet har vært en grunnleggende del av utviklingen av nettstedet vårt. 
+        Vi har nøye vurdert universell design for å sikre at brukere med ulike evner kan 
+        navigere og samhandle med nettstedet uten hindringer. Denne rapporten beskriver 
+        tiltakene vi har tatt for å oppfylle WCAG 2.0s fire prinsipper for tilgjengelighet—oppfattbar,
+         opererbar, forståelig og robust.</p>
+    
         <div class="accesibility-page-images">
             <figure>
             <img src="./images/accesibilit-test.png"
@@ -97,7 +94,7 @@
                 Lighthouse Generated Accesibility Test Report of Home Page for Mobile
                 
             </figcaption>
-        </figure>   <!--oslomarka karti gosteren resmi koy buraya-->
+        </figure>  
     
          </div>
 
@@ -105,24 +102,52 @@
     </section>
     <section class="accesibility-testing">
         <article>
-            <h2>Percivable</h2>
-            <p></p>
+            <h2>1. Oppfattbart Design</h2>
+            <p> For å gjøre innholdet tilgjengelig for alle brukere, har vi fokusert på klarhet og tilrettelegging:
+                Vi har brukt semantisk HTML gjennom hele nettstedet, inkludert header, nav, main, og ,
+                footer, og section"" for å gi en logisk struktur som hjelpemiddelteknologier lett kan tolke.
+                Alternativ tekst (alt-attributter) er lagt til for alle bilder. Dette sikrer at skjermlesere kan beskrive innholdet til synshemmede brukere. Eksempelvis har Oslomet-logoen et meningsfullt alt-attributt (alt="Oslomet Logo").
+                Videotilgjengelighet er ivaretatt med undertekster ved hjelp av track-elementet, slik at døve eller hørselshemmede brukere kan følge videoinnholdet. Kontrollfunksjonene gjør det mulig for brukere å pause, spole tilbake og justere avspillingshastigheten.
+                Vi har valgt fargekontraster som oppfyller WCAG 2.1-kravene. Dette sikrer lesbarhet for brukere med nedsatt syn, samtidig som det forbedrer brukeropplevelsen for alle.
+                Nettstedet er designet med responsiv tilpasning, slik at det fungerer sømløst på ulike enheter og skjermstørrelser. </p>
         </article>
         <article>
-            <h3>Text Readability</h3>
-            <p></p>
+            <h2>2. Opererbar Navigasjon</h2>
+            <p>For å gjøre nettstedet enkelt å bruke, uavhengig av inputmetode, har vi implementert følgende:
+
+                Tastaturtilgjengelighet sikrer at brukere kan navigere ved hjelp av Tab-tasten og se fokusindikatorer på aktive elementer.
+                Hamburgermenyen er lett å navigere med tastatur og har tydelige ARIA-etiketter for å veilede brukere av skjermlesere.
+                Interaktive elementer, som accordion-paneler og sidemenyer, gjør det mulig å utvide eller skjule innhold dynamisk. Dette gir brukere en mer fokusert opplevelse uten å overveldes av informasjon.
+                Søkefeltet inkluderer en klar aria-label ("Search Field"), som gjør det enkelt for skjermlesere å identifisere dets formål.
+                Videoavspillingskontroller og tydelige avslutningsknapper for dynamisk innhold gir brukerne fleksibilitet og kontroll over nettstedets funksjonalitet.
+                 </p>
 
             
 
         </article>
 
         <article>
-            <h2>Operable</h2>
+            <h2>3. Forståelig Innhold</h2>
+            <p>En enkel og logisk layout forbedrer brukeropplevelsen:
+
+                Beskrivende overskrifter gir en klar struktur som hjelper brukere med å finne informasjon raskt.
+                Lesbar tekst er prioritert med passende skriftstørrelser, tilstrekkelig linjeavstand og kortfattede avsnitt.
+                Nettstedets primærspråk er angitt som norsk (lang="no"), noe som hjelper skjermlesere med korrekt uttale.
+                Dynamiske elementer, som sidebar-paneler, har intuitive etiketter som gjør det enkelt for brukere å forstå hvordan de skal samhandle med dem.
+                Eksterne lenker åpnes i nye faner (target="_blank") med rel="noopener", noe som gir en trygg og forutsigbar opplevelse.
+                </p>
 
         </article>
 
         <article>
-            <h2>Percivable</h2>
+            <h2>4. Robust Arkitektur</h2>
+            <p>
+                Nettstedet er designet for å fungere godt på tvers av plattformer og enheter:
+
+                HTML5-standarder og ARIA-attributter (f.eks. aria-expanded, aria-labelledby) forbedrer kompatibiliteten med hjelpemiddelteknologier.
+                Responsiv design sikrer at nettstedet fungerer optimalt på alt fra mobiltelefoner til store skjermer.
+                Dynamisk innhold som hamburgermenyen og accordion-panelene fungerer godt med fallback-mekanismer for miljøer uten JavaScript-støtte.
+                Ved å implementere disse løsningene har vi skapt et nettsted som er tilgjengelig for alle brukere og i tråd med moderne standarder for universell design. </p>
         </article>
     </section>
     
