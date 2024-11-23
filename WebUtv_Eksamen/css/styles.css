@@ -747,7 +747,7 @@ ul li a{
 
 .grid-item-activity img {
     width: 100%;
-    text-align: center;
+    text-align: center;/*aligns the items in the center*/
     box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
     border-radius: 4px;
   }
