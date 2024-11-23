@@ -62,11 +62,8 @@ header {
         font-weight: 500;/* Medium font weight */
         transition: 0.8s;
         background: transparent;
-        color: #fcfafa;
+        color: #ddd;
     }
-    .search-box input::placeholder {
-    color: rgba(255, 255, 255, 0.6); /* Placeholder yazısını yarı saydam beyaz yapar */
-}
     
     /*button and icon*/
     .search-box button {
@@ -77,7 +74,7 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #ffffff; /* İkon rengi */
+        color: #666; /* İkon rengi */
         font-size: 24px; /* İkon boyutu */
         transition: color 0.3s ease;
         margin-left: 10px;
@@ -847,9 +844,9 @@ ul li a{
 
 
   
-    footer{
-        display: flex; /*footer kucuk ekranda kaybolur*/ 
-    }
+footer{
+    display: none; /*footer kucuk ekranda kaybolur*/ 
+}
 }
 /* Büyük ölçeklerde ve küçük ekranlarda tek sütuna düşür */
 @media (max-width: 1024px), (min-resolution: 192dpi) {
