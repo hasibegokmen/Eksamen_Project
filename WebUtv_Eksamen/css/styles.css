@@ -958,11 +958,11 @@ ul li a{
     
     }
     .accesibility-testing {
-       align-items: flex-start;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth and emphasis */
         min-height: 400px;
         margin: 2rem;
         display: grid;
-        grid-template-rows: repeat(2, 1fr); /* Three columns of equal width */
+        grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
         gap: 2rem;
         
 
@@ -976,11 +976,9 @@ ul li a{
   /* styling the articles inside the section */
   .accesibility-testing article {
     background-color: #a1d6fa;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 2rem;
     border-radius: 5px;
-    /*background-attachment:*/
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth and emphasis */
+    
   }
       
     
