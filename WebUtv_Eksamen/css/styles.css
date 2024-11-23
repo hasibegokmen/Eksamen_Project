@@ -897,33 +897,31 @@ ul li a{
 /*ACCESIBILITY STATUS REPORT OF THE WEBSITE PAGE CSS*/
 .accesibility-page{
     background-color: #ffffff;
+
   margin: 0 auto; /*"To align in the center"*/
   padding: 0 5%; /* "Leaves a 5% margin on the left and right sides of the screen" */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
-
 }
 .accesibility-page h1{
     text-align: center; /*keeps the title in the center of the page*/
     margin-top: 4rem; /*to make a space betwen hesader and he title*/
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: clamp(1.8rem, 2.5vw, 3rem); /* Dinamik yazı boyutu */
+    font-size: clamp(2.5rem, 2.5vw, 3rem); /* Dinamik yazı boyutu */
 }
 .accesibility-page p{
     padding-left: 2rem; /*gives space between the website frame and the text*/
     padding-right: 2rem; /*gives space between the website frame and the text*/
     padding-bottom: 0.1rem;/*used to make the space between paragraphs smaller*/
-    line-height:2rem; /*used to leave spaces between the lines, to make it easier to read.*/
+    line-height:3rem; /*used to leave spaces between the lines, to make it easier to read.*/
     margin-bottom:0.5rem;
-
 }
 
 .accesibility-page-images{
     display: grid; /* "Use flexbox to arrange side by side" */
     grid-template-columns: 1fr 1fr;
+
     gap: 20px; /* "Spacing between images" */
     justify-content: center; /* "Centers the images" */
     align-items: start; /* "Aligns the top of the images" */
-
 }
 
 .accesibility-page-images figure {
@@ -933,6 +931,7 @@ ul li a{
 
 }
 .accesibility-page-images img{
+
     width: 100%; /* "Expands according to the container" */
     height: auto;
     max-width: 100%; /* "The image does not overflow the container" */
@@ -955,14 +954,12 @@ ul li a{
 
     }
     .accesibility-testing {
-        grid-template-columns: repeat(3, 1fr); /* Three columns of equal width */
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth and emphasis */
         min-height: 400px;
-        margin: 3rem;
+        margin: 2rem;
         display: grid;
         grid-template-columns: repeat(2, 1fr); /* Three columns of equal width */
         gap: 30px;
-
-
         /*  styles of the subtitles in the accesibility-testing section */
     }
     .accesibility-testing h2 {
@@ -970,14 +967,14 @@ ul li a{
 
     }
 
+
   /* styleling the articles inside the section */
+
   .accesibility-testing article {
     background-color: #a1d6fa;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 2rem;
     border-radius: 5px;
-    /*background-attachment:*/
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth and emphasis */
+    
   }
 
 
