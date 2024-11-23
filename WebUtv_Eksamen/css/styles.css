@@ -62,8 +62,11 @@ header {
         font-weight: 500;/* Medium font weight */
         transition: 0.8s;
         background: transparent;
-        color: #ddd;
+        color: #fcfafa;
     }
+    .search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* Placeholder yazısını yarı saydam beyaz yapar */
+}
     
     /*button and icon*/
     .search-box button {
@@ -74,7 +77,7 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #666; /* İkon rengi */
+        color: #ffffff; /* İkon rengi */
         font-size: 24px; /* İkon boyutu */
         transition: color 0.3s ease;
         margin-left: 10px;
@@ -644,102 +647,83 @@ ul li a{
 
 
 /*-----------Activity Page Design------------------*/
-
+/*general stle of the main */
 .main {
     max-width: 1800px; /* Limit the content width. */
     margin: 0 auto; /* centers the elements*/
 }
-
-    .background-container {
-        max-width: 1200%; /*  streches the width of the backgound container completely*/
-        gap: 2rem;
-        padding: 20px; /*"Add padding between the content and the edges." */
-        background-color: #b3e5fc; /*makes background light blue color*/
-        border-radius: 10px; /* round the corners*/
-        box-sizing: border-box; /* used to prevent overflow*/
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* added a bit shadow */
-    }
-
+/*styling codes for rhe background container*/
+.background-container {
+     max-width: 1200%; /*  streches the width of the backgound container completely*/
+     gap: 2rem;
+     padding: 20px; /*"Add padding between the content and the edges." */
+     background-color: #b3e5fc; /*makes background light blue color*/
+     border-radius: 10px; /* round the corners*/
+     box-sizing: border-box; /* used to prevent overflow*/
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* added a bit shadow */
+     margin: 2.5rem;
+     
+}
+/*the head title*/
 .introduksjontittel{
-    padding: 1rem; 
+    padding-top: 1rem;
     text-align: center;/*keeps the text in the middle of the place*/
     font-size: 2.5rem;/*it fits better to the page with this font size*/
    
 }
-
+/*styling codes of the first section part. inroduction part*/
 .aktivitetsoversikt {
     text-align: center;/*keeps the title in the  center*/
-    padding-top: 1rem; /*used to make a space between heading and the tekst*/
+    width: 100%;
     line-height: 1.8; /* used to increase the line spacing */
-    padding: 1rem;
-
+    
 }
+/*styling of the subtitle. used to center it*/
 .aktivitetsoversikt h2{
     text-align: center;/*keeps the subtitle in the center of the page*/
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
-.aktivitetsoversikt article{
-    text-align: justify; /*tused to align the text to both the left and the right margins*/
-    font-size: 1.5rem;/*used this size to make it easier to read for the users*/
-    margin: 0 auto;/*used to leave equal margins on the sides*/
-    max-width: 90%;/*used to keep the content a bit smaller in the page and it fits better with this way*/
-    
-}
+/*image container styling */
 .image-container {
-    display: grid; /* Yan yana dizmek için flexbox */
-    grid-template-columns: 1fr 1fr;
-    object-fit: contain;
-   line-height: 2rem;
-    gap: 20px; /* Resimler arasında boşluk */
-    justify-content: center; /* Resimleri ortalar */
-    
-    
-   
-}
-.image-container img{
-    width: 100%; /* Resmin genişliği */
-    height: auto; /* Resmin yüksekliği */
-    object-fit: contain; /* Resmi keserek alanı doldurur, orantıları korur */
-    border: 1px solid #333; /* Görünürlük için kenarlık ekledik */
-    height: 30rem; /* Resmin yüksekliği */
-}
-
-
-.image-figure-intro{
-  text-align: center; /* Alt açıklamayı ortalamak için */
-  
+    display: grid; /* used to make elements 2 column grid container */
+    grid-template-columns: 1fr 1fr;/*kepp the images in the same grid container*/
+    object-fit: contain;/*used to fit the images entirely in the container*/
+    gap: 20px; /* leaves space between images*/
+    justify-content: center; /* keeps the images (grid container) in the center */
 }
 
 .image-figure-intro img {
-    width: 500px; /* Resmin genişliğini ayarla */
-    width: 100%;
-    object-fit: cover;
-  
+    width:100%; /* the width of the images */
   }
-  
+
   .image-figure-intro figcaption {
-    font-size: 1rem; /* Alt açıklama yazı boyutu */
-    color: #555; /* Yazı rengi */
-    margin-top: 0rem; /* Resimle alt açıklama arasına boşluk */
-    padding-top: 0;
-    
+    font-size: 1.2rem; /* resized to make it more readable */
+    color: #555; /* color of the figcaption text */
+    text-align: center;/*is alligned in the center under the images*/
   }
 
-
-
-
-
-.grid-container-activity {
-    display: grid; /* Grid düzenini etkinleştir */
-    gap: 3rem; /* Kutular arasındaki boşluk */
-    padding: 20px;
-    margin: 0 auto;/*kutulari ekrana ortalar*/
-    max-width: 90%; /*kutularin boyutunu belirler*/
-    
+  .aktivitetsoversikt article{
+    text-align: justify; /*used to align the text to both the left and the right margins*/
+    font-size: 1.5rem;/*used this size to make it easier to read for the users*/
+    margin: 0 auto;/*used to leave equal margins on the sides*/
+    max-width: 90%;/*used to keep the content a bit smaller in the page and it fits better with this way*/  
+    padding-bottom: 2rem;/*make space between the text and the white grid*/
 }
 
+/*styling codes of the white grids*/
+.grid-container-activity {
+    display: grid; /* used to make elements (text and the image) 2 column grid container */
+    gap: 3rem; /* used to leave space between the grids */
+    margin: 0 auto;/*centers the grids in the page*/
+    max-width: 90%; /*adjusted the size of grids to 90% to make a good look and design. So,it will be placed inside the blue background nicely*/   
+}
+/*styling of items inside the white grids*/
 .grid-item-activity {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* İki sütun oluştur */
+    grid-template-columns: 1fr 1fr; /* created to coloumn grids*/
+    justify-content: center;
+    align-items: center;
     gap:4.5rem;
     background-color: #ffffff;
     border: 1px solid #292727;
@@ -749,39 +733,34 @@ ul li a{
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 .grid-item-activity article {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-top:3rem;
     margin-left: 2rem;
+    text-align: left;
+    margin: 1rem;
     display: inline;
     font-size: clamp(1rem, 1.5vw, 1.2rem); /* Metin boyutu sınırlandırılır */
     
     
 }
 .grid-item-activity p {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   
     display: grid;
     line-height: 1.8rem;
     font-size: clamp(1rem, 1.5vw, 1.2rem); /* Metin boyutu sınırlandırılır */
 }
 
 .grid-item-activity img {
-    width: 95%;
-    margin-top: 1.5rem;
-
+    width: 100%;
+    text-align: center;
     box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
     border-radius: 4px;
-  
-}
-
+  }
 
 /* sub-titles */
 .grid-item-activity h3{
   color: #0805f0;
   line-height: 3rem;
-  font-size: clamp(1rem, 1.5vw, 1.2rem); /* Metin boyutu sınırlandırılır */
- ;
-  
-  
+  font-size: clamp(1.5rem, 1.5vw, 1.2rem); /* Metin boyutu sınırlandırılır */
 }
 
 .grid-item-activity figure{
@@ -868,9 +847,9 @@ ul li a{
 
 
   
-footer{
-    display: none; /*footer kucuk ekranda kaybolur*/
-}
+    footer{
+        display: flex; /*footer kucuk ekranda kaybolur*/ 
+    }
 }
 /* Büyük ölçeklerde ve küçük ekranlarda tek sütuna düşür */
 @media (max-width: 1024px), (min-resolution: 192dpi) {
