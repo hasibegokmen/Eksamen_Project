@@ -984,6 +984,86 @@ figcaption {
 /*###################################################################*/
 /*css settings for TABLET OF ALL THE PAGES. MAKE YOUR CHANGES HERE. */
 @media (max-width: 480px) {
+
+    .search-box {
+        justify-self: left;
+        margin-left:0;
+        margin-right:0;
+    }
+    
+
+    /*Navbar Hamburger Menu/Toogle Menu*/
+    /* "Hamburger menu icon" */
+    .kontrol {
+        display: block;
+        font-size: 2rem;
+        color: white;
+        position: fixed;
+        top: 1rem;
+        right: 2rem;
+        cursor: pointer;
+        z-index: 20;
+        transition: transform 0.3s ease;
+    }
+
+    /* "The sidebar starts hidden" */
+    .menu {
+        position: fixed;
+        right: -30%;
+        top: 0;
+        height: 13%;
+        width: 9rem;
+        background-color: #000064;
+        transition: right 0.5s ease;
+        z-index: 15;
+        padding-top: 3.5rem;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        right:3.5rem;
+    }
+
+    .menu ul li {
+        text-align: left;
+        padding: 0rem;
+    }
+
+    .menu a {
+        background-color:#000064;
+        font-size: 1rem;
+    }
+
+    .menu a.active {
+       font-size:1.1rem;
+    }
+
+    /* "Show from the right when the menu is opened" */
+    #kontrol:checked ~ .menu {
+        right: 0;
+    }
+
+    /* "Initially, only the three lines (fa-bars) are visible" */
+    .kontrol .fa-bars {
+        display: inline-block;
+    }
+
+    .kontrol .fa-times {
+        display: none; /* "X is initially hidden"*/
+    }
+
+    /* "The icon changes when the hamburger menu is opened" */
+    #kontrol:checked + .kontrol .fa-bars {
+        display: none; /* "The three lines are hidden" */
+    }
+
+    #kontrol:checked + .kontrol .fa-times {
+        display: inline-block; /* "The X becomes visible"*/
+    }
+
     /*HOMEPAGE-CSS*/
     
     .page-header1{
@@ -995,7 +1075,7 @@ figcaption {
     }
     .video{
         width: 100%; /* Full width of its container */
-        height: 10rem;
+        height: 18rem;
         margin-top: 0rem;
     }
 
@@ -1046,71 +1126,7 @@ figcaption {
         margin-left:0;
         margin-right:0;
     }
-    /* "Hamburger menu icon" */
-    .kontrol {
-        display: block;
-        font-size: 2rem;
-        color: white;
-        position: fixed;
-        top: 1rem;
-        right: 1rem;
-        cursor: pointer;
-        z-index: 20;
-        transition: transform 0.3s ease;
-    }
-
-    /* "The sidebar starts hidden" */
-    .menu {
-        position: fixed;
-        right: -100%;
-        top: 0;
-        height: 40%;
-        width: 150px;
-        background-color: #000064;
-        transition: right 0.5s ease;
-        z-index: 15;
-        padding-top: 60px;
-    }
-
-    .menu ul {
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
-    }
-
-    .menu ul li {
-        text-align: left;
-        padding: 0.8rem;
-    }
-
-    .menu a {
-        background-color:#000064;
-        font-size: 1rem;
-    }
-
-    /* "Show from the right when the menu is opened" */
-    #kontrol:checked ~ .menu {
-        right: 0;
-    }
-
-    /* "Initially, only the three lines (fa-bars) are visible" */
-    .kontrol .fa-bars {
-        display: inline-block;
-    }
-
-    .kontrol .fa-times {
-        display: none; /* "X is initially hidden"*/
-    }
-
-    /* "The icon changes when the hamburger menu is opened" */
-    #kontrol:checked + .kontrol .fa-bars {
-        display: none; /* "The three lines are hidden" */
-    }
-
-    #kontrol:checked + .kontrol .fa-times {
-        display: inline-block; /* "The X becomes visible"*/
-    }
+    
 
     /* "Grid layout adjustment on mobile" */
     .grid-container-home {
