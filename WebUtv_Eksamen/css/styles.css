@@ -817,10 +817,10 @@ ul li a{
 
 
 
-/*ACCESIBILITY STATUS REPORT OF THE WEBSITE PAGE CSS*/
+
+/*---------------------------------------ACCESIBILITY PAGE CSS--------------------------------*/
 .accesibility-page{
     background-color: #ffffff;
-
   margin: 0 auto; /*"To align in the center"*/
   padding: 0 5%; /* "Leaves a 5% margin on the left and right sides of the screen" */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
@@ -828,21 +828,23 @@ ul li a{
 .accesibility-page h1{
     text-align: center; /*keeps the title in the center of the page*/
     margin-top: 4rem; /*to make a space betwen hesader and he title*/
-    font-size: clamp(2.5rem, 2.5vw, 3rem); /* Dinamik yazı boyutu */
+    font-size: 3.5rem;
 }
 .accesibility-page p{
     padding-left: 2rem; /*gives space between the website frame and the text*/
     padding-right: 2rem; /*gives space between the website frame and the text*/
-    padding-bottom: 0.1rem;/*used to make the space between paragraphs smaller*/
+    padding-bottom: 1rem;/*used to make the space between paragraph and the images*/
     line-height:3rem; /*used to leave spaces between the lines, to make it easier to read.*/
     margin-bottom:0.5rem;
+    font-size: 1.5rem;
+ 
 }
 
 .accesibility-page-images{
     display: grid; /* "Use flexbox to arrange side by side" */
-    grid-template-columns: 1fr 1fr;
-
-    gap: 20px; /* "Spacing between images" */
+    grid-template-columns: 1fr 1fr; /*gereksiz olabilir bu kod geri don BAKKKKKKK*/
+    padding: 3rem;
+    gap: 4rem; /* "Spacing between images" */
     justify-content: center; /* "Centers the images" */
     align-items: start; /* "Aligns the top of the images" */
 }
@@ -883,21 +885,27 @@ ul li a{
         display: grid;
         grid-template-columns: repeat(2, 1fr); /* Three columns of equal width */
         gap: 30px;
+        width: 90%;
+        box-shadow: #000;
+        box-shadow: 0 4px 8px rgba(128, 126, 126, 0.1); /* added a bit shadow */
         /*  styles of the subtitles in the accesibility-testing section */
     }
-    .accesibility-testing h2 {
-    margin-bottom: 2rem;
-
-    }
+    
 
 
   /* styleling the articles inside the section */
 
   .accesibility-testing article {
     background-color: #a1d6fa;
-    padding: 2rem;
+    padding: 0.5rem;
     border-radius: 5px;
+   
     
+  }
+  .accesibility-testing article p{
+    font-size: 1.1rem;
+    padding: 0.6rem;
+ 
   }
 
 
@@ -919,7 +927,7 @@ ul li a{
     }
     .accesibility-testing{
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
         gap: 20px; /* Adds space between the boxes */
         margin: 20px auto; /* Centers the grid and adds space on top and bottom */
         max-width: 90%; /* Limits the overall width of the grid */
@@ -939,7 +947,6 @@ ul li a{
 }
 }
 /*"Accessibility second section styles end here"*/
-
 
 /*Github page*/
 
@@ -1307,15 +1314,39 @@ figcaption {
     .GitHubPageImages {
         grid-template-columns: 1fr;
     }
+    /*-----------Accessibility page mobil css ------------*/
+   
+    .accesibility-page.accesibility-page h1{
+        font-size: 2rem;
+    }
+    .accesibility-page p{
+        font-size: 1.5rem;
+    }
+    .accesibility-testing{
+    grid-template-columns: 1fr;/*columns reduced to one for better readibility*/
+
+    }
+    .accesibility-testing article h2 {
+        font-size: 1.2rem;
+    }
+    .GitHubPageTextContent {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .GitHubPageTextContent h3 {
+        font-size: 1.3rem;
+    }
+
+    .GitHubPageTextContent p {
+        font-size: 0.9rem;
+    }
+
+    .GitHubPageImages {
+        grid-template-columns: 1fr;
+    }
 }
-/*css settings for mobile*/
 
-
-/*Activity*/
-
-/*GitHub*/
-
-/*Accessibility*/
 
 
 @media (max-width: 480px) {
