@@ -15,7 +15,7 @@ body {
         "header"
         "content"
         "footer";
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Arial, sans-serif','Trebuchet MS';
 }
 
 /* Navbar Design - Common for all pages */
@@ -121,13 +121,11 @@ header {
     position: relative; /* Enables additional styling, like hover effects */
 }
 
-/* .menu a:hover {
-    text-decoration: underline; /* Adds underline when hovered 
-}  */
+/*menu active style. User understand that which page is open*/
 .menu a.active {
-    color: rgb(255, 255, 255);          /* Set text color to white */
-    font-weight: bold;                  /* Make the font bold */
-    border-bottom: 2px solid rgb(255, 255, 255); /* Add a white bottom border to the active link */
+    color: rgb(255, 255, 255);  
+    font-weight: bold;
+    border-bottom: 2px solid rgb(255, 255, 255);
     font-size: 150%;
 }
 
@@ -188,8 +186,8 @@ Inspired by the following tutorial:
 /*video preview*/
 .video{
     width: 100%; /* Full width of its container */
-    height: 42rem;
-    margin-top: -2rem;
+    height: 32rem;
+    margin-top: 0;
 }
 .video-preview {
     width: 100%;
@@ -200,7 +198,7 @@ Inspired by the following tutorial:
 .video-preview img {
     max-width: 100%; /* Scale down on smaller screens */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Rounds the corners of the image */
+    border-radius: 8px; 
     /* Additional styling specific to this image */
 }
 
@@ -274,9 +272,9 @@ Inspired by the following resources:
     position: absolute; /* Positioned relative to the parent */
     top: 0; /* Aligns panel to the top */
     left: 0; /* Aligns panel to the left */
-    width: 100%;  /* Full width of the content */
-    max-width: 100%; /* Ensures panel doesn’t exceed container width */
-    text-align: left; /* Aligns text to the left */
+    width: 100%;  
+    max-width: 100%; 
+    text-align: left; 
     visibility: hidden; /* Initially invisible */
     overflow: hidden; /* Hides content outside the container */
     word-wrap: break-word; /* Breaks long text into multiple lines */
@@ -291,7 +289,7 @@ Inspired by the following resources:
 }
 
 input[type="radio"]:checked + label + .info-panel {
-    display: block; /* Displays the panel */
+    display: block; /* Displays the panel when it is checked */
 }
 
 /* Close button for the info panel */
@@ -456,25 +454,25 @@ input[type="radio"]:checked + label + .info-panel {
 }
 
 /* "1st panel design" */
-.spør-link-design1{
+.spoor-link-design1{
     font-size: 18px;
     font-family: Arial, sans-serif;
     font-weight: 400;
 }
 
-.spør-link-design2{
+.spoor-link-design2{
     color: black;
     font-size: 28px;
     font-family: Arial, sans-serif;
     font-weight: 800;
 
 }
-.spør-link-design3{
+.spoor-link-design3{
     font-size: 18px;
     font-family: Arial, sans-serif;
     font-weight: 400;
 }
-.spør-link-design4{
+.spoor-link-design4{
     font-size: 18px;
     font-family: Arial, sans-serif;
     font-weight: 400;
@@ -493,8 +491,7 @@ input[type="radio"]:checked + label + .info-panel {
 .link-design4{
     color: #222;
 
-    /* "3rd panel design" */
-
+/* "3rd panel design" */
 }
 .images-613{
     width: 650px;
@@ -913,20 +910,89 @@ ul li a{
 
 
 
+/* its starting  -------------- GitHub side  ----------------- */
+/* Benefited with this nettside:
+https://www.w3schools.com/css/css3_images.asp
+*/
+
+.GitHubPageMain {
+    padding: 2rem;
+    font-family: Arial;
+    line-height: 1.6;
+    color: #334;
+    text-align: center;
+}
+
+.GitHubPageImages {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    /*margin-bottom: ;*/
+    padding: 0;
+}
+
+.GitHubPageimage {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+.GitHubPageimage:hover {
+    transform: scale(1.09);
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+figcaption {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 0.3rem;
+}
+
+.GitHubPageTextContent {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border: 0.05rem solid #ddd;
+    border-radius: 0.5rem;
+}
+
+.GitHubPageTextContent h3 {
+    color: #0056b3;
+    font-size: 1.5rem;
+}
+
+.GitHubPageTextContent h3:not(:first-of-type) {
+    border-top: 0.04rem solid #dde;
+    padding-top: 1rem;
+    margin-top: 1.6rem;
+}
+
+.GitHubPageTextContent p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.7;
+    text-indent: 2.3rem;
 
 
+}
 
-
-
-/*"Changes to be applied for phone size"*/
-/* "Right-Side Sliding Menu on Mobile"*/
-@media (max-width: 768px) {
+/*###################################################################*/
+/*css settings for TABLET OF ALL THE PAGES. MAKE YOUR CHANGES HERE. */
+@media (max-width: 480px) {
 
     .search-box {
         justify-self: left;
         margin-left:0;
         margin-right:0;
     }
+    
+
+    /*Navbar Hamburger Menu/Toogle Menu*/
     /* "Hamburger menu icon" */
     .kontrol {
         display: block;
@@ -934,7 +1000,7 @@ ul li a{
         color: white;
         position: fixed;
         top: 1rem;
-        right: 1rem;
+        right: 2rem;
         cursor: pointer;
         z-index: 20;
         transition: transform 0.3s ease;
@@ -943,14 +1009,14 @@ ul li a{
     /* "The sidebar starts hidden" */
     .menu {
         position: fixed;
-        right: -100%;
+        right: -30%;
         top: 0;
-        height: 40%;
-        width: 150px;
+        height: 13%;
+        width: 9rem;
         background-color: #000064;
         transition: right 0.5s ease;
         z-index: 15;
-        padding-top: 60px;
+        padding-top: 3.5rem;
     }
 
     .menu ul {
@@ -958,16 +1024,21 @@ ul li a{
         flex-direction: column;
         padding: 0;
         margin: 0;
+        right:3.5rem;
     }
 
     .menu ul li {
         text-align: left;
-        padding: 0.8rem;
+        padding: 0rem;
     }
 
     .menu a {
         background-color:#000064;
         font-size: 1rem;
+    }
+
+    .menu a.active {
+       font-size:1.1rem;
     }
 
     /* "Show from the right when the menu is opened" */
@@ -992,6 +1063,70 @@ ul li a{
     #kontrol:checked + .kontrol .fa-times {
         display: inline-block; /* "The X becomes visible"*/
     }
+
+    /*HOMEPAGE-CSS*/
+    
+    .page-header1{
+        font-size: 1rem;
+    }
+
+    .page-header2{
+        font-size: 0.7rem;
+    }
+    .video{
+        width: 100%; /* Full width of its container */
+        height: 20rem;
+        margin-top: 0rem;
+    }
+
+    /* Mobile side-link layout */
+    .side-link {
+        position: relative; /* Reference for positioning the info-panel */
+        font-size: 1rem;
+        z-index: 5; /* The side-link is positioned behind the panel. */
+        padding: 0.2rem;
+        margin-bottom: 0.15rem;
+    }
+
+
+
+
+    /*GitHub page-CSS for mobile*/
+    .GitHubPageMain {
+        padding: 1rem;
+    }
+
+    .GitHubPageImages {
+        gap: 1rem;
+    }
+}
+
+
+/*###################################################################*/
+/*css settings for TABLET OF ALL THE PAGES. MAKE YOUR CHANGES HERE. */
+@media (min-width:480px) and (max-width: 768px) {
+    /*HOMEPAGE-CSS*/
+    
+    .page-header1{
+        font-size: 1.8rem;
+    }
+
+    .page-header2{
+        font-size: 1.5rem;
+
+    }
+    .video{
+        width: 100%; /* Full width of its container */
+        height: 20rem;
+        margin-top: 0rem;
+    }
+
+    .search-box {
+        justify-self: left;
+        margin-left:0;
+        margin-right:0;
+    }
+    
 
     /* "Grid layout adjustment on mobile" */
     .grid-container-home {
@@ -1108,112 +1243,12 @@ ul li a{
 }
 
 
-}
-
-@media (max-width: 1024px) {
-}
-
-
-
-
-@media(min-width:320px) and (max-width:480px){
-
-}
-
-@media (min-width: 1920px) {
-
-}
 
 
 
 
 
-
-/* finish activitet side*/
-
-
-
-/* its starting  -------------- GitHub side  ----------------- */
-/* Benefited with this nettside:
-https://www.w3schools.com/css/css3_images.asp
-*/
-
-.GitHubPageMain {
-    padding: 2rem;
-    font-family: Arial;
-    line-height: 1.6;
-    color: #334;
-    text-align: center;
-}
-
-.GitHubPageImages {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    /*margin-bottom: ;*/
-    padding: 0;
-}
-
-.GitHubPageimage {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-}
-.GitHubPageimage:hover {
-    transform: scale(1.09);
-}
-
-figure {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-figcaption {
-    font-size: 0.85rem;
-    color: #555;
-    margin-top: 0.3rem;
-}
-
-.GitHubPageTextContent {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1.5rem;
-    border: 0.05rem solid #ddd;
-    border-radius: 0.5rem;
-}
-
-.GitHubPageTextContent h3 {
-    color: #0056b3;
-    font-size: 1.5rem;
-}
-
-.GitHubPageTextContent h3:not(:first-of-type) {
-    border-top: 0.04rem solid #dde;
-    padding-top: 1rem;
-    margin-top: 1.6rem;
-}
-
-.GitHubPageTextContent p {
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    text-align: left;
-    line-height: 1.7;
-    text-indent: 2.3rem;
-
-
-}
-/*###################################################################*/
-/*css settings for MOBILE OF ALL THE PAGES. MAKE YOUR CHANGES HERE. */
-@media (max-width: 768px) {
-    /*HOMEPAGE-CSS*/
-
-
-
-
-
-
-    /*-------------------Activity page mobil codes------------------*/
+    /*-------------------Activity page tablet codes------------------*/
     .image-container {
         grid-template-columns: 1fr;  
       
@@ -1272,7 +1307,7 @@ figcaption {
         margin: 1rem; /* "Reduce the outer margin" */
     }
 
-/*---------------activity page MOBILLLL codes are finished here-------------*/
+/*---------------activity page Tablet codes are finished here-------------*/
 
     /*----------GitHub mobil css---------------*/
 
@@ -1338,38 +1373,14 @@ figcaption {
 
 
 
+/* For (21:9)*/
+@media (min-aspect-ratio: 21/9) and (min-width: 2560px) {
 
-@media (max-width: 480px) {
-    /*HOMEPAGE-CSS*/
-    .page-header{
-        justify-content: center;
-    }
-    .page-header1{
-        display: flex;
-        font-size: 1.8rem;
-        color: #222;
-        margin-left: 1rem;
-    }
-
-    .page-header2{
-        font-size: 1.5rem;
-        color: #222;
-        margin-left: 1rem;
-
-    }
-    .video{
-        width: 100%; /* Full width of its container */
-        height: 42rem;
-        margin-top: -2rem;
-    }
-    .GitHubPageMain {
-        padding: 1rem;
-    }
-
-    .GitHubPageImages {
-        gap: 1rem;
-    }
+    /*video preview*/
+.video{
+    width: 100%; /* Full width of its container */
+    height: 42rem;
+    margin-top: -2rem;
 }
 
-
-
+}
