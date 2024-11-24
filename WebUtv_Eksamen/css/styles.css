@@ -1107,19 +1107,6 @@ ul li a{
 
 }
 
-@media (max-width: 1024px) {
-}
-
-
-
-
-@media(min-width:320px) and (max-width:480px){
-
-}
-
-@media (min-width: 1920px) {
-
-}
 
 
 
@@ -1356,8 +1343,8 @@ figcaption {
     }
     .video{
         width: 100%; /* Full width of its container */
-        height: 42rem;
-        margin-top: -2rem;
+        height: 10rem;
+        margin-top: 100rem;
     }
     .GitHubPageMain {
         padding: 1rem;
