@@ -186,8 +186,8 @@ Inspired by the following tutorial:
 /*video preview*/
 .video{
     width: 100%; /* Full width of its container */
-    height: 42rem;
-    margin-top: -2rem;
+    height: 32rem;
+    margin-top: 0;
 }
 .video-preview {
     width: 100%;
@@ -289,7 +289,7 @@ Inspired by the following resources:
 }
 
 input[type="radio"]:checked + label + .info-panel {
-    display: block; /* Displays the panel */
+    display: block; /* Displays the panel when it is checked */
 }
 
 /* Close button for the info panel */
@@ -910,14 +910,136 @@ ul li a{
 
 
 
+/* its starting  -------------- GitHub side  ----------------- */
+/* Benefited with this nettside:
+https://www.w3schools.com/css/css3_images.asp
+*/
+
+.GitHubPageMain {
+    padding: 2rem;
+    font-family: Arial;
+    line-height: 1.6;
+    color: #334;
+    text-align: center;
+}
+
+.GitHubPageImages {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    /*margin-bottom: ;*/
+    padding: 0;
+}
+
+.GitHubPageimage {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+.GitHubPageimage:hover {
+    transform: scale(1.09);
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+figcaption {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 0.3rem;
+}
+
+.GitHubPageTextContent {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border: 0.05rem solid #ddd;
+    border-radius: 0.5rem;
+}
+
+.GitHubPageTextContent h3 {
+    color: #0056b3;
+    font-size: 1.5rem;
+}
+
+.GitHubPageTextContent h3:not(:first-of-type) {
+    border-top: 0.04rem solid #dde;
+    padding-top: 1rem;
+    margin-top: 1.6rem;
+}
+
+.GitHubPageTextContent p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.7;
+    text-indent: 2.3rem;
+
+
+}
+
+/*###################################################################*/
+/*css settings for TABLET OF ALL THE PAGES. MAKE YOUR CHANGES HERE. */
+@media (max-width: 480px) {
+    /*HOMEPAGE-CSS*/
+    
+    .page-header1{
+        font-size: 1rem;
+    }
+
+    .page-header2{
+        font-size: 0.7rem;
+    }
+    .video{
+        width: 100%; /* Full width of its container */
+        height: 10rem;
+        margin-top: 0rem;
+    }
+
+    /* Mobile side-link layout */
+    .side-link {
+        position: relative; /* Reference for positioning the info-panel */
+        font-size: 1rem;
+        z-index: 5; /* The side-link is positioned behind the panel. */
+        padding: 0.2rem;
+        margin-bottom: 0.15rem;
+    }
 
 
 
 
+    /*GitHub page-CSS for mobile*/
+    .GitHubPageMain {
+        padding: 1rem;
+    }
 
-/*"Changes to be applied for phone size"*/
-/* "Right-Side Sliding Menu on Mobile"*/
-@media (max-width: 768px) {
+    .GitHubPageImages {
+        gap: 1rem;
+    }
+}
+
+
+/*###################################################################*/
+/*css settings for TABLET OF ALL THE PAGES. MAKE YOUR CHANGES HERE. */
+@media (min-width:480px) and (max-width: 768px) {
+    /*HOMEPAGE-CSS*/
+    
+    .page-header1{
+        font-size: 1.8rem;
+    }
+
+    .page-header2{
+        font-size: 1.5rem;
+
+    }
+    .video{
+        width: 100%; /* Full width of its container */
+        height: 20rem;
+        margin-top: 0rem;
+    }
 
     .search-box {
         justify-self: left;
@@ -1105,99 +1227,12 @@ ul li a{
 }
 
 
-}
 
 
 
 
 
-
-
-/* finish activitet side*/
-
-
-
-/* its starting  -------------- GitHub side  ----------------- */
-/* Benefited with this nettside:
-https://www.w3schools.com/css/css3_images.asp
-*/
-
-.GitHubPageMain {
-    padding: 2rem;
-    font-family: Arial;
-    line-height: 1.6;
-    color: #334;
-    text-align: center;
-}
-
-.GitHubPageImages {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    /*margin-bottom: ;*/
-    padding: 0;
-}
-
-.GitHubPageimage {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-}
-.GitHubPageimage:hover {
-    transform: scale(1.09);
-}
-
-figure {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-figcaption {
-    font-size: 0.85rem;
-    color: #555;
-    margin-top: 0.3rem;
-}
-
-.GitHubPageTextContent {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1.5rem;
-    border: 0.05rem solid #ddd;
-    border-radius: 0.5rem;
-}
-
-.GitHubPageTextContent h3 {
-    color: #0056b3;
-    font-size: 1.5rem;
-}
-
-.GitHubPageTextContent h3:not(:first-of-type) {
-    border-top: 0.04rem solid #dde;
-    padding-top: 1rem;
-    margin-top: 1.6rem;
-}
-
-.GitHubPageTextContent p {
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    text-align: left;
-    line-height: 1.7;
-    text-indent: 2.3rem;
-
-
-}
-/*###################################################################*/
-/*css settings for MOBILE OF ALL THE PAGES. MAKE YOUR CHANGES HERE. */
-@media (max-width: 768px) {
-    /*HOMEPAGE-CSS*/
-
-
-
-
-
-
-    /*-------------------Activity page mobil codes------------------*/
+    /*-------------------Activity page tablet codes------------------*/
     .image-container {
         grid-template-columns: 1fr;  
       
@@ -1256,7 +1291,7 @@ figcaption {
         margin: 1rem; /* "Reduce the outer margin" */
     }
 
-/*---------------activity page MOBILLLL codes are finished here-------------*/
+/*---------------activity page Tablet codes are finished here-------------*/
 
     /*----------GitHub mobil css---------------*/
 
@@ -1322,38 +1357,14 @@ figcaption {
 
 
 
+/* For (21:9)*/
+@media (min-aspect-ratio: 21/9) and (min-width: 2560px) {
 
-@media (max-width: 480px) {
-    /*HOMEPAGE-CSS*/
-    .page-header{
-        justify-content: center;
-    }
-    .page-header1{
-        display: flex;
-        font-size: 1.8rem;
-        color: #222;
-        margin-left: 1rem;
-    }
-
-    .page-header2{
-        font-size: 1.5rem;
-        color: #222;
-        margin-left: 1rem;
-
-    }
-    .video{
-        width: 100%; /* Full width of its container */
-        height: 10rem;
-        margin-top: 100rem;
-    }
-    .GitHubPageMain {
-        padding: 1rem;
-    }
-
-    .GitHubPageImages {
-        gap: 1rem;
-    }
+    /*video preview*/
+.video{
+    width: 100%; /* Full width of its container */
+    height: 42rem;
+    margin-top: -2rem;
 }
 
-
-
+}
