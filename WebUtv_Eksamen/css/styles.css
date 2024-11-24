@@ -767,7 +767,7 @@ ul li a{
     background-color: #ffffff;
     border: 1px solid #292727;
     border-radius: 8px;
-   padding: 1rem;
+    padding: 1rem;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
@@ -1298,6 +1298,11 @@ figcaption {
 
 
     /*-------------------Activity page tablet codes------------------*/
+    h1.introduksjontittel {
+        font-size: 1.8rem; /* Smaller size for small screens */
+        text-align: center; /* Center the text */
+        line-height: 1.4; /* Add space between lines */
+    }
     .image-container {
         grid-template-columns: 1fr;  
       
@@ -1379,7 +1384,7 @@ figcaption {
     }
      /*-----------Accessibility page mobil css ------------*/
      
-     .accesibility-page h1{
+    .accesibility-page h1{
         font-size: 2rem;
     }
     .accesibility-page p{
