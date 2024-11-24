@@ -81,9 +81,10 @@ https://www.w3schools.com/accessibility/
     <p>Tilgjengelighet har vært en grunnleggende del av utviklingen av nettstedet vårt. 
         Vi har nøye vurdert universell design for å sikre at brukere med ulike evner kan 
         navigere og samhandle med nettstedet uten hindringer. Denne rapporten beskriver 
-        tiltakene vi har tatt for å oppfylle WCAG 2.0s fire prinsipper for tilgjengelighet—oppfattbar,
-         opererbar, forståelig og robust.  I tillegg til den automatiserte tilgengelighetskontrollen med Lighthouse, gjennomførte
-          vi også en manuell evaluering av tilgjengeligheten. Dette var en tidkrevende og krevende prosess for gruppen vår, men en viktig 
+        tiltakene vi har tatt for å oppfylle prinsippene i WCAG 2.1.  Nettsidens tilgjengelighetstest 
+        for telefon og  laptop ble gjennomført 
+         både med Lighthouse digital plattform og manuelt, mens   ble kontrollert manuelt for store skjermer.
+          Dette var en tidkrevende  prosess for gruppen vår, men en viktig 
           del av arbeidet for å sikre god kvalitet og brukervennlighet.</p>
         <p> Skjermbildene viser resultatene av tilgjengelighetstesting på både desktop og mobil ved bruk av Lighthouse.</p>
     
@@ -92,14 +93,14 @@ https://www.w3schools.com/accessibility/
             <img src="./images/accesibility-scroe-home.png"
             alt="Homepage Accesibility Test Score" />
             <figcaption>
-                Lighthouse Generert Tilgjengelighetstest for Hjemmesiden på Desktop
+                Tilgjengelighetstest for Hjemmesiden på Desktop
             </figcaption>
         </figure>
         <figure >
             <img src="./images/accesibility-score-activitypage.png"
             alt="Activity page Accesibility Test Score " />
             <figcaption>
-                Lighthouse Generert Tilgjengelighetstest for Aktivitetsiden på Desktop
+                Tilgjengelighetstest for Aktivitetsiden på Desktop
                 
             </figcaption>
         </figure>  
@@ -107,14 +108,14 @@ https://www.w3schools.com/accessibility/
             <img src="./images/accesibility-score-homepage-phone.png"
             alt="Homepage Accesibility Test Score for Phone size" />
             <figcaption>
-                Lighthouse Generert Tilgjengelighetstest for Hjemmesiden på Mobil
+                Tilgjengelighetstest for Hjemmesiden på Mobil
             </figcaption>
         </figure>
         <figure>
             <img src="./images/accesibility-score-activitypage-phone.png"
             alt="Activity Page Accesibility Test Score for Phone size" />
             <figcaption>
-                **Lighthouse Generert Tilgjengelighetstest for Aktivitetsiden på Mobil**
+                Tilgjengelighetstest for Aktivitetsiden på Mobil
             </figcaption>
         </figure>
     
@@ -126,15 +127,13 @@ https://www.w3schools.com/accessibility/
         <article>
             <h2>1. Oppfattbart Design</h2>
             <p> For å gjøre innholdet tilgjengelig for alle brukere, har vi fokusert på klarhet og tilrettelegging.
-                Vi har brukt semantisk HTML gjennom hele nettstedet, inkludert header, nav, main, 
-                footer,article og section for å gi en logisk struktur som hjelpemiddelteknologier lett kan bruke og forstå.
+                Vi har brukt semantisk HTML gjennom hele nettstedet for å gi en logisk struktur som hjelpemiddelteknologier lett kan bruke og forstå.
              Alternativ tekst (alt-attributter) er lagt til for alle bilder. Dette sikrer at skjermlesere kan beskrive innholdet
-              til synshemmede brukere.  For eksempel;  Oslomet-logoen har et meningsfullt alt-attributt (alt="Oslomet Logo").
+              til synshemmede brukere.  
             Videotilgjengelighet er ivaretatt med undertekster ved hjelp av track-elementet, slik at døve eller hørselshemmede brukere
              kan følge videoinnholdet. Kontrollfunksjonene gjør det mulig for brukere å pause, spole tilbake og justere avspillingshastigheten. 
-                Vi har valgt fargekontraster som oppfyller WCAG 2.1-kravene. Dette sikrer lesbarhet for brukere med nedsatt syn, samtidig som det forbedrer brukeropplevelsen for alle.
-               Som gruppe ble det laget medieopplegg for å sikre at nettsiden fungerer harmonisk og lesbar på telefon-, laptop- og skrivebordsskjermer. 
-                På denne måten ble tilgjengeligheten sikret på disse enhetene. 
+             Vi valgte fargekontrast og tekstharmoni som gjør det lettere å lese og gir en klar syn."
+                 
         </article>
         <article>
             <h2>2. Opererbar Navigasjon</h2>
@@ -142,8 +141,10 @@ https://www.w3schools.com/accessibility/
                 Hamburgermenyen er lett å navigere med tastatur og har tydelige ARIA-etiketter for å veilede brukere av skjermlesere.
                 Interaktive elementer, som toggleable accordion-paneler og sidemenyer, gjør det mulig å utvide eller skjule innhold dynamisk.
                  Dette gir brukere en mer fokusert opplevelse uten å overveldes av informasjon.
-                Søkefeltet inkluderer en klar aria-label ("Search Field"), som gjør det enkelt for skjermlesere å identifisere dets formål.
+                Søkefeltet inkludererforstørrelsesglass-ikon og  en klar aria-label ("Search Field") in i søkefeltet, som gjør det enkelt for skjermlesere 
+                å identifisere dets formål.
                 Videoavspillingskontroller og tydelige avslutningsknapper for dynamisk innhold gir brukerne fleksibilitet og kontroll over nettstedets funksjonalitet.
+                Nettstedets bunntekst (footer) inneholder også interaktive elementer, som er utformet for å gi brukeren rask tilgang til generell informasjon.
             </p>
         </article>
 
@@ -161,7 +162,6 @@ https://www.w3schools.com/accessibility/
         <article>
             <h2>4. Robust Arkitektur</h2>
             <p>
-                Nettstedet er designet for å fungere godt på tvers av plattformer og enheter:
                 HTML5-standarder og ARIA-attributter (f.eks. aria-expanded, aria-labelledby) forbedrer kompatibiliteten med hjelpemiddelteknologier.
                 Responsiv design sikrer at nettstedet fungerer optimalt på alt fra mobiltelefoner til store skjermer.
                 Dynamisk innhold som hamburgermenyen og accordion-panelene fungerer godt med fallback-mekanismer for miljøer uten JavaScript-støtte.
@@ -174,7 +174,7 @@ https://www.w3schools.com/accessibility/
 <!--Inspired by 
 https://www.youtube.com/watch?v=dlsjiphBris&list=PL7wCz7NFX_Hcp94Mr8yFqcHnLDcdpfvhF&ab_channel=TarunCode-WebDesigner-
 https://www.youtube.com/watch?v=k3I8Ja61vEQ&list=PL7wCz7NFX_Hcp94Mr8yFqcHnLDcdpfvhF&index=3&ab_channel=TarunCode-WebDesigner
-->
+->-->
 
 <!--FOOTER CODING-->
 <footer class="footer" id="footer">
