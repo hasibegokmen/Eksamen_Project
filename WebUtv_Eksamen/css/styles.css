@@ -15,7 +15,7 @@ body {
         "header"
         "content"
         "footer";
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Arial, sans-serif','Trebuchet MS';
 }
 
 /* Navbar Design - Common for all pages */
@@ -121,13 +121,11 @@ header {
     position: relative; /* Enables additional styling, like hover effects */
 }
 
-/* .menu a:hover {
-    text-decoration: underline; /* Adds underline when hovered 
-}  */
+/*menu active style. User understand that which page is open*/
 .menu a.active {
-    color: rgb(255, 255, 255);          /* Set text color to white */
-    font-weight: bold;                  /* Make the font bold */
-    border-bottom: 2px solid rgb(255, 255, 255); /* Add a white bottom border to the active link */
+    color: rgb(255, 255, 255);  
+    font-weight: bold;
+    border-bottom: 2px solid rgb(255, 255, 255);
     font-size: 150%;
 }
 
@@ -200,7 +198,7 @@ Inspired by the following tutorial:
 .video-preview img {
     max-width: 100%; /* Scale down on smaller screens */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Rounds the corners of the image */
+    border-radius: 8px; 
     /* Additional styling specific to this image */
 }
 
@@ -274,9 +272,9 @@ Inspired by the following resources:
     position: absolute; /* Positioned relative to the parent */
     top: 0; /* Aligns panel to the top */
     left: 0; /* Aligns panel to the left */
-    width: 100%;  /* Full width of the content */
-    max-width: 100%; /* Ensures panel doesn’t exceed container width */
-    text-align: left; /* Aligns text to the left */
+    width: 100%;  
+    max-width: 100%; 
+    text-align: left; 
     visibility: hidden; /* Initially invisible */
     overflow: hidden; /* Hides content outside the container */
     word-wrap: break-word; /* Breaks long text into multiple lines */
@@ -456,25 +454,25 @@ input[type="radio"]:checked + label + .info-panel {
 }
 
 /* "1st panel design" */
-.spør-link-design1{
+.spoor-link-design1{
     font-size: 18px;
     font-family: Arial, sans-serif;
     font-weight: 400;
 }
 
-.spør-link-design2{
+.spoor-link-design2{
     color: black;
     font-size: 28px;
     font-family: Arial, sans-serif;
     font-weight: 800;
 
 }
-.spør-link-design3{
+.spoor-link-design3{
     font-size: 18px;
     font-family: Arial, sans-serif;
     font-weight: 400;
 }
-.spør-link-design4{
+.spoor-link-design4{
     font-size: 18px;
     font-family: Arial, sans-serif;
     font-weight: 400;
@@ -493,8 +491,7 @@ input[type="radio"]:checked + label + .info-panel {
 .link-design4{
     color: #222;
 
-    /* "3rd panel design" */
-
+/* "3rd panel design" */
 }
 .images-613{
     width: 650px;
