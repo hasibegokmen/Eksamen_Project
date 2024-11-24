@@ -14,7 +14,7 @@
     <meta name="description" content="The page contains information about OslaMet's Matematisk Modellering og Datavitenskap - Ingeniør"/>
     
     <!-- Title of the webpage -->
-    <title>Accesibility Status Report of The Website </title>
+    <title>Tur Forslag i Oslomarka for Oslo-met Studenter</title>
 
      <!-- Link to Font Awesome for icons used in the menu. Icons used in Hamburber menu symbol, "X" symbol, searching and sosial media links-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -23,10 +23,6 @@
 </head>
 <body>
 
-<!--Used resources in the research process:
-https://www.w3.org/TR/UNDERSTANDING-WCAG20/intro.html
-https://www.w3schools.com/accessibility/
--->
 
 <!--Header Section -->
 <header> 
@@ -54,6 +50,7 @@ https://www.w3schools.com/accessibility/
             <input type="checkbox" id="kontrol">
             <!-- Label with hamburger and closs icons on Navbar -->
             <label for="kontrol" class="kontrol">
+    
                 <i class="fa fa-bars"></i><!-- Hamburger icon -->
                 <i class="fa fa-times"></i><!-- Close icon -->
             </label>
@@ -61,123 +58,198 @@ https://www.w3schools.com/accessibility/
             <section class="menu">
                 <ul><!--List of navigation links-->
                     <li><a href="index.html">Hjem</a></li>
-                    <li><a href="accessibility.html" class = "active">Tilgjengelighet</a></li>
+                    <li><a href="accessibility.html">Tilgjengelighet</a></li>
                     <li><a href="github.html">GitHub</a></li>
-                    <li><a href="activity.html">Aktivitet</a></li>
+                    <li><a href="activity.html" class = "active">Aktivitet</a></li>
                 </ul>
             </section>
         </section>
     </nav>
 </header>
 
-
-<!--https://www.w3.org/TR/UNDERSTANDING-WCAG20/intro.html-->
-
-<main class="accesibility-page">
-    <section class="accesibility-page">
+<main class="main">
+    <h1 class="introduksjontittel"> TUR FORSLAG I OSLOMARKA FOR OSLO-MET STUDENTER</h1>
+    <div class="background-container">
+    <section class="aktivitetsoversikt">
         <article>
-   
-    <h1> Tilgjengelighetsrapport for Nettsiden </h1>
-    <p>Tilgjengelighet har vært en grunnleggende del av utviklingen av nettstedet vårt. 
-        Vi har nøye vurdert universell design for å sikre at brukere med ulike evner kan 
-        navigere og samhandle med nettstedet uten hindringer. Denne rapporten beskriver 
-        tiltakene vi har tatt for å oppfylle prinsippene i WCAG 2.1.  Nettsidens tilgjengelighetstest 
-        for telefon og  laptop ble gjennomført 
-         både med Lighthouse digital plattform og manuelt, mens   ble kontrollert manuelt for store skjermer.
-          Dette var en tidkrevende  prosess for gruppen vår, men en viktig 
-          del av arbeidet for å sikre god kvalitet og brukervennlighet.</p>
-        <p> Skjermbildene viser resultatene av tilgjengelighetstesting på både desktop og mobil ved bruk av Lighthouse.</p>
-    
-        <div class="accesibility-page-images">
-            <figure>
-            <img src="./images/accesibility-scroe-home.png"
-            alt="Homepage Accesibility Test Score" />
-            <figcaption>
-                Tilgjengelighetstest for Hjemmesiden på Desktop
-            </figcaption>
-        </figure>
-        <figure >
-            <img src="./images/accesibility-score-activitypage.png"
-            alt="Activity page Accesibility Test Score " />
-            <figcaption>
-                Tilgjengelighetstest for Aktivitetsiden på Desktop
+            <h2>Utforsk Oslomarka!</h2>
+            <div class="image-container">
+                <figure class="image-figure-intro">
+                <img src="./images/activitypage-utsikk.jpeg"
+                alt="Utsikt fra Kollern" />
+                <figcaption>
+                   Utsikken fra Kollern
+                   Fotograf: Ole P Hval
+                </figcaption>
+            </figure>
+            <figure class="image-figure-intro">
+                <img src="./images/activitypage-kolsastoppen.jpeg"
+                alt="Utsikt fra Kolsåstoppen" />
+                <figcaption>
+                    Utsikk fra Kolsåstoppen 
+                    Fotograf: Marius Dalseg Sætre
+                    
+                </figcaption>
+            </figure>   <!--oslomarka karti gosteren resmi koy buraya-->
+        
+             </div>
+            <p>
+                Knapt noen annen hovedstad kan tilby så flotte store 
+                turområder rett utenfor stuedøra som Oslo. Byen er omkranset 
+                av skogkledte åser fra Askeråsene og Kolsås i vest til Voksenåsen 
+                og Vettakollen i nord og Ekeberg og Haukåsen i øst. Nesten en million 
+                mennesker har Oslomarka som hjemmeområde og det er knapt et sted i byen 
+                hvor befolkningen ikke har relativt kort vei til nærmeste markaområde.
                 
-            </figcaption>
-        </figure>  
-        <figure>
-            <img src="./images/accesibility-score-homepage-phone.png"
-            alt="Homepage Accesibility Test Score for Phone size" />
-            <figcaption>
-                Tilgjengelighetstest for Hjemmesiden på Mobil
-            </figcaption>
-        </figure>
-        <figure>
-            <img src="./images/accesibility-score-activitypage-phone.png"
-            alt="Activity Page Accesibility Test Score for Phone size" />
-            <figcaption>
-                Tilgjengelighetstest for Aktivitetsiden på Mobil
-            </figcaption>
-        </figure>
-    
-         </div>
+        
+            <a class="activity-knapp" href="https://ut.no/utforsker/omrade/1223/oslomarka/turforslag" target="_blank"  rel="noopener">Les mer informasjon</a>
+            
+            <p>Her er noen turtipser og anbefalt turer i Oslomarka for deg å utforske og nyte. For å se flere turtipser og få mer informasjon, kan dere besøke netsidene til 
+                <a class="activity-knapp" href="https://www.dnt.no/dnt-der-du-er/dnt-oslo-og-omegn/turforslag/" target="_blank"  rel="noopener">Den Norske Turistforening  </a>  og  
+                <a class="activity-knapp" href="https://ut.no/utforsker/omrade/1223/oslomarka/turforslag">UT.NO </a>.</p>
 
+            
+           
         </article>
+            
     </section>
-    <section class="accesibility-testing">
+        
+    <div class="grid-container-activity">  
+    <section class="grid-item-activity">    <!--1. forslag-->   
         <article>
-            <h2>1. Oppfattbart Design</h2>
-            <p> For å gjøre innholdet tilgjengelig for alle brukere, har vi fokusert på klarhet og tilrettelegging.
-                Vi har brukt semantisk HTML gjennom hele nettstedet for å gi en logisk struktur som hjelpemiddelteknologier lett kan bruke og forstå.
-             Alternativ tekst (alt-attributter) er lagt til for alle bilder. Dette sikrer at skjermlesere kan beskrive innholdet
-              til synshemmede brukere.  
-            Videotilgjengelighet er ivaretatt med undertekster ved hjelp av track-elementet, slik at døve eller hørselshemmede brukere
-             kan følge videoinnholdet. Kontrollfunksjonene gjør det mulig for brukere å pause, spole tilbake og justere avspillingshastigheten. 
-             Vi valgte fargekontrast og tekstharmoni som gjør det lettere å lese og gir en klar syn."
-                 
-        </article>
-        <article>
-            <h2>2. Opererbar Navigasjon</h2>
-            <p> Tastaturtilgjengelighet sikrer at brukere kan navigere ved hjelp av Tab-tasten og se fokusindikatorer på aktive elementer.
-                Hamburgermenyen er lett å navigere med tastatur og har tydelige ARIA-etiketter for å veilede brukere av skjermlesere.
-                Interaktive elementer, som toggleable accordion-paneler og sidemenyer, gjør det mulig å utvide eller skjule innhold dynamisk.
-                 Dette gir brukere en mer fokusert opplevelse uten å overveldes av informasjon.
-                Søkefeltet inkludererforstørrelsesglass-ikon of  en klar aria-label ("Search Field") in i søkefeltet, som gjør det enkelt for skjermlesere 
-                å identifisere dets formål.
-                Videoavspillingskontroller og tydelige avslutningsknapper for dynamisk innhold gir brukerne fleksibilitet og kontroll over nettstedets funksjonalitet.
-                Nettstedets bunntekst (footer) inneholder også interaktive elementer, som er utformet for å gi brukeren rask tilgang til generell informasjon.
+       
+            <h3>Flotte høstturer i Oslomarka</h3>
+            <p>
+                Når høsten legger sitt fargesprakende teppe over Oslomarka, 
+                er det få ting som slår en tur ut i ditt nærområde. 
+                I marka finner du over 2700 km med blåmerkede stier. Vi har 
+                funnet frem ti av våre turfavoritter som passer perfekt til en flott høsttur.
+                For mer detaljer,
+                <a class="activity-link" href="https://www.dnt.no/dnt-der-du-er/dnt-oslo-og-omegn/turforslag/fine-hostturer-i-marka/"
+                target="_blank" rel="noopener">klikk her</a>
+            </p>
+            <p>
+                I skogene rundt i Oslo og Akershus er det et utall av stier. 
+                Går du en tur vil du se at mange av dem er merket med blå merker på trærne. 
+                De blåmerkede stiene leder deg til mange flotte turmål rundt omkring. 
+                Stiene følges opp av DNT Oslo og Omegn og lokale turlag. 
+                Vi gjør vårt beste for at du skal kunne ferdes trygt og finne fram i skogen. 
+                Derfor merker vi med blått og setter opp skilt til de viktigste stedene i skogen. 
+                For mer informasjon, 
+                <a class="activity-link" href="https://www.dnt.no/dnt-der-du-er/dnt-oslo-og-omegn/turforslag/stier-i-oslomarka/"
+                target="_blank" rel="noopener">les videre</a>
             </p>
         </article>
 
-        <article>
-            <h2>3. Forståelig Innhold</h2>
-            <p>Beskrivende overskrifter gir en klar struktur som hjelper brukere med å finne informasjon raskt.
-                Lesbar tekst er prioritert med passende skriftstørrelser, tilstrekkelig linjeavstand og kortfattede avsnitt.
-                Nettstedets primærspråk er angitt som norsk (lang="no"), noe som hjelper skjermlesere med korrekt uttale.
-                Dynamiske elementer, som sidebar-paneler, har intuitive etiketter som gjør det enkelt for brukere å forstå hvordan de skal samhandle med dem.
-                Eksterne lenker åpnes i nye faner (target="_blank") med rel="noopener", noe som gir en trygg og forutsigbar opplevelse.
-                </p>
+        <figure>
+            <img src="./images/activity-turer.jpeg"
+            alt="Høsturer i Oslomarka" />
+            <figcaption>
+                En bit av Flyktningeruta
+                Fotograf:Marius Dalseg Sætre
 
-        </article>
-
-        <article>
-            <h2>4. Robust Arkitektur</h2>
-            <p>
-                HTML5-standarder og ARIA-attributter (f.eks. aria-expanded, aria-labelledby) forbedrer kompatibiliteten med hjelpemiddelteknologier.
-                Responsiv design sikrer at nettstedet fungerer optimalt på alt fra mobiltelefoner til store skjermer.
-                Dynamisk innhold som hamburgermenyen og accordion-panelene fungerer godt med fallback-mekanismer for miljøer uten JavaScript-støtte.
-                Ved å implementere disse løsningene har vi skapt et nettsted som er tilgjengelig for alle brukere og i tråd med moderne standarder for universell design. </p>
-        </article>
-    </section>
+            </figcaption>
+        </figure>
     
+    </section>
+    <section class="grid-item-activity">  <!--2.tur forslag-->     
+        <article >
+            <h3>Utsiktstur til Korpåsen ved Skullerud i Østmarka</h3>
+            <p>
+                På toppen av stupet på Korpåsen ved Skullerud er det et fantastisk utsiktspunkt som er 
+                et superfint turmål for nærturer med utsikt. Det er en kort tur opp hit fra Skullerudstua, 
+                som gjør dette til et lett tilgjengelig sted for kortreiste tureventyr i marka. Utsikten er 
+                det ingenting å klage på. For mer detaljer,
+                <a class="activity-link" href="https://ut.no/turforslag/111279318?_gl=1*e15yrh*_ga*NzIxMDQ3Mzg3LjE3MzA4NDY2MTA.*_ga_63XYTWFZRL*MTczMTQzNzUxMC45LjEuMTczMTQzNzc2Ny4wLjAuMTk0NzI5NDkxNg.."
+                target="_blank" rel="noopener">klikk her</a>
+            </p>
+            <p>
+                Midt i Nasjonalparken rager en av Østmarkas høyeste og flotteste topper, Tonekollen.
+                Hentet fra boken 104 toppturer i Oslomarka. Skrevet av Anders Skaiå.
+                Det var enebakkingen N.B Krogsbøl som skrev om Tonekollen først, om hans tur til Tonekollen St. 
+                Hansaften 1861 for å se på solnedgangen og soloppgangen: "Aa for en deilig stund. 
+                Det var en stille, hellig stundt i Alfaders store Tempel. 
+                Gaa dit, se og betrakt dette herlige panorama" skriver han. 
+                For mer informasjon, 
+            
+                <a class="activity-link" href="https://ut.no/turforslag/1112157525/topptur-til-tonekollen-stmarkas-beste-utsikt"
+                target="_blank" rel="noopener">les videre</a>
+            </p>
+        </article>
+        <figure>
+            <img src="./images/activitypage-korpasen.jpeg"
+            alt="Utsikt fra Oslomarka" />
+            <figcaption>
+                Kveldsutsikt fra Korpåsen i Østmarka
+                Fotograf: Martin Kvist
+            </figcaption>
+        </figure>
+     
+    </section>
+
+    <section class="grid-item-activity">   <!--3.tur forslag-->      
+        <article>
+            <h3>Paddletur-Padleled Drammen Rute 9 </h3>
+            <p>
+                Dette er en av rutene i padleleden i Drammenselva og fjorden. Totalt er det lagt ut 33 ruter i denne leden
+                 som starter i Hokksund, går via Drammen, ut fjorden, gjennom Svelvikstrømmen og frem til Rødtangen og Sandebukta.
+                  Her møter den padleleden i Oslofjorden. Ta gjerne en tur langs leden via den digitale padleboka "Padleruter i 
+                  Drammenselva og fjorden". 
+            </p>
+            <p>
+                    Padleleden i Drammenelva og fjorden går gjennom kommunene Øvre Eiker, Drammen, Lier, Asker og Holmestrand.
+                     Rutene i den ytre delen av fjorden og Sandebukta er lagt inn slik at det er en naturlig overgang til rutene 
+                     i Indre Oslofjord, Vestfold og Telemark for dem som ønsker å fortsette padleturen i disse flotte områdene.
+                      For mer detaljer,
+                <a class="activity-link" href="https://ut.no/turforslag/1112154704/padleled-drammen-rute-9-lierelva-fra-lierbyen-til-linnes-bru-leden-i-elva-og-fjorden."
+                target="_blank"  rel="noopener">klikk her</a>
+            </p>
+           
+        </article>
+        <figure>
+            <img src="./images/activitypage-paddletur.png"alt="Paddling på Lierelva" />
+            <figcaption>
+                Paddling på Lierelva
+                Fotograf: Jens Petter Ørjansen
+            </figcaption>
+        </figure>
+    </section>
+    <section class="grid-item-activity">  <!--2.tur forslag-->     
+        <article >
+            <h3>Fra Vestmarkasetra til Sollihøgda på ski</h3>
+            <p>
+                Dette er andre etappe på ekspedisjonen langs Bærums grense. I 2021 har Bærum Turlag planlagt en ekspedisjon 
+                som over 6 etapper følger kommunegrensen – en tur på totalt rundt 92 km.  For mer detaljer,
+                
+            </p>
+            <p>
+                Den andre etappen kan gjennomføres både på vinteren og på sommeren. Denne beskrivelsen omtaler skituren som starter
+                 ved Franskleiv - parkeringsplassen ved Vestmarksetra. Du følger skiløypa som tar av nederst på parkeringsplassen og følger
+                  lysløype vestover langs kommunegrensen, under Nedre Gupu og til Furuholmen. Dette er ikke korteste skiløype men følger nærmest grensen.
+                For mer informasjon, 
+            
+                <a class="activity-link" href="https://ut.no/turforslag/1112154290/fra-vestmarksetra-til-sollihgda-pa-ski" 
+                target="_blank"  rel="noopener">klikk her.</a>
+            </p>
+        </article>
+        <figure>
+            <img src="./images/activitypage-skitur.jpeg"
+            alt="Mot Burås" />
+            <figcaption>
+                Mot Burås
+                Fotograf: Jan Eldegard Hjelle
+            </figcaption>
+        </figure>
+     
+    </section>
+</div>
+</div>
 </main>
 
-<!--Inspired by 
-https://www.youtube.com/watch?v=dlsjiphBris&list=PL7wCz7NFX_Hcp94Mr8yFqcHnLDcdpfvhF&ab_channel=TarunCode-WebDesigner-
-https://www.youtube.com/watch?v=k3I8Ja61vEQ&list=PL7wCz7NFX_Hcp94Mr8yFqcHnLDcdpfvhF&index=3&ab_channel=TarunCode-WebDesigner
-->
-
-<!--FOOTER CODING-->
-<footer class="footer" id="footer">
+<!--Inspired by https://www.youtube.com/watch?v=dlsjiphBris&list=PL7wCz7NFX_Hcp94Mr8yFqcHnLDcdpfvhF&ab_channel=TarunCode-WebDesigner
+https://www.youtube.com/watch?v=k3I8Ja61vEQ&list=PL7wCz7NFX_Hcp94Mr8yFqcHnLDcdpfvhF&index=3&ab_channel=TarunCode-WebDesigner-->
+<!--FOOTER IS ADDED-->
+<footer>
     <div class="row">
         <div class="column"> <!--Bu kisim footerda cok yer kapliyor, uygun bir yere alinacak, grup toplantisindan sonra-->
             <h3>Links</h3>
@@ -206,16 +278,16 @@ https://www.youtube.com/watch?v=k3I8Ja61vEQ&list=PL7wCz7NFX_Hcp94Mr8yFqcHnLDcdpf
         <div class="column">
             <div class="social-media-grid">
             
-            <a href="https://www.facebook.com/oslomet/" target="_blank" aria-label="Facebook" title="Facebook" rel="noopener">
+            <a href="https://www.facebook.com/oslomet/" target="_blank" aria-label="Facebook" title="Facebook"  rel="noopener">
                 <i class="fab fa-facebook"></i> Facebook
             </a>
-            <a href="https://www.instagram.com/oslomet/" target="_blank" aria-label="Instagram" title="Instagram" rel="noopener">
+            <a href="https://www.instagram.com/oslomet/" target="_blank" aria-label="Instagram" title="Instagram"  rel="noopener">
                 <i class="fab fa-instagram"></i> Instagram
             </a>
             <a href="https://twitter.com/oslomet" target="_blank" aria-label="Twitter" title="Twitter" rel="noopener">
                 <i class="fab fa-twitter"></i> Twitter
             </a>
-            <a href="https://www.linkedin.com/school/oslomet/" target="_blank" aria-label="LinkedIn" title="LinkedIn" rel="noopener">
+            <a href="https://www.linkedin.com/school/oslomet/" target="_blank" aria-label="LinkedIn" title="LinkedIn"  rel="noopener">
                 <i class="fab fa-linkedin"></i> LinkedIn
             </a>
             </div>
@@ -225,7 +297,4 @@ https://www.youtube.com/watch?v=k3I8Ja61vEQ&list=PL7wCz7NFX_Hcp94Mr8yFqcHnLDcdpf
     </div>
 </footer>
 </body>
-</html>
-
-
 
