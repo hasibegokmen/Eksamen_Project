@@ -14,14 +14,13 @@
     <meta name="description" content="The page contains information about OslaMet's Matematisk Modellering og Datavitenskap - Ingeniør"/>
     
     <!-- Title of the webpage -->
-    <title>Mathematisk Modellering og Datavitenskap - Ingeniør</title>
+    <title>Home-Mathematisk Modellering og Datavitenskap - Ingeniør</title>
 
      <!-- Link to Font Awesome for icons used in the menu. Icons used in Hamburber menu symbol, "X" symbol, searching and sosial media links-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Link to external CSS for page styling -->
     <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body>
 
 
 <!--Header Section -->
@@ -38,11 +37,12 @@
    
         <!--Search Box-->
         <section class="search-box">
-            <input type="text" placeholder="Search..."><!--Search input-->
-            <a href="#">
-                <i class="fas fa-search"></i><!--Search icon-->
-            </a>
+            <input type="text" placeholder="Search..." aria-label="Search Field">
+            <button type="submit" aria-label="Search">
+                <i class="fas fa-search" aria-hidden="true"></i>
+            </button>
         </section>
+        
 
         <!-- Hamburger Menu Section -->
         <section class="Hamburger-menu" id="Hamburger-menu">
@@ -56,19 +56,21 @@
             <!-- Navigation Menu -->
             <section class="menu">
                 <ul><!--List of navigation links-->
-                    <li><a href="index.html">Hjem</a></li>
-                    <li><a href="accessibility.html">Tilgjengelighet</a></li>
-                    <li><a href="github.html">GitHub</a></li>
+                    <li><a href="index.html" class = "active">Hjem</a></li>
                     <li><a href="activity.html">Aktivitet</a></li>
+                    <li><a href="github.html">GitHub</a></li>
+                    <li><a href="accessibility.html">Tilgjengelighet</a></li>
                 </ul>
             </section>
         </section>
     </nav>
 </header>
 
-
 <main>
 <!--https://www.w3schools.com/html/html_table_colspan_rowspan.asp-->
+<!--In order to design a user-friendly and understandable page, the user can see the table he wants to see with radio buttons. 
+A clear and understandable table has been designed for 3 sections.-->
+
 <section class="studieprogTable">
   <h2>Studiets Oppbygning </h2>
   <h3>Velg Emnegruppe:</h3>
@@ -89,29 +91,29 @@
 
   <p class="go-btn" id="go-btn"><a href="index.html">Gå Tilbake Hjem Side</a></p>
 
-  <!-------------------Emnegruppe: Matematikk og Fysikk--------------------------->
+  <!---------------------------------Emnegruppe: Matematikk og Fysikk---------------------------------------->
   <section class="studie-table-container">
     <section class="table" id="matematik-fysikk-prog">
       <table>
         <thead>
           <tr>
-            <th colspan="5">Emnegruppe: Matematikk og Fysikk</th>
+            <th colspan="5">Emnegruppe: Matematikk og Fysikk</th> <!--Title of the Table-->
           </tr>
           <thead>
             <tr>
-              <th>Studieår</th>
-              <th>Semester</th>
-              <th>Emne</th>
-              <th>Emnekode</th>
+              <th>Studieår</th><!--Studieår column header-->
+              <th>Semester</th><!--Semester column header-->
+              <th>Emne</th><!--Emne column header-->
+              <th>Emnekode</th><!--Emnekode volumn header-->
               <th>Stp</th>
             </tr>
           </thead>
         </thead>
           <tbody>
-            <!-- 1. Yıl -->
+            <!----------- 1. Year----- -->
             <tr>
               <td rowspan="7"><strong>1. Studieår</strong></td><!--to merge row-->
-              <td rowspan="4">1. Semester</td>
+              <td rowspan="4">1. Semester</td><!--to merge row-->
               <td><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DAPE1300/2024/H%C3%98ST" target="_blank" rel="noopener">Diskret matematikk</a></td>
               <td>DAPE1300</td>
               <td>10 stp</td>
@@ -132,7 +134,7 @@
               <td>5 stp</td>
             </tr>
             <tr>
-              <td rowspan="3">2. Semester</td>
+              <td rowspan="3">2. Semester</td><!--to merge row-->
               <td><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DAFE1000/2024/H%C3%98ST" target="_blank" rel="noopener">Matematikk 1000</a></td>
               <td>DAFE1000</td>
               <td>10 stp</td>
@@ -148,7 +150,7 @@
               <td>10 stp</td>
             </tr>
             
-            <!-- 2. Yıl -->
+            <!---------- 2. Year ------->
             <tr>
               <td rowspan="6"><strong>2. Studieår</strong></td>
               <td rowspan="3">3. Semester</td>
@@ -185,7 +187,7 @@
             </tr>
             
       
-            <!-- 3. Yıl -->
+            <!---------- 3. Year ---------------->
             <tr>
               <td rowspan="11"><strong>3. Studieår</strong></td>
               <td rowspan="6">5. Semester</td>
@@ -249,7 +251,7 @@
     </section>
   </section>
 
-  <!------------------------------------Statistiske og datadrevne metoder----------------->
+  <!------------------------------------Statistiske og datadrevne metoder----------------------->
   <section class="studie-table-container">
     <section class="table" id="statistik-data-prog">
       <table>
@@ -268,7 +270,7 @@
           </thead>
         </thead>
           <tbody>
-            <!-- 1. Yıl -->
+            <!--------------------------- 1. Year ---------------->
             <tr>
               <td rowspan="7"><strong>1. Studieår</strong></td><!--to merge row-->
               <td rowspan="4">1. Semester</td>
@@ -308,7 +310,7 @@
               <td>10 stp</td>
             </tr>
             
-            <!-- 2. Yıl -->
+            <!--------------------- 2. Year ------------------------------------>
             <tr>
               <td rowspan="7"><strong>2. Studieår</strong></td>
               <td rowspan="3">3. Semester</td>
@@ -350,7 +352,7 @@
               <td>10 stp</td>
             </tr>
       
-            <!-- 3. Yıl -->
+            <!------------------------------ 3. Yıl ------------------------------------->
             <tr>
               <td rowspan="10"><strong>3. Studieår</strong></td>
               <td rowspan="6">5. Semester</td>
@@ -410,7 +412,7 @@
   </section>
 
 
-  <!-----------------------------Emnegruppe: Vitenskapelige Beregninger---------------->
+  <!-----------------------------Emnegruppe: Vitenskapelige Beregninger--------------------------->
   <section class="studie-table-container">
     <section class="table" id="vitenskapelige-beregninger-prog">
       <table>
@@ -429,7 +431,7 @@
           </thead>
         </thead>
           <tbody>
-            <!-- 1. Yıl -->
+            <!--------------------------- 1. Year---------------------------- -->
             <tr>
               <td rowspan="7"><strong>1. Studieår</strong></td><!--to merge row-->
               <td rowspan="4">1. Semester</td>
@@ -469,7 +471,7 @@
               <td>10 stp</td>
             </tr>
             
-            <!-- 2. Yıl -->
+            <!------------- 2. Year ---------------->
             <tr>
               <td rowspan="6"><strong>2. Studieår</strong></td>
               <td rowspan="3">3. Semester</td>
@@ -507,7 +509,7 @@
             </tr>
             
       
-            <!-- 3. Yıl -->
+            <!----------------------------- 3. Year --------------------------------->
             <tr>
               <td rowspan="11"><strong>3. Studieår</strong></td>
               <td rowspan="6">5. Semester</td>
