@@ -354,6 +354,26 @@ input[type="radio"]:checked + label + .info-panel {
     color: #555;
 }
 
+.mat-studie {
+    /*display: flex;*/
+    align-items: left;
+    margin: 0rem;
+    max-width: 400px;
+    padding: 0rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    width: 20rem;
+    height:auto;
+}
+
+.mat-studie .image {
+    width: 50px; 
+    height: auto; 
+    object-fit: contain; 
+    border-radius: 8px; 
+}
+
 
 /* Table Styles for Study Programs at studiepro page*/
 
